@@ -1,0 +1,149 @@
+---
+title: "_pitmastr_: a standardized workflow for working with PIT tag data"
+date: "2024-07-03"
+output: 
+  html_document:
+    theme: flatly
+    toc: yes
+    number_sections: yes
+    toc_float:
+      collapsed: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting started with _pitmastr_
+
+This document outlines recommendations by Kailing et al for step-by-step guidelines to store and structure PIT tag data and use the pitmastr package developed by the authors.
+
+<div class = "alert alert-warning" role="alert">
+Prior to using _pitmastr_, **users should have the following:**
+</div>
+
+<div style="color: black">
+  - A <span style="background-color: #FFF9E4">common suffix/prefix appended to all folders</span> containing files downloaded from PIT tag reader. 
+    - The main function of this package relies on a shared pattern string (i.e., suffix/prefix) to automate the search for files output from the readers. 
+    - Accordingly, parent folders (those assigned a shared prefix) should only contain the files output from the reader, and **should not** contain subfolders nested within them or other xlsx, txt, or log files. (see section ## for example folder structure)
+  - A <span style="background-color: #FFF9E4">map file, **m1**</span>, that contains connections between site names and reader based on serial number. Dates deployed at each site should be included if necessary (for example, if a reader was relocated to a different site).
+  - A <span style="background-color: #FFF9E4">second map file, **m2**</span>, that contains biological variables users want to link to individuals (i.e, sex, species, etc). *Note*, these data should not be time-varying (age, mass).
+  - A <span style="background-color: #FFF9E4">list file, **l1**</span>, containing IDs of test tags used to monitor system operation. If users, do not have this list available, IDs unmatched during join with m2 (map file containing biological variables) can be retained as test tags.
+</div>
+
+# Data management
+
+## File storage
+
+Depending on the type and settings of reader deployed and the reader's settings, the way detections are stored can vary. The folder structure we recommend accomodates most formats output by the readers *See below for caveat regarding .accdb. 
+
+  - Data downloaded as .log files will store detections by date, generating a single file for each. 
+  - Newer systems allow for the export of multiple dates worth of detections into a single .txt or xlsx file. 
+  
+_pitmastr_ was created with this in mind and by storing as recommended users can simultaneously assemble all detections from the various frameworks.
+
+*_Users with detections stored as .accdb files are encouraged to export the table from MS Access as a .xlsx to be compatible with master file assembly through 'workhorse'_.
+
+_MACY: WILL REPLACE WITH OBSCURED SITE NAMES AND MAKE SURE FILE NAMES ALIGN WITH WORKFLOW DOC_
+<center>
+
+```{r echo=FALSE} 
+knitr::include_graphics("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/folderstructure.png")
+```
+
+</center>
+
+![In the above example, there exists multiple readers at a single site that need to remain distinct. Each reader is assigned a name that joins the site and entrance.]
+
+## Map files
+
+<center>
+
+```{r echo=FALSE}
+knitr::include_graphics(c("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m1_sernums.png","/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m2_indmeta.png"))
+```
+
+</center>
+
+# Data integration
+The first family of functions within _pitmastr_ are used to wrangle data stored in PIT tag files. The primary data integration function will search the user specified directory (path) to find all files output by readers, extract the detections from those files and serial numbers of readers, and assemble them in a master dataframe that can be exported or manipulated subsequently.
+
+## Load 'pitmastr' package
+```{r}
+# through mkailing git repository
+# devtools::install_github(mkailing/pitmastr)
+
+# or if CRAN hosted
+# library(pitmastr)
+```
+
+## Assemble data...
+
+### with **'workhorse'**
+The workhorse function was built to search all folders within the directory for each of the file types in which PIT detections could be stored by the readers and downloaded.
+
+'workhorse' requires two arguments: 
+
+  - **path**, the directory containing folders that store files downloaded from readers
+  - **string**, the shared prefix/suffix that is appended to all parent folders
+  
+and a third argument is optional:
+
+  - **remove.dup**, specify whether duplicated detections should be dropped from master dataframe once assemble (ie if one row is an exact match to another). 
+    - This argument defaults to "N", such that all rows will be retained even if exact match. 
+    - In many instances, duplicated rows may be an artifact of accidentally duplicated data and their removal is strongly suggested.
+
+In our example dataset, the highest folders are the primary site names. Within them, the *_parent folders_* contain the prefix "LOGGER_", which is the pattern we call to the function indicating which folders to search for files containing detections from readers. The path up to the parent folder name will be included as a column in the returned object.
+
+```{r}
+#df1 <- workhorse(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
+#                 string = "LOGGER_",
+#                 remove.dup = "N") #retain all rows
+
+## -------- OR
+
+#df1 <- workhorse(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
+#                 string = "LOGGER_",
+#                 remove.dup = "Y") #drops rows that have exact match with previous row (keeps single detection)
+
+```
+
+
+### with **'integ_extract'**
+The 'integ_extract' function may be beneficial for users that prefer to create a smaller object that contains detections from one reader/one file type.
+
+'integ_extract' requires two arguments:
+
+  - **path**, the folder containing files downloaded from reader
+  - **filetype**, the extension for the type of file storing detections from the reader
+
+```{r}
+#df2 <- extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/pitmastr_test", 
+#               filetype = ".txt")
+```
+
+
+## Link individuals' metrics to PIT detections using 'integ_ids'
+The integ_ids function allows users to combine metadata from individuals to detections. 
+
+integ_ids requires three arguments:
+
+  - **x**, the df containing detections (ie the object created with 'workhorse' or an object written with 'extract')
+  - **y**, the map file, m3, containing individual metadata (i.e., species, sex, tag location, tag date). 
+    _Note_: only time-independent variables may properly match. Time-varying factors that get included, such as mass, may not be properly reflected with detection dates.
+  - **anchor_by**, the name of the column containing PIT tag IDs that is shared between the master file and map file 3. In our example, we rename to 'id' to match the mastr_file created by 'workhorse'
+
+```{r}
+#pit_working <- integ_ids(mastr_pit, m2, anchor_by = 'pit_id')
+```
+
+
+# Data manipulation
+
+# Data exploration
+
+## Generating plots with Shiny
+
+## Survival analyses with 'survival' package
+
+You can also embed plots, for example:
