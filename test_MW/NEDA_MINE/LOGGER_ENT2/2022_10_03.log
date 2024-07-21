@@ -1,0 +1,375 @@
+TAG: 01 10/03/2022 00:01:48.170 989.001032566746
+INF: Start Of Noise Report
+  Present Noise:                      68 mV (7%)
+  Maximum Noise:                    360 mV (40%)
+  Average Noise:                      81 mV (9%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 00:02:45.000 7,40,9,3600
+INF: End Of Noise Report
+TAG: 01 10/03/2022 00:03:26.440 989.001032566746
+TAG: 01 10/03/2022 00:06:25.610 989.001032566746
+TAG: 01 10/03/2022 00:07:55.080 989.001032566746
+TAG: 01 10/03/2022 00:10:16.550 989.001032566746
+TAG: 01 10/03/2022 00:11:42.290 989.001032566746
+TAG: 01 10/03/2022 00:13:43.320 989.001032566746
+MSG: 01 10/03/2022 00:56:21.320 Set Caps = 381, I = 4.6 A, PH = 387, dPH = 2
+INF: Start Of Noise Report
+  Present Noise:                      68 mV (7%)
+  Maximum Noise:                    480 mV (53%)
+  Average Noise:                      84 mV (9%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 01:02:45.000 7,53,9,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      68 mV (7%)
+  Maximum Noise:                    278 mV (30%)
+  Average Noise:                      87 mV (9%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 02:02:45.000 7,30,9,3600
+INF: End Of Noise Report
+TAG: 01 10/03/2022 02:17:41.730 989.001034203303
+TAG: 01 10/03/2022 02:54:15.650 989.001040476364
+MSG: 01 10/03/2022 03:01:16.100 Test Tag Single Shot Fired
+TAG: 01 10/03/2022 03:01:16.130 999.000000007425
+MSG: 01 10/03/2022 03:01:16.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 2131.4182
+  Date:                               10/03/2022
+  Time:                                 03:01:26
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       389
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        240 min
+ Measurements:
+  Antenna Current Gain:                       95
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        1849
+  Tags In Memory:                      3135 (3%)
+  Status Reports In Memory:            405 (39%)
+  Input Voltage:                          23.7 V
+  Exciter Voltage:                        19.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.6 A
+  Tuning Capacitors:                         381
+  Tuning Phase:                              391
+  Tuning Relative Phase:                      -2
+  FDXB Signal Level:                  58 mV (6%)
+  Temperature:                            22.7 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 10/03/2022 03:01:26.100 16,0,0,2,5,-2,381,3,39,237,199,46,6,391,227,0,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    261 mV (29%)
+  Maximum Noise:                    606 mV (67%)
+  Average Noise:                      87 mV (9%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 03:02:45.000 29,67,9,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      58 mV (6%)
+  Maximum Noise:                    281 mV (31%)
+  Average Noise:                      86 mV (9%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 04:02:45.000 6,31,9,3600
+INF: End Of Noise Report
+TAG: 01 10/03/2022 04:39:14.120 989.001040476393
+INF: Start Of Noise Report
+  Present Noise:                    213 mV (23%)
+  Maximum Noise:                    455 mV (50%)
+  Average Noise:                      84 mV (9%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 05:02:45.000 23,50,9,3600
+INF: End Of Noise Report
+TAG: 01 10/03/2022 05:28:59.580 989.001032566806
+INF: Start Of Noise Report
+  Present Noise:                      58 mV (6%)
+  Maximum Noise:                    286 mV (31%)
+  Average Noise:                      82 mV (9%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 06:02:45.000 6,31,9,3600
+INF: End Of Noise Report
+MSG: 01 10/03/2022 07:01:16.100 Test Tag Single Shot Fired
+TAG: 01 10/03/2022 07:01:16.140 999.000000007425
+MSG: 01 10/03/2022 07:01:16.140 VTT Test Passed
+INF: Start Of Noise Report
+  Present Noise:                      20 mV (2%)
+  Maximum Noise:                    342 mV (38%)
+  Average Noise:                      55 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 07:02:45.000 2,38,6,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      20 mV (2%)
+  Maximum Noise:                    157 mV (17%)
+  Average Noise:                      22 mV (2%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 08:02:45.000 2,17,2,3600
+INF: End Of Noise Report
+MSG: 01 10/03/2022 08:52:17.620 Set Caps = 380, I = 4.5 A, PH = 391, dPH = -2
+INF: Start Of Noise Report
+  Present Noise:                      44 mV (4%)
+  Maximum Noise:                      68 mV (7%)
+  Average Noise:                      24 mV (2%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 09:02:45.000 4,7,2,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      68 mV (7%)
+  Maximum Noise:                    143 mV (15%)
+  Average Noise:                      44 mV (4%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 10:02:45.000 7,15,4,3600
+INF: End Of Noise Report
+MSG: 01 10/03/2022 11:01:16.100 Test Tag Single Shot Fired
+TAG: 01 10/03/2022 11:01:16.130 999.000000007425
+MSG: 01 10/03/2022 11:01:16.130 VTT Test Passed
+INF: Start Of Noise Report
+  Present Noise:                      54 mV (6%)
+  Maximum Noise:                    105 mV (11%)
+  Average Noise:                      58 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 11:02:45.000 6,11,6,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      54 mV (6%)
+  Maximum Noise:                    429 mV (47%)
+  Average Noise:                      57 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 12:02:45.000 6,47,6,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      54 mV (6%)
+  Maximum Noise:                     98 mV (10%)
+  Average Noise:                      54 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 13:02:45.000 6,10,6,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      54 mV (6%)
+  Maximum Noise:                    147 mV (16%)
+  Average Noise:                      55 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 14:02:45.000 6,16,6,3600
+INF: End Of Noise Report
+MSG: 01 10/03/2022 15:01:16.100 Test Tag Single Shot Fired
+TAG: 01 10/03/2022 15:01:16.130 999.000000007425
+MSG: 01 10/03/2022 15:01:16.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 2131.4182
+  Date:                               10/03/2022
+  Time:                                 15:01:26
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       389
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        240 min
+ Measurements:
+  Antenna Current Gain:                       95
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        1851
+  Tags In Memory:                      3140 (3%)
+  Status Reports In Memory:            406 (39%)
+  Input Voltage:                          23.7 V
+  Exciter Voltage:                        19.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.5 A
+  Tuning Capacitors:                         380
+  Tuning Phase:                              387
+  Tuning Relative Phase:                       2
+  FDXB Signal Level:                  46 mV (5%)
+  Temperature:                            28.0 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 10/03/2022 15:01:26.100 16,0,0,2,5,2,380,3,39,237,199,45,5,387,280,0,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                      75 mV (8%)
+  Maximum Noise:                      86 mV (9%)
+  Average Noise:                      54 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 15:02:45.000 8,9,6,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      46 mV (5%)
+  Maximum Noise:                      85 mV (9%)
+  Average Noise:                      47 mV (5%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 16:02:45.000 5,9,5,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      75 mV (8%)
+  Maximum Noise:                    100 mV (11%)
+  Average Noise:                      48 mV (5%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 17:02:45.000 8,11,5,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      46 mV (5%)
+  Maximum Noise:                    122 mV (13%)
+  Average Noise:                      52 mV (5%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 18:02:45.000 5,13,5,3600
+INF: End Of Noise Report
+MSG: 01 10/03/2022 19:01:16.100 Test Tag Single Shot Fired
+TAG: 01 10/03/2022 19:01:16.140 999.000000007425
+MSG: 01 10/03/2022 19:01:16.140 VTT Test Passed
+INF: Start Of Noise Report
+  Present Noise:                      54 mV (6%)
+  Maximum Noise:                    265 mV (29%)
+  Average Noise:                      53 mV (5%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 19:02:45.000 6,29,5,3600
+INF: End Of Noise Report
+INF: Start Of Noise Report
+  Present Noise:                      62 mV (6%)
+  Maximum Noise:                    246 mV (27%)
+  Average Noise:                      67 mV (7%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 20:02:45.000 6,27,7,3600
+INF: End Of Noise Report
+TAG: 01 10/03/2022 20:37:05.350 989.001032566778
+TAG: 01 10/03/2022 20:37:48.370 989.001034179450
+TAG: 01 10/03/2022 20:38:28.360 989.001032566778
+TAG: 01 10/03/2022 20:46:12.650 989.001032566978
+TAG: 01 10/03/2022 20:47:14.040 989.001032566978
+TAG: 01 10/03/2022 21:01:03.520 989.001032566796
+INF: Start Of Noise Report
+  Present Noise:                      54 mV (6%)
+  Maximum Noise:                    249 mV (27%)
+  Average Noise:                      63 mV (7%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 21:02:45.000 6,27,7,3600
+INF: End Of Noise Report
+TAG: 01 10/03/2022 21:27:36.600 989.001040476391
+TAG: 01 10/03/2022 21:28:56.560 989.001032566806
+TAG: 01 10/03/2022 21:29:59.600 989.001040476391
+TAG: 01 10/03/2022 21:39:39.910 989.001034203303
+TAG: 01 10/03/2022 21:40:41.300 989.001034203303
+TAG: 01 10/03/2022 21:55:15.300 989.001040476331
+INF: Start Of Noise Report
+  Present Noise:                      54 mV (6%)
+  Maximum Noise:                    249 mV (27%)
+  Average Noise:                      62 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 22:02:45.000 6,27,6,3600
+INF: End Of Noise Report
+MSG: 01 10/03/2022 23:01:16.100 Test Tag Single Shot Fired
+TAG: 01 10/03/2022 23:01:16.130 999.000000007425
+MSG: 01 10/03/2022 23:01:16.130 VTT Test Passed
+INF: Start Of Noise Report
+  Present Noise:                      70 mV (7%)
+  Maximum Noise:                    248 mV (27%)
+  Average Noise:                      61 mV (6%)
+  Time Averaged Over:                    1:00:00
+NRP: 01 10/03/2022 23:02:45.000 7,27,6,3600
+INF: End Of Noise Report
+TAG: 01 10/03/2022 23:43:17.000 989.001032566806
+INF: Start Of Noise Report
+  Present Noise:                     98 mV (10%)
+  Maximum Noise:                    634 mV (70%)
+  Average Noise:                      77 mV (8%)
+  Time Averaged Over:                    1:00:00
