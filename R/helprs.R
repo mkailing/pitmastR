@@ -17,7 +17,7 @@ library(mark) #use to extract dates from log files
 
 
 ### MACY NOTES: ####
-# Consider ways to perform QA/QC checks?
+# Consider ways to perform QA/QC checks? 1) set list of permissible calls within each function
 # Write objects to reuse date and time patterns!
 # MS Access db files? need to be read in as compatible csv or xlsx
 # Remove duplicates argument in case files get copied accidentally?
@@ -69,7 +69,7 @@ extract_log <- function(path){
   }
   colnames(out)<-'xx'
   x1<-data.frame(date=str_extract(out$xx, "[0-9]{2}/[0-9]{2}/[0-9]{4}"), #substr(out$xx,start=9,stop=18) #str_extract_date(out$xx, format("%m/%d/%Y")
-                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}")),
+                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
                  id=str_extract(out$xx, "\\d{3}[.]\\d{12}"),
                  sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")) #time=substr
   x1$id<-paste("P_",x1$id,sep="");
@@ -100,13 +100,14 @@ extract_txt <- function(path){
   }
   colnames(out)<-'xx'
   x1<-data.frame(date = str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"),
-                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}")), #will this ever change?
+                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change? Needs to be extended to decimal seconds to have full time
                  id = str_extract(out$xx, "\\d{3}[.]\\d{12}"),
                  sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")
   )
   x1$id<-paste("P_",x1$id,sep="");
   return(x1)
 }
+
 
 # Test extract_txt with CL1 test files
 
@@ -128,7 +129,7 @@ extract_xlsx <- function(path){
            time = 2,
            id = 3,
            sn = 4)
-  x1$time <- gsub('.{1}$',"",x1$time);
+  x1$time <- chron(times=gsub('.{1}$',"",x1$time));
   x1$id<-paste("P_",x1$id,sep="")
   #x1$id<-gsub("[.]","",x1$id)
   return(x1)
@@ -140,8 +141,7 @@ CL1b = extract_xlsx("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/C
 #CL1b = extract_xlsx("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW")
 
 
-
-# If there is a manageable about of dfs, user can merge all SF;ST dataframes to together if desired
+# If there is a manageable amount of dfs, user can merge all together manually using rbind
 pit_tmp <- rbind(CL1a, CL1b, MR1, NE2, NE4)
 # or merge desired dfs with detections directly
 #pit_tmp <- rbind(extract_txt())
@@ -161,7 +161,7 @@ integ_extract <- function(path, filetype){
     }
     colnames(out)<-'xx'
     x1<-data.frame(date=str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #substr(out$xx,start=9,stop=18) #str_extract_date(out$xx, format("%m/%d/%Y")
-                   time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}")),
+                   time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
                    id=str_extract(out$xx, "\\d{3}[.]\\d{12}"),
                    sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")) #time=substr
     x1$id<-paste("P_",x1$id,sep="");
@@ -179,7 +179,7 @@ integ_extract <- function(path, filetype){
     }
     colnames(out)<-'xx'
     x1<-data.frame(date = str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #will this ever change?
-                   time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}")), #will this ever change?
+                   time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
                    id = str_extract(out$xx, "\\d{3}[.]\\d{12}"),
                    sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")
     )
@@ -200,14 +200,12 @@ integ_extract <- function(path, filetype){
              time = 2,
              id = 3,
              sn = 4)
-    x1$time <- gsub('.{1}$',"",x1$time);
+    x1$time <- chron(times=gsub('.{1}$',"",x1$time));
     x1$id<-paste("P_",x1$id,sep="")
     return(x1)
   }
-  if (filetype = "multi") {
+}
 
-  }
-  }
 
 CL2a = integ_extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/pitmastr_test",
                    filetype = ".txt")
@@ -255,7 +253,7 @@ workhorse <- function(directory, string, remove.dup = "N"){
         }
     colnames(out1) <- 'xx'
     x1<-data.frame(date=str_extract(out1$xx, "[0-9]{2}/[0-9]{2}/[0-9]{4}"),
-                   time=chron(times=str_extract(out1$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}")),
+                   time=chron(times=str_extract(out1$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
                    id=str_extract(out1$xx, "\\d{3}[.]\\d{12}"),
                    serial.num = str_extract(out1$xx, "\\d{4}[.]\\d{4}"),
                    path = str_extract(out1$xx, getwd()),
@@ -274,7 +272,7 @@ workhorse <- function(directory, string, remove.dup = "N"){
         }
       colnames(out2)<-'xx'
       x2<-data.frame(date = str_extract(out2$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"),
-                     time=chron(times=str_extract(out2$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}")), #will this ever change?
+                     time=chron(times=str_extract(out2$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
                      id = str_extract(out2$xx, "\\d{3}[.]\\d{12}"),
                      serial.num = str_extract(out2$xx, "\\d{4}[.]\\d{4}"),
                      path = str_extract(out2$xx, getwd()),
@@ -297,7 +295,7 @@ workhorse <- function(directory, string, remove.dup = "N"){
              serial.num = 4) %>%
         mutate(path = getwd(),
                source = ".xlsx")
-    x3$time <- gsub('.{1}$',"",x3$time);
+    x3$time <- chron(times=gsub('.{1}$',"",x3$time));
     x3$id<-paste("P_",x3$id,sep="")
     all <- rbind(all, x3)
     }
@@ -314,14 +312,16 @@ workhorse <- function(directory, string, remove.dup = "N"){
     #all$site <- m1$site[match(all$serial.num, m1$serial.num)]
     #all$ent <- m1$ent[match(all$serial.num, m1$serial.num)]
     df <- rbind(df, all) #%>%
-      #mutate(time = as.character(time))
-    if (remove.dup=="Y") {
-      df = df %>% filter(!duplicated(cbind(date,time,id))) #remove rows of duplicated (regardless of file source)
-      #date, times, and pit_id (ie no bat can be detected >1x at same timepoint)
     }
+  if (remove.dup=="Y") {
+    #df = df[!duplicated(df),]
+    #df = df %>% filter(!duplicated(cbind(date,time,id))) #remove rows of duplicated (regardless of file source)
+    df = df %>% distinct(date, time, id, .keep_all = TRUE)
+    #date, times, and pit_id (ie no bat can be detected >1x at same timepoint)
   }
   return(df)
 }
+
 
 ## Consider: m1 gets read in and formatted (esp dates) outside of workhorse function
 # m1$start.date=mdy(m1$start.date)
@@ -333,18 +333,17 @@ workhorse <- function(directory, string, remove.dup = "N"){
 
 # Test workhorse function using test_MW
 mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
+                       string = "LOGGER_")
+
+mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
                        string = "LOGGER_",
-                       remove.dup = "N")
+                       remove.dup = "Y") #drops duplicate detections, retains only first source
 
-mastr_pit1 <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
-                       string = "LOGGER_",
-                       remove.dup = "Y")
+#check no duplicate rows were carried over after using remove.dup arguement
+mastr_dups = mastr_pit[duplicated(mastr_pit[,c("date", "time", "id")]),]
 
-mastr_dups = mastr_pit[duplicated(mastr_pit),]
-
-## This provides the serial number from the dated .log files and filepath from directory structure
-## THINK THIS CAN BE DELETED NOW? No longer needed
-# combine_single <- function(directory, string, filetype){
+## Perhaps no longer needed
+#combine_single <- function(directory, string, filetype){
   setwd(directory)
   log_dirs <- list.dirs()
 #use this function to get full file path name, so we can filter to desired directories (ie those containing .log files)
@@ -402,7 +401,7 @@ mastr_pit$pit_id = mastr_pit$id
 
 #DATES ACROSS DFS NEEDS TO BE THE SAME FORMAT, or MINIMALLY be named the same and site named the same!!
 #in this function, x = mastr_file (containing detections) and y = m2 (containing biological metrics and pit_ids)
-integ_ids <- function(x, y, anchor_by){
+integrate_ids <- function(x, y, anchor_by){
   #anchor_by = quote(anchor_by)
   df <- merge(x, y, by = anchor_by) %>% #this database has all detections that were matched to a pit_id in m2
     rename(date.detected = date.x,
@@ -438,12 +437,11 @@ m2 = m2 %>%
 print(sum(duplicated(m2$pit_id)))
 
 # test integrate_indiv function that merges individual metadata from m2 to ids associated with detections
-pit_working <- integ_ids(mastr_pit, m2, anchor_by = 'pit_id')
+pit_working <- integrate_ids(mastr_pit, m2, anchor_by = 'pit_id')
 
 #write.csv(m2, file="/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m2.csv", row.names = FALSE)
 
 # from here, users should make sure that dates are formatted correctly across all columns
-
 
 ## DATA MANIPULATION ####
 
@@ -451,7 +449,7 @@ pit_working <- integ_ids(mastr_pit, m2, anchor_by = 'pit_id')
 # cmpr_id <- grouped by individual (pit_id)
 # cmpr_time <- grouped by time unit of interest (pop-level summaries?)
 
-# Need dfs that contain all possible dates readers were on (using test tag file)
+# Need dfs that contain all possible dates readers were on (using test tag file) for survival object
 
 # Each df gets a family of functions to move through analyses
 
@@ -468,36 +466,78 @@ y = x %>%
   group_by(pit_id, year(date.detected), month(date.detected)) %>%
   summarise(n.obs = length(unique(date.detected)))
 
-compress_id <- function(x, obs.unit, date.colname) {
-  if (obs.unit == "days") {
+## This compresses to the number of unique observations within a time frame. ie: how many dates detected during week 40 of the year?
+compress_ids_date <- function(x, #name of working dataframe
+                             obs.groups = c(pit_id), #list of columns to group by 
+                             obs.unit = c("weeks","months","years"), #date units that the user wants to count number of days active by
+                             date.colname) { #name of date column in x for function to search by
+  if (obs.unit == "weeks") {
     y = x %>%
-      #mutate(date.colname=as.Date.POSIXlt(noquote(date.colname))) %>%
-      group_by(pit_id, year({{date.colname}}), month({{date.colname}})) %>%
-      summarise(n.obs = length(unique({{date.colname}})))
-#    colnames(y)<-gsub("(date.detected)","",colnames(y))
+      #mutate(date.colname=as.Date.POSIXlt(date.colname)) %>%
+      group_by(across({{obs.groups}}), year({{date.colname}}), month({{date.colname}}), week({{date.colname}})) %>%
+      summarise(n.days = length(unique({{date.colname}})))
+#    colnames(z)<-gsub("(date.detected)","",colnames(z))
     return(y)
   }
-  if (obs.unit == "weeks") {
-    z = x %>%
-      #mutate(date.colname=as.Date.POSIXlt(date.colname)) %>%
-      group_by(pit_id, year({{date.colname}}), month({{date.colname}}), week({{date.colname}})) %>%
-      summarise(n.obs = length(unique({{date.colname}})))
-#    colnames(z)<-gsub("(date.detected)","",colnames(z))
-    return(z)
+  if (obs.unit == "months") {
+    y = x %>%
+      group_by(across({{obs.groups}}), year({{date.colname}}), month({{date.colname}})) %>%
+      summarise(n.days = length(unique({{date.colname}})))
   }
+  if (obs.unit == "years") {
+    y = x %>%
+      group_by(across({{obs.groups}}), year({{date.colname}})) %>%
+      summarise(n.days = length(unique({{date.colname}})))
+  }
+  return(y)
 }
 
-cmpr_id <- compress_id(x = pit_working, obs.unit = "weeks", date.colname = date.detected)
+cmpr_ids_weeks <- compress_ids_date(x = pit_working, obs.groups =  c(pit_id, sex, site.detected), obs.unit = "weeks", date.colname = date.detected)
 
-cmpr_id <- pit_working %>%
-  group_by(pit_id, year(date.detected), month(date.detected)) %>%
-  summarise(n.days.active = length(unique(date.detected)))
+cmpr_ids_months <- compress_ids_date(x = pit_working, obs.groups = c(pit_id, sex, site.detected), obs.unit = "months", date.colname = date.detected)
 
-df2 <- pit_working %>%
-  group_by(site.detected, year(date.detected), date.detected) %>%
-  summarise(n.inds.active = length(unique(pit_id)))
+#compress_date <- function(x,obs.groups)
 
 # Format for survival analysis ####
+
+# figure out formatting for test tag detections to become sampling events
+test_tags <- read.csv("/Users/mkailing/Dropbox/Kailing_Projects/DATA/test_tags_temp.csv")
+
+tt.list <- test_tags %>%
+  group_by(pit_id, site, ent, date) %>%
+  subset(length(unique(time))>=2) %>% #filter to test tags that fired at least twice in a day; can make this more specific if needed
+  distinct(pit_id, site, ent, date) %>% #only keep distinct days for each site and entrance (reader)
+  ungroup() %>%
+  #rename(dates.on = date) %>%
+  mutate(date.detected = format(as.Date(date, format="%m/%d/%y"), "%Y-%m-%d"),
+         ent = gsub("ent","",ent),
+         reader_date = paste(site, ent, date.detected, sep = ".")) %>%
+  select(-c(pit_id, date))
+
+#tt.list$date=format(as.Date(tt.list$date, format = "%m/%d/%Y"),"%Y-%m-%d")
+
+pw.tmp <- pit_working %>%
+  group_by(pit_id, site.detected, ent) %>%
+  expand(date.detected = tt.list$date.detected) %>% #format(as.Date(tt.list$date, format = "%m/%d/%y"), "%Y-%m-%d")) %>%
+  mutate(reader_date = paste(site.detected, ent, date.detected, sep = ".")) %>%
+  filter(reader_date %in% tt.list$reader_date) #%>%
+  #select(-reader_date)
+
+#check that expand df worked
+pit6745 <- pw.tmp %>%
+  subset(pit_id == 'P_989.001032566745')
+print(min(pit6745$date.detected))
+#earliest date for NEDA 4, is Sept 2, 2020
+#confirm with tt.list df
+
+#Check with another example
+pit7046 <- pw.tmp %>%
+  subset(pit_id == 'P_989.001032567046')
+print(min(pit7046$date.detected))
+#earliest date for MR 1 is 
+
+## need to expand working to include all unique dates on test tags to characterize 'sampling'
+
 
 
 

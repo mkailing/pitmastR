@@ -65,7 +65,7 @@ knitr::include_graphics(c("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/ima
 
 </center>
 
-# Data integration
+# Data assembly
 The first family of functions within _pitmastr_ are used to wrangle data stored in PIT tag files. The primary data integration function will search the user specified directory (path) to find all files output by readers, extract the detections from those files and serial numbers of readers, and assemble them in a master dataframe that can be exported or manipulated subsequently.
 
 ## Load 'pitmastr' package
@@ -109,10 +109,10 @@ In our example dataset, the highest folders are the primary site names. Within t
 ```
 
 
-### with **'integ_extract'**
-The 'integ_extract' function may be beneficial for users that prefer to create a smaller object that contains detections from one reader/one file type.
+### with **'single_extract'**
+The 'single_extract' function may be beneficial for users that prefer to create a smaller object of detections from one reader/one file type.
 
-'integ_extract' requires two arguments:
+'single_extract' requires two arguments:
 
   - **path**, the folder containing files downloaded from reader
   - **filetype**, the extension for the type of file storing detections from the reader
@@ -124,13 +124,13 @@ The 'integ_extract' function may be beneficial for users that prefer to create a
 
 
 ## Link individuals' metrics to PIT detections using 'integ_ids'
-The integ_ids function allows users to combine metadata from individuals to detections. 
+The 'integrate_ids' function allows users to combine metadata from individuals to detections. 
 
-integ_ids requires three arguments:
+'integrate_ids' requires three arguments:
 
   - **x**, the df containing detections (ie the object created with 'workhorse' or an object written with 'extract')
-  - **y**, the map file, m3, containing individual metadata (i.e., species, sex, tag location, tag date). 
-    _Note_: only time-independent variables may properly match. Time-varying factors that get included, such as mass, may not be properly reflected with detection dates.
+  - **y**, the map file, m3, containing individual metadata (i.e., species, sex, tag location, tag date) 
+    _Note_: only time-independent variables may properly match. Time-varying factors that get included, such as mass, may not be properly reflected with detection dates
   - **anchor_by**, the name of the column containing PIT tag IDs that is shared between the master file and map file 3. In our example, we rename to 'id' to match the mastr_file created by 'workhorse'
 
 ```{r}
@@ -139,11 +139,22 @@ integ_ids requires three arguments:
 
 
 # Data manipulation
+This family of functions will create objects for users to use in simple statistical models and survival analyses.
+
+'compress_id_date' function will return a dataframe object of data summarized by PIT tag ID and user-specific date time units. It requires XX arguments:
+
+  - **x**, the df containing detections and desired grouping variables. In our example we use the object returned from 'integrate_ids'
+  - **obs.groups**, a list of column names by which the user wants data to be structured and summarized
+  - **obs.units**, the time unit by which to summarize observations
+  
+'compress_id_surv' fucntion return an object that can be used to perform survival analyses by way of the survival package. It requires XX arguments:
+
+  - **x**, the df containing all detections by date
+  - **y**, the df containing all observation events (ie. PIT tag readers were operational) by date
+
 
 # Data exploration
 
 ## Generating plots with Shiny
 
 ## Survival analyses with 'survival' package
-
-You can also embed plots, for example:
