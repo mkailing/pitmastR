@@ -1,0 +1,354 @@
+ALM: 01 09/06/2022 00:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 00:11:03.100 Reports Memory Full
+TAG: 01 09/06/2022 00:13:09.050 989.001038203919
+ALM: 01 09/06/2022 00:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 00:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 00:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 00:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 01:01:03.100 Reports Memory Full
+TAG: 01 09/06/2022 01:01:53.420 989.001032567141
+ALM: 01 09/06/2022 01:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 01:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 01:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 01:41:03.100 Reports Memory Full
+TAG: 01 09/06/2022 01:43:04.170 989.001034179371
+ALM: 01 09/06/2022 01:51:03.100 Reports Memory Full
+TAG: 01 09/06/2022 01:58:54.150 989.001032567055
+ALM: 01 09/06/2022 02:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 02:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 02:10:53.140 999.000000007425
+MSG: 01 09/06/2022 02:10:53.140 VTT Test Passed
+TAG: 01 09/06/2022 02:10:53.160 999.000000007425
+ALM: 01 09/06/2022 02:11:03.100 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3116
+  Date:                               09/06/2022
+  Time:                                 02:11:03
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       4
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       387
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                     Enabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        180 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                         596
+  Tags In Memory:                     8048 (10%)
+  Status Reports In Memory:           1022 (99%)
+  Input Voltage:                          23.6 V
+  Exciter Voltage:                        17.8 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.2 A
+  Tuning Capacitors:                         348
+  Tuning Phase:                              389
+  Tuning Relative Phase:                      -2
+  FDXB Signal Level:                415 mV (46%)
+  Temperature:                            16.5 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 01 09/06/2022 02:11:03.100 16,0,0,2,4,-2,348,10,99,236,178,42,46,389,165,21,0,0,0,0
+INF: End Of Full Status Report
+ALM: 01 09/06/2022 02:21:03.100 Reports Memory Full
+TAG: 01 09/06/2022 02:30:43.060 989.001034203173
+ALM: 01 09/06/2022 02:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 02:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 02:51:03.100 Reports Memory Full
+TAG: 01 09/06/2022 02:56:01.540 989.001032567111
+TAG: 01 09/06/2022 03:00:01.200 989.001034203140
+ALM: 01 09/06/2022 03:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 03:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 03:21:03.100 Reports Memory Full
+TAG: 01 09/06/2022 03:21:54.210 989.001032567057
+ALM: 01 09/06/2022 03:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 03:41:03.100 Reports Memory Full
+TAG: 01 09/06/2022 03:42:03.270 989.001032567110
+ALM: 01 09/06/2022 03:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 04:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 04:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 04:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 04:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 04:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 04:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 05:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 05:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 05:10:53.140 999.000000007425
+MSG: 01 09/06/2022 05:10:53.140 VTT Test Passed
+ALM: 01 09/06/2022 05:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 05:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 05:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 05:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 05:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 06:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 06:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 06:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 06:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 06:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 06:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 07:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 07:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 07:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 07:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 07:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 07:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 08:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 08:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 08:10:53.130 999.000000007425
+MSG: 01 09/06/2022 08:10:53.130 VTT Test Passed
+ALM: 01 09/06/2022 08:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 08:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 08:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 08:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 08:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 09:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 09:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 09:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 09:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 09:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 09:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 10:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 10:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 10:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 10:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 10:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 10:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 11:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 11:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 11:10:53.130 999.000000007425
+MSG: 01 09/06/2022 11:10:53.130 VTT Test Passed
+ALM: 01 09/06/2022 11:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 11:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 11:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 11:41:03.100 Reports Memory Full
+MSG: 01 09/06/2022 11:45:20.310 Set Caps = 347, I = 4.1 A, PH = 390, dPH = -3
+ALM: 01 09/06/2022 11:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 12:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 12:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 12:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 12:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 12:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 12:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 13:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 13:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 13:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 13:31:03.100 Reports Memory Full
+MSG: 01 09/06/2022 13:36:26.390 Set Caps = 348, I = 4.2 A, PH = 389, dPH = -2
+ALM: 01 09/06/2022 13:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 13:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 14:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 14:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 14:10:53.160 999.000000007425
+MSG: 01 09/06/2022 14:10:53.160 VTT Test Passed
+ALM: 01 09/06/2022 14:11:03.100 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3116
+  Date:                               09/06/2022
+  Time:                                 14:11:03
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       4
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       387
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                     Enabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        180 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                         601
+  Tags In Memory:                     8057 (10%)
+  Status Reports In Memory:          1023 (100%)
+  Input Voltage:                          23.6 V
+  Exciter Voltage:                        17.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.2 A
+  Tuning Capacitors:                         348
+  Tuning Phase:                              387
+  Tuning Relative Phase:                       0
+  FDXB Signal Level:                324 mV (36%)
+  Temperature:                            17.1 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 01 09/06/2022 14:11:03.100 16,0,0,2,4,0,348,10,100,236,179,42,36,387,171,21,0,0,0,0
+INF: End Of Full Status Report
+ALM: 01 09/06/2022 14:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 14:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 14:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 14:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 15:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 15:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 15:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 15:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 15:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 15:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 16:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 16:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 16:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 16:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 16:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 16:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 17:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 17:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 17:10:53.130 999.000000007425
+MSG: 01 09/06/2022 17:10:53.130 VTT Test Passed
+ALM: 01 09/06/2022 17:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 17:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 17:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 17:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 17:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 18:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 18:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 18:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 18:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 18:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 18:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 19:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 19:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 19:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 19:31:03.100 Reports Memory Full
+TAG: 01 09/06/2022 19:37:37.950 989.001034179231
+ALM: 01 09/06/2022 19:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 19:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 20:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 20:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 20:10:53.130 999.000000007425
+MSG: 01 09/06/2022 20:10:53.130 VTT Test Passed
+ALM: 01 09/06/2022 20:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 20:21:03.100 Reports Memory Full
+TAG: 01 09/06/2022 20:23:27.530 989.001032567087
+ALM: 01 09/06/2022 20:31:03.100 Reports Memory Full
+TAG: 01 09/06/2022 20:38:34.410 989.001032567057
+ALM: 01 09/06/2022 20:41:03.100 Reports Memory Full
+TAG: 01 09/06/2022 20:49:15.530 989.001032567110
+ALM: 01 09/06/2022 20:51:03.100 Reports Memory Full
+ALM: 01 09/06/2022 21:01:03.100 Reports Memory Full
+TAG: 01 09/06/2022 21:03:48.210 989.001032567087
+TAG: 01 09/06/2022 21:07:37.980 989.001032567087
+TAG: 01 09/06/2022 21:09:14.910 989.001032567087
+TAG: 01 09/06/2022 21:10:55.620 989.001032567087
+ALM: 01 09/06/2022 21:11:03.100 Reports Memory Full
+ALM: 01 09/06/2022 21:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 21:31:03.100 Reports Memory Full
+ALM: 01 09/06/2022 21:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 21:51:03.100 Reports Memory Full
+TAG: 01 09/06/2022 21:57:26.150 989.001038203907
+ALM: 01 09/06/2022 22:01:03.100 Reports Memory Full
+ALM: 01 09/06/2022 22:11:03.100 Reports Memory Full
+TAG: 01 09/06/2022 22:15:18.970 989.001038203907
+ALM: 01 09/06/2022 22:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 22:31:03.100 Reports Memory Full
+TAG: 01 09/06/2022 22:38:36.440 989.001034203137
+ALM: 01 09/06/2022 22:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 22:51:03.100 Reports Memory Full
+TAG: 01 09/06/2022 22:52:32.630 989.001032567055
+TAG: 01 09/06/2022 22:53:18.140 989.001040544987
+TAG: 01 09/06/2022 22:53:49.120 989.001032567055
+ALM: 01 09/06/2022 23:01:03.100 Reports Memory Full
+MSG: 01 09/06/2022 23:10:53.100 Test Tag Single Shot Fired
+TAG: 01 09/06/2022 23:10:53.140 999.000000007425
+MSG: 01 09/06/2022 23:10:53.140 VTT Test Passed
+ALM: 01 09/06/2022 23:11:03.100 Reports Memory Full
+TAG: 01 09/06/2022 23:14:41.500 989.001038203982
+ALM: 01 09/06/2022 23:21:03.100 Reports Memory Full
+ALM: 01 09/06/2022 23:31:03.100 Reports Memory Full
+TAG: 01 09/06/2022 23:31:36.270 989.001034179376
+ALM: 01 09/06/2022 23:41:03.100 Reports Memory Full
+ALM: 01 09/06/2022 23:51:03.100 Reports Memory Full

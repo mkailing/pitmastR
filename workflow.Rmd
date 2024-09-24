@@ -158,3 +158,5 @@ This family of functions will create objects for users to use in simple statisti
 ## Generating plots with Shiny
 
 ## Survival analyses with 'survival' package
+
+# Check status of readers
