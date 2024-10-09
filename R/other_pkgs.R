@@ -48,3 +48,16 @@ View(veteran)
 
 test <- as.data.frame(Surv(veteran$time, veteran$status))
 test2 <- as.data.frame(Surv(veteran$time, veteran$diagtime, veteran$status, type = 'interval'))
+
+## play around with package/function building
+
+(x <- "alfa,bravo,charlie,delta")
+#> [1] "alfa,bravo,charlie,delta"
+strsplit(x, split = ",")
+
+strsplit(x, split = ",")[[1]]
+
+strsplit1 <- function(x, split) {
+  strsplit(x, split = split)[[1]]
+}
+

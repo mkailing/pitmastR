@@ -1,7 +1,8 @@
 # This script writes a reproducible pipeline for integrating, manipulating, and exploring datasets
 # downloaded from BioMark PIT tagging systems
 
-rm(list=ls()) ###### clear work environment ##########
+###### clear work environment ##########
+rm(list=ls())
 
 library(devtools)
 
@@ -22,7 +23,6 @@ library(mark) #use to extract dates from log files
 # Consider ways to perform QA/QC checks? 1) set list of permissible calls within each function
 # Write objects to reuse date and time patterns!
 
-# Need to match in S/N based on site, entrance, and date
 # Need to create function to run dx check on readers working
 
 # Flexible for HEX vs DEC?
@@ -52,96 +52,35 @@ library(mark) #use to extract dates from log files
 #place individual log files within these folders.
 #Do search for .log within directory and copy/paste
 
+# ii) format files for compatibility
+
+m1 <- format_m1(path.csv = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW/sn_map.csv",
+                  date1 = start,
+                  date2 = end,
+                  date.format = "%m/%d/%y")
+
 ## 1) DATA ASSEMBLY ####
 
 # Depending on need and structure of file storage and type, user may want one of the following functions
 
 ### 1a) Single Folder; Single File Type ####
-# this might be helpful if only want to focus on single reader&file type (not merge all reader detections to one large file)
 
-# Working with .log files
+# Test extract_log function with BC, NE and MR files
 
-extract_log <- function(path){
-  setwd(path)
-  log_files <- list.files(path = path, pattern = ".log")
-  out <- data.frame()
-  for (i in 1:length(log_files)) {
-    eg <-readLines(log_files[i]) #this makes distinct lines for log files
-    sn <-grep('\\d{4}[.]\\d{4}', eg, value = TRUE)
-    tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE),sn[i])) #makes dataframe containing only tag detections
-    out<-rbind(out,tmp)
-  }
-  colnames(out)<-'xx'
-  x1<-data.frame(date=str_extract(out$xx, "[0-9]{2}/[0-9]{2}/[0-9]{4}"), #substr(out$xx,start=9,stop=18) #str_extract_date(out$xx, format("%m/%d/%Y")
-                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
-                 id=str_extract(out$xx, "\\d{3}[.]\\d{12}"),
-                 sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")) #time=substr
-  x1$id<-paste("P_",x1$id,sep="");
-#  x1$id<-gsub("[.]","",x1$id);
-  return(x1)
-}
+BC1 = extract_log("/Users/mkailing/Dropbox/MIDWEST_WNS/MIDWEST_PIT/DATA/BAY_CITY/LOGGER_ENT1")
 
-# Test extract_log function with NE and MR files
-
-## NEDA 4
-NE4 = extract_log("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/NEDA_MINE/LOGGER_ENT4")
-
-NE2 = extract_log("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/NEDA_MINE/LOGGER_ENT2")
+NE2 = extract_log("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW/NEDA_MINE/LOGGER_ENT2",
+                  map.file1 = m1)
 
 ## MAIDEN ROCK 1
 MR1 = extract_log("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/MAIDEN_ROCK/LOGGER_ENT1")
 
-# Working with .txt files
-
-extract_txt <- function(path){
-  setwd(path)
-  txt_files <- list.files(path = path, pattern = ".txt")
-  out <- data.frame()
-  for (i in 1:length(txt_files)) {
-    eg <-readLines(txt_files[i]) #this reads in and makes distinct lines for log files
-    tmp <- data.frame(grep("\\d{3}[.]\\d{12}", eg, value=TRUE))
-    out<-rbind(out,tmp)
-  }
-  colnames(out)<-'xx'
-  x1<-data.frame(date = str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"),
-                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change? Needs to be extended to decimal seconds to have full time
-                 id = str_extract(out$xx, "\\d{3}[.]\\d{12}"),
-                 sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")
-  )
-  x1$id<-paste("P_",x1$id,sep="");
-  return(x1)
-}
-
-
 # Test extract_txt with CL1 test files
-
-CL1a = extract_txt("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/CLINTON/LOGGER_ENT1")
-
-# Working with .xlsx files
-
-extract_xlsx <- function(path){
-  setwd(path)
-  xlsx_files <- list.files(path = path, pattern = ".xlsx")
-  out <- data.frame()
-  for (i in 1:length(xlsx_files)) {
-    eg <-read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
-    out<-rbind(out,eg)
-  }
-  x1<-out %>%
-    select(1, 2, 9, 5) %>% #select the rows we want to include from xlsx file (as is it is matching the compatible output with other file types)
-    rename(date = 1,
-           time = 2,
-           id = 3,
-           sn = 4)
-  x1$time <- chron(times=gsub('.{1}$',"",x1$time));
-  x1$id<-paste("P_",x1$id,sep="")
-  #x1$id<-gsub("[.]","",x1$id)
-  return(x1)
-}
+CL1a = extract_txt("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_mw/CLINTON/LOGGER_ENT1")
 
 # Test extract_xlsx with CL1 test files
-
-CL1b = extract_xlsx("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/CLINTON/LOGGER_ENT1")
+CL1b = extract_xlsx("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW/CLINTON/LOGGER_ENT1",
+                    map.file1 = m1)
 #CL1b = extract_xlsx("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW")
 
 
@@ -151,70 +90,70 @@ pit_tmp <- rbind(CL1a, CL1b, MR1, NE2, NE4)
 #pit_tmp <- rbind(extract_txt())
 
 # OR user can use this function but must specify filetype
-integ_extract <- function(path, filetype){
-  setwd(path)
-  if (filetype == ".log") {
-    #setwd(path)
-    log_files <- list.files(path = path, pattern = filetype)
-    out <- data.frame()
-    for (i in 1:length(log_files)) {
-      eg <-readLines(log_files[i]) #this makes distinct lines for log files
-      sn <-grep('\\d{4}[.]\\d{4}', eg, value = TRUE)
-      tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE),sn[i])) #makes dataframe containing only tag detections
-      out<-rbind(out,tmp)
-    }
-    colnames(out)<-'xx'
-    x1<-data.frame(date=str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #substr(out$xx,start=9,stop=18) #str_extract_date(out$xx, format("%m/%d/%Y")
-                   time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
-                   id=str_extract(out$xx, "\\d{3}[.]\\d{12}"),
-                   sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")) #time=substr
-    x1$id<-paste("P_",x1$id,sep="");
-    #  x1$id<-gsub("[.]","",x1$id);
-    return(x1)
-  }
-  if (filetype == ".txt") {
-    #setwd(path)
-    txt_files <- list.files(path = path, pattern = filetype)
-    out <- data.frame()
-    for (i in 1:length(txt_files)) {
-      eg <-readLines(txt_files[i]) #this reads in and makes distinct lines for log files
-      tmp <- data.frame(grep("\\d{3}[.]\\d{12}", eg, value=TRUE))
-      out<-rbind(out,tmp)
-    }
-    colnames(out)<-'xx'
-    x1<-data.frame(date = str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #will this ever change?
-                   time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
-                   id = str_extract(out$xx, "\\d{3}[.]\\d{12}"),
-                   sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")
-    )
-    x1$id<-paste("P_",x1$id,sep="");
-    return(x1)
-  }
-  if (filetype == ".xlsx") {
-    #setwd(path)
-    xlsx_files <- list.files(path = path, pattern = filetype)
-    out <- data.frame()
-    for (i in 1:length(xlsx_files)) {
-      eg <-read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
-      out<-rbind(out,eg)
-    }
-    x1<-out %>%
-      select(1, 2, 9, 5) %>% #select the rows we want to include from xlsx file (as is it is matching the compatible output with other file types)
-      rename(date = 1,
-             time = 2,
-             id = 3,
-             sn = 4)
-    x1$time <- chron(times=gsub('.{1}$',"",x1$time));
-    x1$id<-paste("P_",x1$id,sep="")
-    return(x1)
-  }
-}
-
-
-CL2a = integ_extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/pitmastr_test",
-                   filetype = ".txt")
-CL2b = integ_extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/pitmastr_test",
-                    filetype = ".xlsx")
+# #integ_extract <- function(path, filetype){
+#   setwd(path)
+#   if (filetype == ".log") {
+#     #setwd(path)
+#     log_files <- list.files(path = path, pattern = filetype)
+#     out <- data.frame()
+#     for (i in 1:length(log_files)) {
+#       eg <-readLines(log_files[i]) #this makes distinct lines for log files
+#       sn <-grep('\\d{4}[.]\\d{4}', eg, value = TRUE)
+#       tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE),sn[i])) #makes dataframe containing only tag detections
+#       out<-rbind(out,tmp)
+#     }
+#     colnames(out)<-'xx'
+#     x1<-data.frame(date=str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #substr(out$xx,start=9,stop=18) #str_extract_date(out$xx, format("%m/%d/%Y")
+#                    time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
+#                    id=str_extract(out$xx, "\\d{3}[.]\\d{12}"),
+#                    sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")) #time=substr
+#     x1$id<-paste("P_",x1$id,sep="");
+#     #  x1$id<-gsub("[.]","",x1$id);
+#     return(x1)
+#   }
+#   if (filetype == ".txt") {
+#     #setwd(path)
+#     txt_files <- list.files(path = path, pattern = filetype)
+#     out <- data.frame()
+#     for (i in 1:length(txt_files)) {
+#       eg <-readLines(txt_files[i]) #this reads in and makes distinct lines for log files
+#       tmp <- data.frame(grep("\\d{3}[.]\\d{12}", eg, value=TRUE))
+#       out<-rbind(out,tmp)
+#     }
+#     colnames(out)<-'xx'
+#     x1<-data.frame(date = str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #will this ever change?
+#                    time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
+#                    id = str_extract(out$xx, "\\d{3}[.]\\d{12}"),
+#                    sn = str_extract(out$xx, "\\d{4}[.]\\d{4}")
+#     )
+#     x1$id<-paste("P_",x1$id,sep="");
+#     return(x1)
+#   }
+#   if (filetype == ".xlsx") {
+#     #setwd(path)
+#     xlsx_files <- list.files(path = path, pattern = filetype)
+#     out <- data.frame()
+#     for (i in 1:length(xlsx_files)) {
+#       eg <-read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
+#       out<-rbind(out,eg)
+#     }
+#     x1<-out %>%
+#       select(1, 2, 9, 5) %>% #select the rows we want to include from xlsx file (as is it is matching the compatible output with other file types)
+#       rename(date = 1,
+#              time = 2,
+#              id = 3,
+#              sn = 4)
+#     x1$time <- chron(times=gsub('.{1}$',"",x1$time));
+#     x1$id<-paste("P_",x1$id,sep="")
+#     return(x1)
+#   }
+# }
+# 
+# 
+# CL2a = integ_extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/pitmastr_test",
+#                    filetype = ".txt")
+# CL2b = integ_extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/pitmastr_test",
+#                     filetype = ".xlsx")
 
 
 ### 1b) Multiple folders; Multiple file types ####
@@ -225,7 +164,9 @@ CL2b = integ_extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/p
 # setwd("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/NEDA_MINE")
 # string<-"LOGGER_"
 
-# directory <- "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW"
+#directory <- "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW"
+#tag.code = "DEC"
+#string = "LOGGER_"
 # setwd(directory)
 
 # User must define a character string common to all subdirectories containing reader files;
@@ -240,16 +181,16 @@ workhorse <- function(directory,
   sn.regex = "\\d{4}[.]\\d{4}"
   if (tag.code == "DEC"){
     id.regex = "\\d{3}[.]\\d{12}"
-    }
+    } else
   if (tag.code == "HEX") {
     id.regex = "\\d{1}[A-Z]{1}\\d{1}[.]\\d{7}[A-Z]{1}\\d{2}"
-    }
+    } else
   if (tag.code == "NUM"){
     id.regex = "\\d{15}"
     }
   setwd(directory)
   dirs <- list.dirs()
-  #use this function to get full file path name, so we can filter to desired directories (ie those containing reader files /'LOGGER_')
+  #use this function to get full file path name, so we can filter to directories that contain the string we want (ie those containing reader files /'LOGGER_')
   parent_prefix <- function(x, path = basename(normalizePath(".")), sep = ""){
     y = paste(getwd(), x, sep = sep)
     gsub("[.]","",y)
@@ -259,7 +200,7 @@ workhorse <- function(directory,
   df <- data.frame()
   for (i in 1:length(dirs)){
     all = data.frame()
-    setwd(dirs[i])
+    setwd(dirs[i]) 
     log_files <- list.files(pattern = ".log")
     if (length(log_files)>0) {
       out1 <- data.frame()
@@ -274,7 +215,7 @@ workhorse <- function(directory,
     colnames(out1) <- 'xx'
     x1<-data.frame(date=str_extract(out1$xx, date.regex),
                    time=chron(times=str_extract(out1$xx, time.regex)),
-                   id=str_extract(out1$xx, tag.code),
+                   id=str_extract(out1$xx, id.regex),
                    serial.num = str_extract(out1$xx, sn.regex),
                    path = str_extract(out1$xx, getwd()),
                    source = ".log") #time=substr
@@ -308,7 +249,7 @@ workhorse <- function(directory,
         out3<-rbind(out3,eg)
         }
       x3<-out3 %>%
-      select(1, 2, 9, 5) %>% #select the rows we want to include from xlsx file (as is it is matching the compatible output with other file types)
+      select(1, 2, 9, 5) %>% #select the rows we want to include from xlsx file (as is, it is matching the compatible output with other file types)
       rename(date = 1,
              time = 2,
              id = 3,
@@ -321,18 +262,20 @@ workhorse <- function(directory,
     }
     setwd(directory)
     m1 <- data.frame(lapply(read.csv('sn_map.csv'),as.character)) %>%
-      mutate(start.date = format(as.Date(start.date,"%m/%d/%y"), "%m/%d/%Y"), #formats date reader was deployed at site.ent
+      mutate(start.date = format(as.Date(start.date,"%m/%d/%y"), "%Y-%m-%d"), #formats date reader was deployed at site.ent. alternative format: "%m/%d/%Y"
              end.date = ifelse(is.na(end.date)|end.date=="", #if no end date provided (reader is still deployed),
-                               format(Sys.Date(),"%m/%d/%Y"), #this will assign current date for end date
-                               format(as.Date(end.date, "%m/%d/%y"), "%m/%d/%Y")))
+                               format(Sys.Date(),"%Y-%m-%d"), #this will assign current date for end date
+                               format(as.Date(end.date, "%m/%d/%y"),"%Y-%m-%d")),
+             serial.num = ifelse(is.na(serial.num), "0000.0000",format(as.numeric(serial.num), nsmall = 4))) %>% #ifelse(is.na(serial.num),"0000.0000", serial.num))
+      mutate_at(vars(start.date,end.date), as.Date)
     #this match will work if the same reader (ie serial number) has always been at the same site/entrance
     all$site <- m1$site[match(all$serial.num, m1$serial.num)]
     all$ent <- m1$ent[match(all$serial.num, m1$serial.num)]
     #but, if readers were moved between sites.ents, adjust based on dates: MACY NEEDS TO SOLVE THIS!
     #all$site <- m1$site[match(all$serial.num, m1$serial.num)]
     #all$ent <- m1$ent[match(all$serial.num, m1$serial.num)]
-    df <- rbind(df, all) %>%
-      mutate(pit_id = paste("P_",df$id,sep=""))
+    df <- rbind(df, all) #%>%
+      #mutate(pit_id = paste("P_",df$id,sep=""))
     }
   if (remove.dup=="Y") {
     #df = df[!duplicated(df),]
@@ -343,6 +286,10 @@ workhorse <- function(directory,
   return(df)
 }
 
+
+
+
+#sort out how to different patterns of HEX and DEC codes
 "\\d{3}[.]\\d{12}"
 z <- "999000000007425 HYK23-ih7.fhohwheni2863_ 999.000000007425 3D8.0000001D01 "
 #hc <- str_extract(z, "\\d{1}[A-Z0-9]{1,2}[.]\\d{7}[A-Z0-9]{1}\\d{2}")
@@ -365,58 +312,65 @@ mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pit
                        tag.code = "DEC",
                        string = "LOGGER_")
 
-mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
+mastr_pit2 <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW",
                        string = "LOGGER_",
+                       tag.code = "DEC",
                        remove.dup = "Y") #drops duplicate detections, retains only first source
+
+
+macy_pitall <- workhorse(directory = "/Users/mkailing/Dropbox/MIDWEST_WNS/MIDWEST_PIT/DATA",
+                         string = "LOGGER_",
+                         tag.code = "DEC",
+                         remove.dup = "Y")
 
 #check no duplicate rows were carried over after using remove.dup arguement
 mastr_dups = mastr_pit[duplicated(mastr_pit[,c("date", "time", "id")]),]
 
 ## Perhaps no longer needed - skip
-#combine_single <- function(directory, string, filetype){
-  setwd(directory)
-  log_dirs <- list.dirs()
-#use this function to get full file path name, so we can filter to desired directories (ie those containing .log files)
-  parent_prefix <- function(x, path = basename(normalizePath(".")), sep = ""){
-    y = paste(getwd(), x, sep = sep)
-    gsub("[.]","",y)
-  }
-  log_dirs = parent_prefix(log_dirs)
-  log_dirs = log_dirs[grep(string,log_dirs)]
-
-  all = data.frame()
-  for (i in 1:length(log_dirs)){
-    setwd(log_dirs[i])
-    log_files <- list.files(pattern = filetype)
-    out <- data.frame()
-    for (i in 1:length(log_files)) {
-      eg <-readLines(log_files[i]) #this makes distinct lines for log files
-      serial.num <- as.character(grep("S/N: ", eg, value = TRUE))
-      tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE),
-                               as.numeric(gsub("\\D.\\D","",serial.num)),
-                               as.character(getwd()), sep = " ")) #makes dataframe containing only tag detections
-      out<-rbind(out,tmp)
-    }
-    all <- rbind(all, out)
-  }
-  names(all)[1]<-'xx'
-  x1<-data.frame(date=as.Date(substr(all$xx,start=9,stop=18), format = "%m/%d/%Y"),
-                 time=chron(times=substr(all$xx,start=20,stop=32)),
-                 id=substr(all$xx,start=33,stop=48),
-                 serial.num = as.character(substr(all$xx, start = 50, stop = 58)),
-                 path = substr(all$xx, start=59, stop = length(all$xx)))
-  x1$id<-gsub("[.]","",x1$id); x1$id<-paste("P_", x1$id, sep="")
-  setwd(directory)
-  m1 <- as.data.frame(lapply(read.csv('sn_map.csv'),as.character)) %>%
-    mutate(start.date = as.Date(start.date, format = "%m/%d/%Y"),
-           end.date = as.Date(end.date, format = "%m/%d/%Y"))
-  m1 <- data.frame(lapply(read.csv('sn_map.csv'),as.character))
-  #m1[1,2]=as.Date.character(lapply(m1[1,2],format = "%m/%d/%Y"))
-  #m1$end.date=ifelse(!(is.na(m1$end.date)|m1$end.date==""), m1$end.date, format(Sys.Date(),"%m/%d/%Y"))
-  x1$site <- m1$site[match(x1$serial.num, m1$serial.num)]
-  x1$ent <- m1$ent[match(x1$serial.num, m1$serial.num)]
-  return(x1)
-}
+# #combine_single <- function(directory, string, filetype){
+#   setwd(directory)
+#   log_dirs <- list.dirs()
+# #use this function to get full file path name, so we can filter to desired directories (ie those containing .log files)
+#   parent_prefix <- function(x, path = basename(normalizePath(".")), sep = ""){
+#     y = paste(getwd(), x, sep = sep)
+#     gsub("[.]","",y)
+#   }
+#   log_dirs = parent_prefix(log_dirs)
+#   log_dirs = log_dirs[grep(string,log_dirs)]
+# 
+#   all = data.frame()
+#   for (i in 1:length(log_dirs)){
+#     setwd(log_dirs[i])
+#     log_files <- list.files(pattern = filetype)
+#     out <- data.frame()
+#     for (i in 1:length(log_files)) {
+#       eg <-readLines(log_files[i]) #this makes distinct lines for log files
+#       serial.num <- as.character(grep("S/N: ", eg, value = TRUE))
+#       tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE),
+#                                as.numeric(gsub("\\D.\\D","",serial.num)),
+#                                as.character(getwd()), sep = " ")) #makes dataframe containing only tag detections
+#       out<-rbind(out,tmp)
+#     }
+#     all <- rbind(all, out)
+#   }
+#   names(all)[1]<-'xx'
+#   x1<-data.frame(date=as.Date(substr(all$xx,start=9,stop=18), format = "%m/%d/%Y"),
+#                  time=chron(times=substr(all$xx,start=20,stop=32)),
+#                  id=substr(all$xx,start=33,stop=48),
+#                  serial.num = as.character(substr(all$xx, start = 50, stop = 58)),
+#                  path = substr(all$xx, start=59, stop = length(all$xx)))
+#   x1$id<-gsub("[.]","",x1$id); x1$id<-paste("P_", x1$id, sep="")
+#   setwd(directory)
+#   m1 <- as.data.frame(lapply(read.csv('sn_map.csv'),as.character)) %>%
+#     mutate(start.date = as.Date(start.date, format = "%m/%d/%Y"),
+#            end.date = as.Date(end.date, format = "%m/%d/%Y"))
+#   m1 <- data.frame(lapply(read.csv('sn_map.csv'),as.character))
+#   #m1[1,2]=as.Date.character(lapply(m1[1,2],format = "%m/%d/%Y"))
+#   #m1$end.date=ifelse(!(is.na(m1$end.date)|m1$end.date==""), m1$end.date, format(Sys.Date(),"%m/%d/%Y"))
+#   x1$site <- m1$site[match(x1$serial.num, m1$serial.num)]
+#   x1$ent <- m1$ent[match(x1$serial.num, m1$serial.num)]
+#   return(x1)
+# #}
 
 
 # this is specific for MW data; format pit_id to match pit_mastr ids
@@ -425,35 +379,45 @@ mastr_dups = mastr_pit[duplicated(mastr_pit[,c("date", "time", "id")]),]
 # mastr_file$pit_id<-paste(substr(mastr_file$id,1,pl-1),".",substr(mastr_file$id,pl,nchar(mastr_file$id)),sep = "")
 # unique(mastr_file$pit_id)
 
+#### end workhorse ####
+
+mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW",
+                       string = "LOGGER_",
+                       map.file1 = m1)
 mastr_pit$pit_id = mastr_pit$id
+mastr_pit$pit_id<-paste("P_",mastr_pit$pit_id,sep="")
+
 
 ### 1c) Create pit_working file by merging mastr_file with m2 ####
 
 #DATES ACROSS DFS NEEDS TO BE THE SAME FORMAT, or MINIMALLY be named the same and site named the same!!
 #in this function, x = mastr_file (containing detections) and y = m2 (containing biological metrics and pit_ids)
-integrate_ids <- function(x, y, anchor_by){
-  #anchor_by = quote(anchor_by)
-  df <- merge(x, y, by = anchor_by) %>% #this database has all detections that were matched to a pit_id in m2
-    rename(date.detected = date.x,
-           site.detected = site.x,
-           site.tagged = site.y,
-           date.tagged = date.y)
-  return(df)
-}
+# integrate_ids <- function(x, y, joiner){
+#   #anchor_by = quote(anchor_by)
+#   df <- merge(x, y, by = joiner) %>% #this database has all detections that were matched to a pit_id in m2
+#     rename(date.detected = date.x)
+#   return(df)
+# }
 
 
 # Read in m2 file
-m2 <- read.csv("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv")
+#m2 <- read.csv("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv")
+
+m2 <- format_m2("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv",
+                date1 = date,
+                date.format = "%m/%d/%y",
+                id = pit_id)
+
 
 #select columns of biological data that should be joined to pit_mastr
 m2 =  m2 %>%
   filter(str_detect(pit_id, "P_")) %>%
-  select(pit_id, sex, date, species, site) %>%
-  mutate(date = format(as.Date(date, format = "%m/%d/%y"),"%m/%d/%Y")) %>%
+  select(pit_id, sex, date.tagged, species, site) %>%
+#  mutate(date = format(as.Date(date, format = "%m/%d/%y"),"%m/%d/%Y")) %>%
   group_by(pit_id) %>%
-  arrange(date) %>%
-  mutate(samp.event = as.integer(rank(date))) %>%
-  filter(samp.event==1) #this filters to first capture event
+  arrange(date.tagged) %>%
+  mutate(samp.event = as.integer(rank(date.tagged))) #%>%
+  #filter(samp.event==1) #this filters to first capture event
 
 err.ids = m2[duplicated(m2$pit_id)|duplicated(m2$pit_id, fromLast = TRUE),] #each bat should only be invcluded 1x in m2;
 # these 5 bats have multiple assignments from their initial 'tag date'
@@ -466,10 +430,15 @@ m2 = m2 %>%
 #check that no duplicates lingered; should be 0
 print(sum(duplicated(m2$pit_id)))
 
-# test integrate_id function that merges individual metadata from m2 to ids associated with detections
-pit_working <- integrate_ids(mastr_pit, m2, anchor_by = 'pit_id') #%>%
-
 #write.csv(m2, file="/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m2.csv", row.names = FALSE)
+
+# test integrate_id function that merges individual metadata from m2 to ids associated with detections
+#pit_working <- integrate_ids(mastr_pit, m2, joiner = 'pit_id') #%>%
+
+#working_pit <- left_join(mastr_pit, m2, by = 'pit_id')
+working_pit <- integrate_ids(mastr_pit, m2, 
+                              joiner = 'pit_id') # FUNCTIONALLY THIS IS JUST A LEFT JOIN THAT RENAMES COLUMNS AND REMOVES TEST TAGS??
+
 
 # from here, users should make sure that dates are formatted correctly across all columns
 
@@ -478,73 +447,20 @@ pit_working <- integrate_ids(mastr_pit, m2, anchor_by = 'pit_id') #%>%
 #Now, manipulate pit_working to format for specific needs
 # cmpr_id <- grouped by individual (pit_id)
 # cmpr_time <- grouped by time unit of interest (pop-level summaries?)
-
 # Need dfs that contain all possible dates readers were on (using test tag file) for survival object
 
-# Each df gets a family of functions to move through analyses
-# format dates
-pit_working = pit_working %>%
-  mutate(date.detected = format(as.Date(pit_working$date.detected, format = "%m/%d/%Y"),"%Y-%m-%d"),
-         date.tagged = format(as.Date(pit_working$date.tagged, format = "%m/%d/%Y"),"%Y-%m-%d"),
-         pit_date.detected = paste(pit_id, date.detected, sep = "_"))
 
-#pit_working$date.detected=format(as.Date(pit_working$date.detected, format = "%m/%d/%Y"),"%Y-%m-%d")
-#pit_working$date.tagged=format(as.Date(pit_working$date.tagged, format = "%m/%d/%Y"),"%Y-%m-%d") #%>%
+cmpr_ids_weeks <- compress_ids_date(x = working_pit, obs.groups =  c(pit_id, sex, site.detected), 
+                                    obs.unit = "weeks", date.colname = date)
+cmpr_ids_months <- compress_ids_date(x = working_pit, obs.groups = c(pit_id, sex, site.detected), 
+                                     obs.unit = "months", date.colname = date)
 
-#pit_working = pit_working %>% 
-#  mutate(pit_date.detected = paste(pit_id, date.detected, sep="_"))
-
-#how many detections each month/year?
-# x=pit_working
-# date.colname = 'date.detected'
-# print(noquote(date.colname))
-# 
-# y = x %>%
-#   mutate(date.colname=as.POSIXlt.character(noquote(date.colname))) #%>%
-#   group_by(pit_id, year(date.detected), month(date.detected)) %>%
-#   summarise(n.obs = length(unique(date.detected)))
-
-## This compresses to the number of unique observations within a time frame. ie: how many dates detected during week 40 of the year?
-compress_ids_date <- function(x, #name of working dataframe
-                             obs.groups = c(pit_id), #list of columns to group by 
-                             obs.unit = c("weeks","months","years"), #date units that the user wants to count number of days active by
-                             date.colname) { #name of date column in x for function to search by
-  if (obs.unit == "weeks") {
-    y = x %>%
-      #mutate(date.colname=as.Date.POSIXlt(date.colname)) %>%
-      group_by(across({{obs.groups}}), year({{date.colname}}), month({{date.colname}}), week({{date.colname}})) %>%
-      summarise(n.days = length(unique({{date.colname}})))
-#    colnames(z)<-gsub("(date.detected)","",colnames(z))
-    return(y)
-  }
-  if (obs.unit == "months") {
-    y = x %>%
-      group_by(across({{obs.groups}}), year({{date.colname}}), month({{date.colname}})) %>%
-      summarise(n.days = length(unique({{date.colname}})))
-  }
-  if (obs.unit == "years") {
-    y = x %>%
-      group_by(across({{obs.groups}}), year({{date.colname}})) %>%
-      summarise(n.days = length(unique({{date.colname}})))
-  }
-  return(y)
-}
-
-cmpr_ids_weeks <- compress_ids_date(x = pit_working, obs.groups =  c(pit_id, sex, site.detected), obs.unit = "weeks", date.colname = date.detected)
-cmpr_ids_months <- compress_ids_date(x = pit_working, obs.groups = c(pit_id, sex, site.detected), obs.unit = "months", date.colname = date.detected)
-
-## Make a similar function but on a nightly basis, where you can count hourly detections
+## Make a similar function but on a nightly basis, where you can count hourly detections ????
 
 # Format for survival analysis ####
 
 # figure out formatting for test tag detections to become sampling events
 
-## Need to extract test tag detections from mastr_pit to create test tag file
-m1 <- data.frame(lapply(read.csv('sn_map.csv'),as.character)) %>%
-  mutate(start.date = format(as.Date(start.date,"%m/%d/%y"), "%m/%d/%Y"), #formats date reader was deployed at site.ent
-         end.date = ifelse(is.na(end.date)|end.date=="", #if no end date provided (reader is still deployed),
-                           format(Sys.Date(),"%m/%d/%Y"), #this will assign current date for end date
-                           format(as.Date(end.date, "%m/%d/%y"), "%m/%d/%Y")))
 
 #filter to test tag detections only from mastr_pit
 mastr_tt <-  mastr_pit[mastr_pit$pit_id %in% m1$test.tag,]
@@ -552,37 +468,9 @@ mastr_tt <-  mastr_pit[mastr_pit$pit_id %in% m1$test.tag,]
 
 #test_tags <- read.csv("/Users/mkailing/Dropbox/Kailing_Projects/DATA/test_tags_temp.csv")
 
-#write functions to check operation of readers
-readr_check <- function(mapfile, mastr_pit, cutoff = 2,
-                        date1.format, date2.format){
-  m1 <- data.frame(lapply(read.csv('sn_map.csv'),as.character)) %>%
-    mutate(start.date = format(as.Date(start.date, date1.format), date2.format), #formats date reader was deployed at site.ent #"%m/%d/%y" #"%m/%d/%Y"
-           end.date = ifelse(is.na(end.date)|end.date=="", #if no end date provided (reader is still deployed),
-                             format(Sys.Date(), date2.format), #this will assign current date for end date if not provided
-                             format(as.Date(end.date, date1.format), date2.format)))
-  tt <- mastr_pit[mastr_pit$pit_id %in% m1$test.tag,]
-  readr_summary <- mastr_tt %>%
-    group_by(site, ent, date) %>%
-    summarise(test.tag_checks = length(unique(time))) %>%
-    mutate(operating = ifelse(test.tag_checks>=cutoff, "Y","N"))
-  return(readr_summary)
-}
-
-readr_ops <- readr_check(mapfile = "sn_map.csv", #if file is not stored in working directory, full file path will be required
-                         mastr_pit,
-                         cutoff = 3,
-                         date1.format = "%m/%d/%y",
-                         date2.format = "%m/%d/%Y")
-
-
-#  subset(length(unique(time))>=2) %>% #filter to test tags that fired at least twice in a day; can make this more specific if needed
-#  distinct(pit_id, site, ent, date) %>% #only keep distinct days for each site and entrance (reader)
-#  ungroup() %>%
-  #rename(dates.on = date) %>%
-#  mutate(date.detected = format(as.Date(date, format="%m/%d/%y"), "%Y-%m-%d"),
-#         ent = gsub("ent","",ent),
-#         reader_date = paste(site, ent, date.detected, sep = ".")) %>%
-#  select(-c(pit_id, date))
+systems_ops <- readr_check(x = mastr_pit, #if file is not stored in working directory, full file path will be required
+                           y = m1,
+                           min.reads = 3)
 
 #tt.list$date=format(as.Date(tt.list$date, format = "%m/%d/%Y"),"%Y-%m-%d")
 
@@ -614,6 +502,7 @@ print(min(pit7046$date.detected))
 
 ## need to expand working to include all unique dates on test tags to characterize 'sampling'
 ## need to filter out dates that occurred prior to tagging efforts!
+
 
 
 

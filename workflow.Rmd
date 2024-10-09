@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Getting started with _pitmastr_
 
-This document outlines recommendations by Kailing et al for step-by-step guidelines to store and structure PIT tag data and use the pitmastr package developed by the authors.
+This document outlines step-by-step recommendations by Kailing et al for storing and working with PIT tag data using pitmastr package developed by the authors.
 
 <div class = "alert alert-warning" role="alert">
 Prior to using _pitmastr_, **users should have the following:**
@@ -25,22 +25,32 @@ Prior to using _pitmastr_, **users should have the following:**
 <div style="color: black">
   - A <span style="background-color: #FFF9E4">common suffix/prefix appended to all folders</span> containing files downloaded from PIT tag reader. 
     - The main function of this package relies on a shared pattern string (i.e., suffix/prefix) to automate the search for files output from the readers. 
-    - Accordingly, parent folders (those assigned a shared prefix) should only contain the files output from the reader, and **should not** contain subfolders nested within them or other xlsx, txt, or log files. (see section ## for example folder structure)
-  - A <span style="background-color: #FFF9E4">map file, **m1**</span>, that contains connections between site names and reader based on serial number. Dates deployed at each site should be included if necessary (for example, if a reader was relocated to a different site).
+    - Accordingly, parent folders (those assigned a shared prefix) should only contain the files output from the reader, and **should not** contain subfolders or other xlsx, txt, or log files within them. (see section ## for example folder structure)
+  - A <span style="background-color: #FFF9E4">map file, **m1**</span>, that contains connections between reader (often site names) based on serial number. Dates deployed at each site should be included if necessary (for example, if a reader was relocated to a different site).
   - A <span style="background-color: #FFF9E4">second map file, **m2**</span>, that contains biological variables users want to link to individuals (i.e, sex, species, etc). *Note*, these data should not be time-varying (age, mass).
-  - A <span style="background-color: #FFF9E4">list file, **l1**</span>, containing IDs of test tags used to monitor system operation. If users, do not have this list available, IDs unmatched during join with m2 (map file containing biological variables) can be retained as test tags.
+
 </div>
+
+# Load 'pitmastr' package
+
+```{r}
+# through mkailing git repository
+# devtools::install_github(mkailing/pitmastr)
+
+# or if CRAN hosted
+# library(pitmastr)
+```
 
 # Data management
 
 ## File storage
 
-Depending on the type and settings of reader deployed and the reader's settings, the way detections are stored can vary. The folder structure we recommend accomodates most formats output by the readers *See below for caveat regarding .accdb. 
+The way detections on the reader are stored can vary depending on the model type and programmed settings. The folder structure we recommend accommodates most file types output by the readers *See below for caveat regarding .accdb. 
 
-  - Data downloaded as .log files will store detections by date, generating a single file for each. 
+  - Data downloaded as .log files will store detections by date in a single file.
   - Newer systems allow for the export of multiple dates worth of detections into a single .txt or xlsx file. 
   
-_pitmastr_ was created with this in mind and by storing as recommended users can simultaneously assemble all detections from the various frameworks.
+_pitmastr_ was created with this in mind and, by storing as recommended, users can simultaneously assemble all detections from the various filetypes.
 
 *_Users with detections stored as .accdb files are encouraged to export the table from MS Access as a .xlsx to be compatible with master file assembly through 'workhorse'_.
 
@@ -55,7 +65,43 @@ knitr::include_graphics("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/image
 
 ![In the above example, there exists multiple readers at a single site that need to remain distinct. Each reader is assigned a name that joins the site and entrance.]
 
-## Map files
+## Map file formats
+
+R objects are highly sensitive to date and time formats. To streamline data manipulations, prior to assembling or manipulating data, format your map files to ensure compatibility with subsequent data assembly functions. The data should be in long format for ease of use.
+
+### first, prepare your first mapping file that contains reader information  
+'format_map1' requires 4 arguments:
+
+  - **path.csv**, the file path where the map1 file that contains the dates, serial numbers, and locations (e.g., site names) of the readers
+  - **date1**, column name of the deployment dates (or start dates) of the readers at the respective site
+  - **date2**, column name of the last date the reader was deployed at the respective site
+  - **date.format**, the format of the dates in the map1 file. See 'as.Date' function in base R for acceptable formats.
+
+This function will default to the current date if the reader is still active at a site
+
+```{r}
+# read in first map file (m1) and auto format with format_map1 function
+# m1 <- format_map1(path.csv = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW/sn_map.csv",
+#                   date1 = start,
+#                   date2 = end,
+#                   date.format = "%m/%d/%y")
+
+```
+
+### second, prepare your second mapping file that contains biological data associated with individual ids
+'format_map2' requires 3 arguments:
+
+  - **path.csv**, the file path including the name of the map2 file that contains the biological data
+  - **date1**, column name of the sampling dates (or start dates) of the readers at the respective site
+
+```{r}
+# read in second map file (m2) and auto format with format_map2 function
+# m2 <- format_m2("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv",
+#                 date1 = date,
+#                 date.format = "%m/%d/%y",
+#                 id = pit_id)
+```
+
 
 <center>
 
@@ -66,32 +112,24 @@ knitr::include_graphics(c("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/ima
 </center>
 
 # Data assembly
-The first family of functions within _pitmastr_ are used to wrangle data stored in PIT tag files. The primary data integration function will search the user specified directory (path) to find all files output by readers, extract the detections from those files and serial numbers of readers, and assemble them in a master dataframe that can be exported or manipulated subsequently.
-
-## Load 'pitmastr' package
-```{r}
-# through mkailing git repository
-# devtools::install_github(mkailing/pitmastr)
-
-# or if CRAN hosted
-# library(pitmastr)
-```
+The first family of data functions within _pitmastr_ are used to wrangle data stored in PIT tag files. The primary data assembly function ('workhorse') will search the user specified directory (path) to find all files output by readers, extract the detections from those files and serial numbers of readers, and assemble them in a master dataframe that can be exported or manipulated subsequently.
 
 ## Assemble data...
 
 ### with **'workhorse'**
-The workhorse function was built to search all folders within the directory for each of the file types in which PIT detections could be stored by the readers and downloaded.
+The 'workhorse' function was built to search all folders within the directory for each of the file types that can be exported by the readers.
 
-'workhorse' requires two arguments: 
+'workhorse' requires three arguments: 
 
   - **path**, the directory containing folders that store files downloaded from readers
-  - **string**, the shared prefix/suffix that is appended to all parent folders
-  
-and a third argument is optional:
+  - **string**, the shared prefix/suffix appended to all parent folders
+  - **map.file1**, the name of the object created using 'format_map1'
 
-  - **remove.dup**, specify whether duplicated detections should be dropped from master dataframe once assemble (ie if one row is an exact match to another). 
-    - This argument defaults to "N", such that all rows will be retained even if exact match. 
-    - In many instances, duplicated rows may be an artifact of accidentally duplicated data and their removal is strongly suggested.
+and a fourth argument is optional:
+
+  - **remove.dup**, specify whether duplicated detections should be dropped from master dataframe once assembled (i.e., if one row is an exact match to another). 
+    - This argument defaults to "N", such that all rows will be retained even if exact matches exist. 
+    - In most instances, duplicated rows are an artifact of accidentally duplicated data; 'remove.dup="Y"' is strongly suggested.
 
 In our example dataset, the highest folders are the primary site names. Within them, the *_parent folders_* contain the prefix "LOGGER_", which is the pattern we call to the function indicating which folders to search for files containing detections from readers. The path up to the parent folder name will be included as a column in the returned object.
 
@@ -109,10 +147,10 @@ In our example dataset, the highest folders are the primary site names. Within t
 ```
 
 
-### with **'single_extract'**
-The 'single_extract' function may be beneficial for users that prefer to create a smaller object of detections from one reader/one file type.
+### with **'extract'**
+The 'extract_' functions may be beneficial for users that prefer to create a smaller object of detections from one reader/one file type. If desired, these objects can eventually be merged to one large dataframe using base R's 'rbind' function.
 
-'single_extract' requires two arguments:
+'extract' requires two arguments:
 
   - **path**, the folder containing files downloaded from reader
   - **filetype**, the extension for the type of file storing detections from the reader
@@ -123,40 +161,70 @@ The 'single_extract' function may be beneficial for users that prefer to create 
 ```
 
 
-## Link individuals' metrics to PIT detections using 'integ_ids'
-The 'integrate_ids' function allows users to combine metadata from individuals to detections. 
+## Link individuals' metrics to PIT detections using 'integrate_ids'
+The 'integrate_ids' function allows users to combine metadata on individuals to detections. 
 
 'integrate_ids' requires three arguments:
 
   - **x**, the df containing detections (ie the object created with 'workhorse' or an object written with 'extract')
-  - **y**, the map file, m3, containing individual metadata (i.e., species, sex, tag location, tag date) 
+  - **y**, the map2 file, m2, containing individual metadata (i.e., species, sex, tag location, tag date) 
     _Note_: only time-independent variables may properly match. Time-varying factors that get included, such as mass, may not be properly reflected with detection dates
-  - **anchor_by**, the name of the column containing PIT tag IDs that is shared between the master file and map file 3. In our example, we rename to 'id' to match the mastr_file created by 'workhorse'
+  - **joiner**, the name of the column containing PIT tag IDs that is shared between the master file and map file 2. In our example, we rename to 'id' to match the mastr_file created by 'workhorse'
 
 ```{r}
-#pit_working <- integ_ids(mastr_pit, m2, anchor_by = 'pit_id')
+# working_pit <- integ_ids(mastr_pit, m2, 
+#                          joiner = 'pit_id',
+#                          drop.tt = "Y")
+
+## ------------- OR
+
+# working_pit <- integ_ids(mastr_pit, m2, 
+#                          joiner = 'pit_id',
+#                          drop.tt = "N")
+  
 ```
 
 
 # Data manipulation
-This family of functions will create objects for users to use in simple statistical models and survival analyses.
+This family of functions will create objects that users can use in simple statistical models and survival analyses.
 
-'compress_id_date' function will return a dataframe object of data summarized by PIT tag ID and user-specific date time units. It requires XX arguments:
+'compress_id_date' function will return a dataframe with data summarized by PIT tag ID (or other grouping variables) and user-specific date time units. It requires XX arguments:
 
-  - **x**, the df containing detections and desired grouping variables. In our example we use the object returned from 'integrate_ids'
+  - **x**, the df containing detections and desired grouping variables. In our example, we use the object returned from 'integrate_ids'
   - **obs.groups**, a list of column names by which the user wants data to be structured and summarized
   - **obs.units**, the time unit by which to summarize observations
   
-'compress_id_surv' fucntion return an object that can be used to perform survival analyses by way of the survival package. It requires XX arguments:
+```{r}
+# cmpr_ids_weeks <- compress_ids_date(x = working_pit, 
+#                                     obs.groups =  c(pit_id, sex, site.detected),
+#                                     obs.unit = "weeks", date.colname = date)
 
-  - **x**, the df containing all detections by date
-  - **y**, the df containing all observation events (ie. PIT tag readers were operational) by date
+## ------- OR
+
+# cmpr_ids_months <- compress_ids_date(x = working_pit, 
+#                                      obs.groups = c(pit_id, sex, site.detected),
+#                                      obs.unit = "months", date.colname = date)
+
+```
 
 
-# Data exploration
+'compress_id_surv' function return an object that can be used to perform survival analyses by way of the survival package (see . It requires XX arguments:
 
-## Generating plots with Shiny
+  - **x**, name of the df containing all detections by date
+  - **y**, name of the df containing all observation events (ie. PIT tag readers were operational) by date
 
-## Survival analyses with 'survival' package
+
+# Explore data using Shiny plots
 
 # Check status of readers
+These functions are to evaluate the consistency (or identify gaps) in system operation.
+
+'readr_check' will return a dataframe that counts the number of times a test tag was fired (metric for whether reader was working) by date for each system. It requires 3 arguments:
+  - **x**, name of the object containing all detections (e.g., objects returned from the 'workhorse' function)
+  - **y**, name of the map 1 file (e.g. objects returned from format_map1) that contains the list of test tag IDs
+  - **min.reads**, minimum number of test tag fires needed in a day for a system to be considered 'operating'. The value defaults to 2.
+  
+```{r}
+
+```
+

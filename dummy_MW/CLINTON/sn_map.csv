@@ -1,4 +1,18 @@
-site,ent,serial.num
-MAIDEN ROCK,1,1929.3116
-NEDA MINE,2,2131.4182
-NEDA MINE,4,2032.3563
+start.date,end.date,site,ent,serial.num,test.tag,notes
+8/1/19,,MAIDEN ROCK,1,1929.3116,P_999.000000007425,side door
+8/1/19,,MAIDEN ROCK,2,,,main entrance
+8/1/19,,MAIDEN ROCK,3,,,pigeon alley
+8/1/19,,MAIDEN ROCK,4,,,big culvert
+8/1/19,,NEDA MINE,2,2131.4182,P_999.000000007425,in rock hole
+8/1/19,,NEDA MINE,4,2032.3563,P_999.000000007428,"bees, far"
+8/1/19,,NEDA MINE,1,,,culvert
+8/30/23,,NEDA MINE,3,,,cupola 
+9/8/23,,CLINTON,1,,P_999.000000007425,
+10/23/23,,HAILES,1,,P_999.000000007425,
+9/1/24,,BARTON,1,,,upper
+9/1/24,,BARTON,2,,,lower
+8/1/19,,BAY CITY,1,,,large door on hill
+8/1/19,,BAY CITY,2,,,white door
+,,,,,,
+,,,,,,
+MACY: FIGURE OUT WHEN NUMBERS SWITCHED AND SERIAL NUMBERS SHIFTED!?,,,,,,
