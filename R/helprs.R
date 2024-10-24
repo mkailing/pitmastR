@@ -2,7 +2,7 @@
 # downloaded from BioMark PIT tagging systems
 
 ###### clear work environment ##########
-rm(list=ls())
+#rm(list=ls())
 
 library(devtools)
 
@@ -15,9 +15,11 @@ library(reshape2)
 library(stringr)
 library(ggplot2) #will use to plot summary stats and
 library(lubridate) #to convert and work with dates
+#library(anytime)
 library(readxl) #use to read in xlsx files from readers
 library(mark) #use to extract dates from log files
-
+library(gridExtra)
+#Run scripts with functions
 
 ### MACY NOTES: ####
 # Consider ways to perform QA/QC checks? 1) set list of permissible calls within each function
@@ -31,22 +33,11 @@ library(mark) #use to extract dates from log files
 #library(available)
 #available::available('pitmastr')
 
-# function for pdates (probably can pull, will use lubridate instead)
-# pdate <- function(x, month0 = 7) {
-#   x=as.Date(as.character(x), format="%m/%d/%y")
-#   y=colsplit(x, "-",c("Y","m","d"))
-#   pd=(y$d/31)
-#   x=pd+y$m
-#   ifelse(x<month0, x+12, x)
-# }
-
-#pit_test$pdate = pdate(pit_test$date)
 
 # i) Files to be supplied by user: ####
-## .log files within parent directory
+## reader files within parent directory
 ## M1 <- metadata file 1 containing S/Ns associated with site names (likely to match naming in file pathways)
 ## M2 <- metadata file 2 containing tag IDS and biological information on tagged individual (sex, species, date tagged, etc); *currently deals with only metrics that are not time-varying
-## M3 <- list of all test tag IDS to drop from master file
 
 
 #place individual log files within these folders.
@@ -56,8 +47,9 @@ library(mark) #use to extract dates from log files
 
 m1 <- format_m1(path.csv = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW/sn_map.csv",
                   date1 = start,
-                  date2 = end,
-                  date.format = "%m/%d/%y")
+                  date2 = end)
+
+#m1.test <- read.csv("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW/sn_map.csv")
 
 ## 1) DATA ASSEMBLY ####
 
@@ -381,54 +373,45 @@ mastr_dups = mastr_pit[duplicated(mastr_pit[,c("date", "time", "id")]),]
 
 #### end workhorse ####
 
+# mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW",
+#                        string = "LOGGER_",
+#                        map.file1 = m1)
+
 mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW",
                        string = "LOGGER_",
                        map.file1 = m1)
+
+# mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/MIDWEST_WNS/MIDWEST_PIT/DATA",
+#                        string = "LOGGER_",
+#                        map.file1 = m1,
+#                        remove.dup = "Y")
+
 mastr_pit$pit_id = mastr_pit$id
 mastr_pit$pit_id<-paste("P_",mastr_pit$pit_id,sep="")
 
 
 ### 1c) Create pit_working file by merging mastr_file with m2 ####
 
-#DATES ACROSS DFS NEEDS TO BE THE SAME FORMAT, or MINIMALLY be named the same and site named the same!!
-#in this function, x = mastr_file (containing detections) and y = m2 (containing biological metrics and pit_ids)
-# integrate_ids <- function(x, y, joiner){
-#   #anchor_by = quote(anchor_by)
-#   df <- merge(x, y, by = joiner) %>% #this database has all detections that were matched to a pit_id in m2
-#     rename(date.detected = date.x)
-#   return(df)
-# }
-
 
 # Read in m2 file
-#m2 <- read.csv("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv")
+#m2.test <- read.csv("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv")
 
 m2 <- format_m2("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv",
                 date1 = date,
-                date.format = "%m/%d/%y",
-                id = pit_id)
+                id.colname = pit_id,
+                keep.cols = c(sex, species, age, mass, site)
+                )
 
-
-#select columns of biological data that should be joined to pit_mastr
-m2 =  m2 %>%
-  filter(str_detect(pit_id, "P_")) %>%
-  select(pit_id, sex, date.tagged, species, site) %>%
-#  mutate(date = format(as.Date(date, format = "%m/%d/%y"),"%m/%d/%Y")) %>%
-  group_by(pit_id) %>%
-  arrange(date.tagged) %>%
-  mutate(samp.event = as.integer(rank(date.tagged))) #%>%
-  #filter(samp.event==1) #this filters to first capture event
-
-err.ids = m2[duplicated(m2$pit_id)|duplicated(m2$pit_id, fromLast = TRUE),] #each bat should only be invcluded 1x in m2;
+#err.ids = m2[duplicated(m2$pit_id)|duplicated(m2$pit_id, fromLast = TRUE),] #each bat should only be invcluded 1x in m2;
 # these 5 bats have multiple assignments from their initial 'tag date'
 
 # Check if tags in error table can be resolved, if not, remove pit_ids that are in error df
-m2 = m2 %>%
-  filter(!(pit_id %in% err.ids$pit_id)) %>%
-  select(-samp.event)
+# m2 = m2 %>%
+#   filter(!(pit_id %in% err.ids$pit_id)) %>%
+#   select(-samp.event)
 
 #check that no duplicates lingered; should be 0
-print(sum(duplicated(m2$pit_id)))
+#print(sum(duplicated(m2$pit_id)))
 
 #write.csv(m2, file="/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m2.csv", row.names = FALSE)
 
@@ -437,10 +420,231 @@ print(sum(duplicated(m2$pit_id)))
 
 #working_pit <- left_join(mastr_pit, m2, by = 'pit_id')
 working_pit <- integrate_ids(mastr_pit, m2, 
-                              joiner = 'pit_id') # FUNCTIONALLY THIS IS JUST A LEFT JOIN THAT RENAMES COLUMNS AND REMOVES TEST TAGS??
-
+                             joiner = 'pit_id',
+                             drop.tt = "Y") # FUNCTIONALLY THIS IS JUST A LEFT JOIN THAT RENAMES COLUMNS AND REMOVES TEST TAGS??
 
 # from here, users should make sure that dates are formatted correctly across all columns
+
+## NETWORK ANALYSIS ####
+
+# write function to set up network objects at various level (sampling units, ie reader)
+networkit_workit <- function(df){
+  unit.vec <- unique(working_pit$reader)
+  va <- data.frame()
+  ed <- data.frame()
+  pl <- list()
+  #tg <- data.frame()
+  for (i in 1:length(unit.vec)){
+    x <- working_pit %>%
+      filter(reader == unit.vec[i],
+             sex=="F"|sex=="M") %>%
+      group_by(date, pit_id,
+               #hour(hms(time)),
+               species, sex) %>%
+      summarise(n = 1) %>%
+      ungroup()
+    
+    #set up matrix
+    x.cmx <- crossprod(table(x[1:2]))
+    diag(x.cmx) <- 0
+    x.netdf <- as.data.frame(x.cmx)
+    
+    #set up edge table
+    x.ed <- x.netdf %>%
+      mutate(from = rownames(.)) %>%
+      gather(to, n, 1:ncol(x.netdf)) %>%
+      filter(n!=0) %>%
+      mutate(reader = unit.vec[i])
+    
+    #set up node/vertices
+    x.va <- x %>% 
+      rename(node = pit_id) %>%
+      # group the data by the 'node' column
+      group_by(node) %>%
+      # summarize the data, calculating the total occurrences ('n') for each 'node'
+      summarise(n = sum(n)) %>%
+      mutate(reader = unit.vec[i]) %>%
+      #relocate(node) %>%
+      ungroup()
+    
+    x.va$sex = x$sex[match(x.va$node, x$pit_id)]
+    x.va$species = x$species[match(x.va$node, x$pit_id)]
+    
+    va <- rbind(va, x.va)
+    ed <- rbind(ed, x.ed)
+    
+    ig <- graph_from_data_frame(d = x.ed, vertices = x.va, directed = FALSE)
+    
+    x.tg <- as_tbl_graph(ig) %>%
+      activate(nodes) %>%
+      mutate(label = name)
+    
+    #set.seed(1991)
+    
+    # plot network
+    p <- ggraph(graph = x.tg, layout = "kk") +
+      ggtitle(unit.vec[i]) +
+      #facet_edges(~reader) +
+      geom_edge_arc(aes(edge_width = x.ed$n,
+                        edge_alpha = x.ed$n),
+                    colour = "black",
+                    lineend = "round",
+                    strength = .1) +
+      geom_node_point(aes(size = x.va$n,
+                          color = x.va$sex)) +
+      # geom_node_text(aes(label = name), 
+      #                repel = TRUE, 
+      #                point.padding = unit(0.2, "lines"), 
+      #                size = (net_objs[[1]]$n), 
+      #                colour = "gray10") +
+      #scale_edge_width(range = c(0.1,2.5)) +
+      #scale_edge_alpha(range = c(0.1,0.3)) +
+      #scale_size_continuous(range = c(1,5)) +
+      theme_graph(background = 'white') +
+      guides(edge_width = 'none',
+             edge_alpha = 'none')
+    
+    #pl <- p[i]
+  }
+  return(list(va, ed, pl))
+}
+
+
+# li = list('java','python')
+# li2 <- append(li,'r')
+# print(li2)
+#print(net_objs[[3]])
+
+# create objects for network plot and analyses
+net_objs <- networkit_workit(working_pit)
+View(net_objs[[1]]);View(net_objs[[2]])
+print(net_objs[[3]][[1]])
+
+library(igraph)
+library(tidygraph)
+library(ggraph)
+library(cowplot)
+
+ig <- graph_from_data_frame(d = net_objs[[2]], vertices = net_objs[[1]], directed = FALSE)
+
+x.tg <- as_tbl_graph(ig) %>%
+  activate(nodes) %>%
+  mutate(label = name#,
+         #samp.unit == unit.list[i]
+         )
+#map(x.tg, .f = )
+
+
+## manual code for creating network df ####
+pit_sum <- working_pit %>%
+#  subset(reader==reader.list[i]) %>%
+  group_by(date, pit_id,
+           #hour(hms(time)),
+           species, sex) %>%
+  summarise(n = 1) #%>%
+
+net_cmx <- crossprod(table(pit_sum[1:2])) #%>%
+diag(net_cmx) <- 0
+
+net_df <- as.data.frame(net_cmx)
+
+pit_sum %>% dplyr::rename(node = pit_id) %>%
+  # group the data by the 'node' column
+  dplyr::group_by(node, species, sex) %>%
+  # summarize the data, calculating the total occurrences ('n') for each 'node'
+  dplyr::summarise(n = sum(n)) -> pit_va
+
+pit_ed <- net_df %>%
+  mutate(from = rownames(.)) %>%
+  gather(to, n, 1:ncol(net_df)) %>%
+  filter(n!=0)
+
+## end manual code for creating network objects ####
+
+
+set.seed(1991)
+
+x.tg %>%
+  ggraph(layout = "kk") +
+  facet_edges(~reader) +
+  geom_edge_arc(colour = "black",
+                lineend = "round",
+                strength = .1,
+                aes(edge_width = net_objs[[2]]$n,
+                    alpha = net_objs[[2]]$n)) +
+  geom_node_point(aes(size = net_objs[[1]]$n,
+                      color = net_objs[[1]]$sex #,
+                      #shape = net_objs$site.x
+                      )) +
+  # geom_node_text(aes(label = name), 
+  #                repel = TRUE, 
+  #                point.padding = unit(0.2, "lines"), 
+  #                size = (net_objs[[1]]$n), 
+  #                colour = "gray10") +
+  scale_edge_width(range = c(0.1,2.5)) +
+  scale_edge_alpha(range = c(0.1,0.3)) +
+  scale_size_continuous(range = c(1,5)) +
+  theme_graph(background = 'white') +
+  guides(#edge_width = 'none',
+    edge_alpha = 'none')
+
+# write function to set up network viz objects (igraph and tidygraph)
+# graph_objects <- function (net_objs, samp.unit) {
+#   
+# }
+
+pit_ig <- graph_from_data_frame(d=pit_ed, vertices = pit_va, directed=FALSE)
+pit_tg <- as_tbl_graph(pit_ig) %>%
+  activate(nodes) %>%
+  mutate(label=name)
+
+set.seed(1991)
+
+x.tg %>%
+  ggraph(layout = "kk") +
+  facet_edges(~reader) +
+  geom_edge_arc(colour = "black",
+                lineend = "round",
+                strength = .1,
+                aes(edge_width = net_objs[[2]]$n,
+                    alpha = net_objs[[2]]$n)) +
+  # geom_node_point(aes(size = net_objs[[1]]$n,
+  #                     color = net_objs[[1]]$sex,
+                      #shape = pit_va$site.x
+                      # )) +
+  # geom_node_text(aes(label = name), 
+  #                repel = TRUE, 
+  #                point.padding = unit(0.2, "lines"), 
+  #                size = (net_objs[[1]]$n), 
+  #                colour = "gray10") +
+  scale_edge_width(range = c(0.1,2.5)) +
+  scale_edge_alpha(range = c(0.1,0.3)) +
+  scale_size_continuous(range = c(1,5)) +
+  theme_graph(background = 'white') +
+  guides(#edge_width = 'none',
+         edge_alpha = 'none')
+
+# calculate degree centrality
+dg_pit <- pit_ed[rep(seq_along(pit_ed$n),pit_ed$n), 1:2]
+dgg_pit <- graph_from_edgelist(as.matrix(dg_pit), directed = T)
+degree(dgg_pit) %>%
+  as.data.frame() %>%
+  rownames_to_column('node') %>%
+  rename(degree_centrality = 2) %>%
+  arrange(-degree_centrality) -> pit_dc_tbl
+
+# extract most central nodes
+names(degree(dgg_pit))[which(degree(dgg_pit)==max(degree(dgg_pit)))]
+
+# calculate betweenness centrality
+betweenness(dgg_pit) %>%
+  as.data.frame() %>%
+  rownames_to_column('node') %>%
+  rename(betweenness_centrality = 2) %>%
+  arrange(-betweenness_centrality) -> pit_bc_tbl
+# extract most betweenness centrality
+names(igraph::betweenness(dgg_pit))[which(igraph::betweenness(dgg_pit) == max(igraph::betweenness(dgg_pit)))]
+
 
 ## DATA MANIPULATION ####
 
@@ -449,10 +653,10 @@ working_pit <- integrate_ids(mastr_pit, m2,
 # cmpr_time <- grouped by time unit of interest (pop-level summaries?)
 # Need dfs that contain all possible dates readers were on (using test tag file) for survival object
 
-
-cmpr_ids_weeks <- compress_ids_date(x = working_pit, obs.groups =  c(pit_id, sex, site.detected), 
+#without assigning reader and site using m1, the site here is site.tagged. Need to resolve where site.detected gets looped in?
+cmpr_ids_weeks <- compress_ids_date(x = working_pit, obs.groups =  c(pit_id, sex, site), 
                                     obs.unit = "weeks", date.colname = date)
-cmpr_ids_months <- compress_ids_date(x = working_pit, obs.groups = c(pit_id, sex, site.detected), 
+cmpr_ids_months <- compress_ids_date(x = working_pit, obs.groups = c(pit_id, sex, site), 
                                      obs.unit = "months", date.colname = date)
 
 ## Make a similar function but on a nightly basis, where you can count hourly detections ????
@@ -463,14 +667,20 @@ cmpr_ids_months <- compress_ids_date(x = working_pit, obs.groups = c(pit_id, sex
 
 
 #filter to test tag detections only from mastr_pit
-mastr_tt <-  mastr_pit[mastr_pit$pit_id %in% m1$test.tag,]
+#mastr_tt <-  mastr_pit[mastr_pit$pit_id %in% m1$test.tag,]
 #use this file to create sampling events for survival analysis
 
 #test_tags <- read.csv("/Users/mkailing/Dropbox/Kailing_Projects/DATA/test_tags_temp.csv")
 
-systems_ops <- readr_check(x = mastr_pit, #if file is not stored in working directory, full file path will be required
+system_ops <- readr_check(x = mastr_pit,
                            y = m1,
-                           min.reads = 3)
+                           site.col = path, #if serial numbers and readers can't be matched from m1, we can use the path for reader name
+                           min.reads = 3) %>%
+  subset(year(date)>2016)
+
+plot_system_ops <- readr_viz(df = system_ops,
+                             site.col = path)
+
 
 #tt.list$date=format(as.Date(tt.list$date, format = "%m/%d/%Y"),"%Y-%m-%d")
 
@@ -503,7 +713,19 @@ print(min(pit7046$date.detected))
 ## need to expand working to include all unique dates on test tags to characterize 'sampling'
 ## need to filter out dates that occurred prior to tagging efforts!
 
-
+# format_m1 <-function(path.csv, 
+#                        date1, date2,
+#                        date.format) {
+#   x <- data.frame(lapply(read.csv(path.csv),as.character)) %>%
+#     rename(start.date := {{date1}},
+#            end.date := {{date2}}) %>%
+#     mutate(start.date = format(as.Date(start.date,date.format), "%Y-%m-%d"),
+#            end.date = ifelse(is.na(end.date)|end.date=="",
+#                              format(Sys.Date(), "%Y-%m-%d"),
+#                              format(as.Date(end.date,date.format), "%Y-%m-%d")),
+#            serial.num = ifelse(is.na(serial.num), NA, format(as.numeric(serial.num), nsmall = 4)))
+#   return(x)
+# }
 
 
 # EXTRA CODE: ####

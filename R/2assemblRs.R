@@ -47,7 +47,7 @@ workhorse <- function(directory, string, remove.dup = "N", map.file1){
         out2<-rbind(out2,tmp)
       }
       colnames(out2)<-'xx'
-      x2<-data.frame(date = str_extract(out2$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"),
+      x2<-data.frame(date = str_extract(out2$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #does this change with PC vs MAC?
                      time=chron(times=str_extract(out2$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
                      id = str_extract(out2$xx, "\\d{3}[.]\\d{12}"),
                      serial.num = str_extract(out2$xx, "\\d{4}[.]\\d{4}"),

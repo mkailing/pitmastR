@@ -1,6 +1,6 @@
 ---
 title: "_pitmastr_: a standardized workflow for working with PIT tag data"
-date: "2024-07-03"
+date:
 output: 
   html_document:
     theme: flatly
@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Getting started with _pitmastr_
 
-This document outlines step-by-step recommendations by Kailing et al for storing and working with PIT tag data using pitmastr package developed by the authors.
+This document serves as a step-by-step guide by Kailing et al for storing and working with PIT tag data using 'pitmastr' package.
 
 <div class = "alert alert-warning" role="alert">
 Prior to using _pitmastr_, **users should have the following:**
@@ -67,9 +67,18 @@ knitr::include_graphics("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/image
 
 ## Map file formats
 
-R objects are highly sensitive to date and time formats. To streamline data manipulations, prior to assembling or manipulating data, format your map files to ensure compatibility with subsequent data assembly functions. The data should be in long format for ease of use.
+R objects are highly sensitive to date and time formats. To streamline data manipulations, prior to assembling or manipulating data, format your map files to ensure compatibility with subsequent data assembly functions. The data should be in long format for ease of use. Below is an example of map file structure.
 
-### first, prepare your first mapping file that contains reader information  
+<center>
+
+```{r echo=FALSE}
+knitr::include_graphics(c("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m1_example.png","/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m2_indmeta.png"))
+```
+
+</center>
+
+
+### first, prepare your map1 file that contains reader information
 'format_map1' requires 4 arguments:
 
   - **path.csv**, the file path where the map1 file that contains the dates, serial numbers, and locations (e.g., site names) of the readers
@@ -86,33 +95,32 @@ This function will default to the current date if the reader is still active at 
 #                   date2 = end,
 #                   date.format = "%m/%d/%y")
 
+#check dataframe
+# head(m1); tail(m1)
 ```
 
-### second, prepare your second mapping file that contains biological data associated with individual ids
+### second, prepare your map2 file that contains biological data associated with individuals
 'format_map2' requires 3 arguments:
 
   - **path.csv**, the file path including the name of the map2 file that contains the biological data
   - **date1**, column name of the sampling dates (or start dates) of the readers at the respective site
+  - **date.format**, the format of the dates in the map1 file. See 'as.Date' function in base R for acceptable formats.
+  - **id.col**, column name that stores pit tag IDs
 
 ```{r}
 # read in second map file (m2) and auto format with format_map2 function
 # m2 <- format_m2("~/Dropbox/MIDWEST_WNS/DATA/midwest_master.csv",
 #                 date1 = date,
 #                 date.format = "%m/%d/%y",
-#                 id = pit_id)
+#                 id.col = pit_id)
+
+# check dataframe
+# head(m2); tail(m2)
 ```
 
-
-<center>
-
-```{r echo=FALSE}
-knitr::include_graphics(c("/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m1_sernums.png","/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/images/m2_indmeta.png"))
-```
-
-</center>
 
 # Data assembly
-The first family of data functions within _pitmastr_ are used to wrangle data stored in PIT tag files. The primary data assembly function ('workhorse') will search the user specified directory (path) to find all files output by readers, extract the detections from those files and serial numbers of readers, and assemble them in a master dataframe that can be exported or manipulated subsequently.
+The first family of data functions within _pitmastr_ are used to wrangle data stored in PIT tag files. The primary data assembly function ('workhorse') will search the user specified directory (path) to find all files output by readers, extract the detections from those files and serial numbers of readers, and assemble them in a master dataframe that can be exported or manipulated subsequently. Objects returned from any of the assembly functions will have shared structure, so they can be combined easily using 'rbind' in base R.
 
 ## Assemble data...
 
@@ -123,7 +131,7 @@ The 'workhorse' function was built to search all folders within the directory fo
 
   - **path**, the directory containing folders that store files downloaded from readers
   - **string**, the shared prefix/suffix appended to all parent folders
-  - **map.file1**, the name of the object created using 'format_map1'
+  - **map.file1**, the name of an object created using 'format_map1'
 
 and a fourth argument is optional:
 
@@ -134,15 +142,15 @@ and a fourth argument is optional:
 In our example dataset, the highest folders are the primary site names. Within them, the *_parent folders_* contain the prefix "LOGGER_", which is the pattern we call to the function indicating which folders to search for files containing detections from readers. The path up to the parent folder name will be included as a column in the returned object.
 
 ```{r}
-#df1 <- workhorse(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
-#                 string = "LOGGER_",
-#                 remove.dup = "N") #retain all rows
+# mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW",
+#                        #map.file1 = m1,
+#                        string = "LOGGER_")
 
 ## -------- OR
 
-#df1 <- workhorse(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW",
-#                 string = "LOGGER_",
-#                 remove.dup = "Y") #drops rows that have exact match with previous row (keeps single detection)
+# mastr_pit <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/dummy_MW",
+#                        string = "LOGGER_", 
+#                        remove.dup = "Y") #drops rows that have exact match with previous row (keeps single detection)
 
 ```
 
@@ -156,7 +164,7 @@ The 'extract_' functions may be beneficial for users that prefer to create a sma
   - **filetype**, the extension for the type of file storing detections from the reader
 
 ```{r}
-#df2 <- extract(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/pitmastr_test", 
+#df2 <- extract_txt(path = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/test_MW/pitmastr_test", 
 #               filetype = ".txt")
 ```
 
@@ -172,13 +180,13 @@ The 'integrate_ids' function allows users to combine metadata on individuals to 
   - **joiner**, the name of the column containing PIT tag IDs that is shared between the master file and map file 2. In our example, we rename to 'id' to match the mastr_file created by 'workhorse'
 
 ```{r}
-# working_pit <- integ_ids(mastr_pit, m2, 
+# working_pit <- integrate_ids(mastr_pit, m2,
 #                          joiner = 'pit_id',
 #                          drop.tt = "Y")
 
 ## ------------- OR
 
-# working_pit <- integ_ids(mastr_pit, m2, 
+# working_pit <- integrate_ids(mastr_pit, m2,
 #                          joiner = 'pit_id',
 #                          drop.tt = "N")
   
@@ -193,38 +201,59 @@ This family of functions will create objects that users can use in simple statis
   - **x**, the df containing detections and desired grouping variables. In our example, we use the object returned from 'integrate_ids'
   - **obs.groups**, a list of column names by which the user wants data to be structured and summarized
   - **obs.units**, the time unit by which to summarize observations
+  - **date.colname**, column name for date to summarize by
   
 ```{r}
-# cmpr_ids_weeks <- compress_ids_date(x = working_pit, 
+# cmpr_ids_weeks <- compress_ids_date(x = working_pit,
 #                                     obs.groups =  c(pit_id, sex, site.detected),
 #                                     obs.unit = "weeks", date.colname = date)
 
 ## ------- OR
 
-# cmpr_ids_months <- compress_ids_date(x = working_pit, 
+# cmpr_ids_months <- compress_ids_date(x = working_pit,
 #                                      obs.groups = c(pit_id, sex, site.detected),
 #                                      obs.unit = "months", date.colname = date)
 
 ```
 
-
 'compress_id_surv' function return an object that can be used to perform survival analyses by way of the survival package (see . It requires XX arguments:
 
   - **x**, name of the df containing all detections by date
   - **y**, name of the df containing all observation events (ie. PIT tag readers were operational) by date
-
-
-# Explore data using Shiny plots
+  
+- MACY WILL MANIPULATE mastr_pit TO INCLUDE ALL POSSIBLE SAMPLE EVENTS BASED ON READERS AND MAKE AN OBJECT COMPATIBLE WITH 'survival'
 
 # Check status of readers
-These functions are to evaluate the consistency (or identify gaps) in system operation.
+
+These functions are to evaluate the consistency (or identify gaps) in system operation and to create survival object (such that days when systems are running are considered a 'sample event').
 
 'readr_check' will return a dataframe that counts the number of times a test tag was fired (metric for whether reader was working) by date for each system. It requires 3 arguments:
+
   - **x**, name of the object containing all detections (e.g., objects returned from the 'workhorse' function)
-  - **y**, name of the map 1 file (e.g. objects returned from format_map1) that contains the list of test tag IDs
+  - **y**, name of the map 1 file or (e.g. objects returned from format_map1) or vector that contains the list of test tag IDs
+  - **site.col**, site (i.e., reader) column name in x. This allows user to evaluate coverage of each reader
   - **min.reads**, minimum number of test tag fires needed in a day for a system to be considered 'operating'. The value defaults to 2.
   
 ```{r}
-
+# system_ops <- readr_check(x = mastr_pit, #if file is not stored in working directory, full file path will be required
+#                            y = m1,
+#                            min.reads = 3) 
 ```
+  
+'readr_viz' will summarize test tag detections by user-defined time frame and plot output as ggplot object. It requires 2 arguments:
+
+  - **df**, name of the dataframe that summarizes test tags fired (e.g., the object returned using readr_check)
+  - **site.col**, column name that distinguishes readers
+
+- MACY WILL MAKE THIS PLOT MORE APPEALING!!
+
+```{r}
+# plot_system_ops <- readr_viz(df = system_ops,
+#                               site.col = path)
+```
+
+# Explore data using Shiny plots
+
+- MACY WOULD INSERT SHINY APP/OR FUNCTIONS FOR BUILDING SIMPLE PLOTS HERE!!
+
 
