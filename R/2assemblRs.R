@@ -2,8 +2,22 @@
 
 
 # Massive function to assemble data from various folders and file types
-### NEED TO DROP DUPLICATES THAT AREN'T TEST TAGS!
-workhorse <- function(directory, string, remove.dup = "N", map.file1){
+### NOTES ON WORKHORSE: NEED TO DROP DUPLICATES THAT AREN'T TEST TAGS, BETTER: WRITE TEST TAG FILE FIRST!!
+
+#' @title
+#' primary assembler for joining detections
+#' 
+#' @description
+#' workhorse searches across subfolders of a specified directory to extract all tag reads
+#' 
+#' @details 
+#' This function iteratively searches among subfolders for each of the different file types in which tag reads can be stored. Each detection is stored as a row with the respected systems information (serial.number, site, folder location)
+#' stored with the output. ELABORATE ON MORE SPECIFICS!
+#' @param directory path to directory containing all the files saved from readers
+#' @param string pattern of characters shared among parent folders containing the files from readers
+#' @param remove.dup whether duplicate detections (no including reads of test tag) should be dropped; remove.dup defaults to FALSE such that all tag reads are retained
+#' @param map.file1 name of m1, best used with an object returned from the 'format_m1' formatter function.
+workhorse <- function(directory, string, remove.dup = FALSE, map.file1){
   setwd(directory)
   dirs <- list.dirs()
   #use this function to get full file path name, so we can filter to desired directories (ie those containing reader files /'LOGGER_')
@@ -86,102 +100,106 @@ workhorse <- function(directory, string, remove.dup = "N", map.file1){
       df <- rbind(df, z) #%>%
     }
   }
-  if (remove.dup=="Y") {
+  if (remove.dup==TRUE) {
     #df = df[!duplicated(df),]
     #df = df %>% filter(!duplicated(cbind(date,time,id))) #remove rows of duplicated (regardless of file source)
-    df = df %>% distinct(date, time, id, .keep_all = TRUE)
+    
+    #still need to return df and df3
+    df1 = df %>% distinct(date, time, id, .keep_all = TRUE)
+    df2 = df[!distinct(date, time, id, .keep_all = TRUE)]
+    df3 = df[df$pit_id %in% m1$test.tag]
     #date, times, and pit_id (ie no bat can be detected >1x at same timepoint) # NEED TO SORT OUT WHAT TO DO WITH TEST TAGS -- WILL LIKELY BE DUPS AND NEED TO KEEP!
   }
-  return(df)
+  return(c(df1, df2, df3))
 }
 
 
-# Working with .log files in a single folder
-extract_log <- function(path,
-                        map.file1) {
-  setwd(path)
-  log_files <- list.files(path = path, pattern = ".log")
-  out <- data.frame()
-  for (i in 1:length(log_files)) {
-    eg <-readLines(log_files[i]) #this makes distinct lines of each log files
-    serial.num <- as.character(grep("S/N: ", eg, value = TRUE))
-    tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE), serial.num)) #makes dataframe containing only tag detections
-    out<-rbind(out,tmp)
-  }
-  colnames(out)<-'xx'
-  x1<-data.frame(date=str_extract(out$xx, "[0-9]{2}/[0-9]{2}/[0-9]{4}"), #substr(out$xx,start=9,stop=18) #str_extract_date(out$xx, format("%m/%d/%Y")
-                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
-                 id=str_extract(out$xx, "\\d{3}[.]\\d{12}"),
-                 serial.num = str_extract(out$xx, "\\d{4}[.]\\d{4}")) #time=substr
-  x1 = x1 %>% mutate(serial.num = format(as.numeric(serial.num), nsmall = 4),
-                       date = as.Date(format(as.Date(date,"%m/%d/%Y"),"%Y-%m-%d")))
-  if (missing(map.file1)) 
-    return(x1) 
-  else
-    z = map.file1 %>% 
-    group_by(serial.num) %>%
-    inner_join(x1, by = "serial.num", relationship='many-to-many') %>%
-    filter(date %within% interval(start.date,end.date))
-  return(z)
-}
-
-# Working with .txt files in a single folder
-extract_txt <- function(path,
-                        map.file1) {
-  setwd(path)
-  txt_files <- list.files(path = path, pattern = ".txt")
-  out <- data.frame()
-  for (i in 1:length(txt_files)) {
-    eg <-readLines(txt_files[i]) #this reads in and makes distinct lines for log files
-    tmp <- data.frame(grep("\\d{3}[.]\\d{12}", eg, value=TRUE))
-    out<-rbind(out,tmp)
-  }
-  colnames(out)<-'xx'
-  x1<-data.frame(date = str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"),
-                 time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change? Needs to be extended to decimal seconds to have full time
-                 id = str_extract(out$xx, "\\d{3}[.]\\d{12}"),
-                 serial.num = str_extract(out$xx, "\\d{4}[.]\\d{4}")
-  )
-  if (missing(map.file1)) 
-    return(x1) 
-  else
-    z = map.file1 %>% 
-    group_by(serial.num) %>%
-    inner_join(x1, by = "serial.num", relationship='many-to-many') %>%
-    filter(date %within% interval(start.date,end.date))
-  return(z)
-}
-
-# Working with .xlsx files in a single folder
-extract_xlsx <- function(path,
-                         map.file1) {
-  setwd(path)
-  xlsx_files <- list.files(path = path, pattern = ".xlsx")
-  out <- data.frame()
-  for (i in 1:length(xlsx_files)) {
-    eg <-read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
-    out<-rbind(out,eg)
-  }
-  x1<-out %>%
-    select(1, 2, 9, 5) %>% #select the rows we want to include from xlsx file (as is it is matching the compatible output with other file types)
-    rename(date = 1,
-           time = 2,
-           id = 3,
-           serial.num = 4)
-  x1$time <- chron(times=gsub('.{1}$',"",x1$time))
-  if (missing(map.file1)) 
-    return(x1) 
-  else
-    z = map.file1 %>% 
-    group_by(serial.num) %>%
-    inner_join(x1, by = "serial.num", relationship='many-to-many') %>%
-    filter(date %within% interval(start.date,end.date))
-  return(z)
-}
-
-  #x1$id<-paste("P_",x1$id,sep="")
-  #x1$id<-gsub("[.]","",x1$id)
-  #return(x1)
-#}
-
-
+# # Working with .log files in a single folder
+# extract_log <- function(path,
+#                         map.file1) {
+#   setwd(path)
+#   log_files <- list.files(path = path, pattern = ".log")
+#   out <- data.frame()
+#   for (i in 1:length(log_files)) {
+#     eg <-readLines(log_files[i]) #this makes distinct lines of each log files
+#     serial.num <- as.character(grep("S/N: ", eg, value = TRUE))
+#     tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE), serial.num)) #makes dataframe containing only tag detections
+#     out<-rbind(out,tmp)
+#   }
+#   colnames(out)<-'xx'
+#   x1<-data.frame(date=str_extract(out$xx, "[0-9]{2}/[0-9]{2}/[0-9]{4}"), #substr(out$xx,start=9,stop=18) #str_extract_date(out$xx, format("%m/%d/%Y")
+#                  time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
+#                  id=str_extract(out$xx, "\\d{3}[.]\\d{12}"),
+#                  serial.num = str_extract(out$xx, "\\d{4}[.]\\d{4}")) #time=substr
+#   x1 = x1 %>% mutate(serial.num = format(as.numeric(serial.num), nsmall = 4),
+#                        date = as.Date(format(as.Date(date,"%m/%d/%Y"),"%Y-%m-%d")))
+#   if (missing(map.file1)) 
+#     return(x1) 
+#   else
+#     z = map.file1 %>% 
+#     group_by(serial.num) %>%
+#     inner_join(x1, by = "serial.num", relationship='many-to-many') %>%
+#     filter(date %within% interval(start.date,end.date))
+#   return(z)
+# }
+# 
+# # Working with .txt files in a single folder
+# extract_txt <- function(path,
+#                         map.file1) {
+#   setwd(path)
+#   txt_files <- list.files(path = path, pattern = ".txt")
+#   out <- data.frame()
+#   for (i in 1:length(txt_files)) {
+#     eg <-readLines(txt_files[i]) #this reads in and makes distinct lines for log files
+#     tmp <- data.frame(grep("\\d{3}[.]\\d{12}", eg, value=TRUE))
+#     out<-rbind(out,tmp)
+#   }
+#   colnames(out)<-'xx'
+#   x1<-data.frame(date = str_extract(out$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"),
+#                  time=chron(times=str_extract(out$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change? Needs to be extended to decimal seconds to have full time
+#                  id = str_extract(out$xx, "\\d{3}[.]\\d{12}"),
+#                  serial.num = str_extract(out$xx, "\\d{4}[.]\\d{4}")
+#   )
+#   if (missing(map.file1)) 
+#     return(x1) 
+#   else
+#     z = map.file1 %>% 
+#     group_by(serial.num) %>%
+#     inner_join(x1, by = "serial.num", relationship='many-to-many') %>%
+#     filter(date %within% interval(start.date,end.date))
+#   return(z)
+# }
+# 
+# # Working with .xlsx files in a single folder
+# extract_xlsx <- function(path,
+#                          map.file1) {
+#   setwd(path)
+#   xlsx_files <- list.files(path = path, pattern = ".xlsx")
+#   out <- data.frame()
+#   for (i in 1:length(xlsx_files)) {
+#     eg <-read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
+#     out<-rbind(out,eg)
+#   }
+#   x1<-out %>%
+#     select(1, 2, 9, 5) %>% #select the rows we want to include from xlsx file (as is it is matching the compatible output with other file types)
+#     rename(date = 1,
+#            time = 2,
+#            id = 3,
+#            serial.num = 4)
+#   x1$time <- chron(times=gsub('.{1}$',"",x1$time))
+#   if (missing(map.file1)) 
+#     return(x1) 
+#   else
+#     z = map.file1 %>% 
+#     group_by(serial.num) %>%
+#     inner_join(x1, by = "serial.num", relationship='many-to-many') %>%
+#     filter(date %within% interval(start.date,end.date))
+#   return(z)
+# }
+# 
+#   #x1$id<-paste("P_",x1$id,sep="")
+#   #x1$id<-gsub("[.]","",x1$id)
+#   #return(x1)
+# #}
+# 
+# 

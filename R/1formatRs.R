@@ -1,6 +1,17 @@
-# Dataframe formatting functions
+# Format mapping files for consistency across objects
 
-
+#' @title
+#' Formatter for map1 file
+#' 
+#' @description
+#' format_m1 formats the map1 file to be compatible with pit_master
+#' 
+#' @details 
+#' This function automatically formats the first map file that contains the 
+#' names, deployment dates, and serial numbers of each reader.
+#' @param path.csv Path to map1 file location
+#' @param date1 Name of reader start date column
+#' @param date2 Name of reader end date column
 format_m1 <-function(path.csv, 
                      date1, date2) {
   date.formats = c("ymd","mdy","mdY")
@@ -14,7 +25,19 @@ format_m1 <-function(path.csv,
   return(x)
 }
 
-
+#' @title
+#' formatter for map2 file
+#' 
+#' @description
+#' format_m2 formats the map2 file
+#' 
+#' @details 
+#' This function automatically formats the second map file that contains the 
+#' biological information associated with pit_tag IDs.
+#' @param path.csv Path to map2 file location
+#' @param date1 Name of sample date column. Note: the biometrics in this column are what will be associated the pit_ids
+#' @param id.colname Name of column where PIT tag IDs are stored.
+#' @param keep.cols list of columns to keep from map2 file i.e., which variables do you want carried over?
 format_m2 <- function(path.csv,
                         date1,
                         id.colname = id,
@@ -37,7 +60,11 @@ format_m2 <- function(path.csv,
   return(y)
 }
 
-modify_dates <- function(x, hour.start, hour.end) {
-  
-}
+# create_batdate <- function(x, date, hour.start, hour.end) {
+#   x %>%
+#     mutate(batdate=date) # Create new column (duplicate 'date.detected' to get proper format) for 'bat.date')
+#   
+#   x$batdate[x$time>=hour.start & x$batdate<hour.end] = x$batdate[x$time>=hour.start&x$hour.end<7]-1 # If bat is active in hours
+# }
 
+#pit_working
