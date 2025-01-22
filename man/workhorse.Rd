@@ -2,23 +2,29 @@
 % Please edit documentation in R/2assemblRs.R
 \name{workhorse}
 \alias{workhorse}
-\title{primary assembler for joining detections}
+\title{Primary assembler for finding files containing and extracting tag reads}
 \usage{
-workhorse(directory, string, remove.dup = FALSE, map.file1)
+workhorse(directory, string, map.file1, remove.dup = FALSE)
 }
 \arguments{
 \item{directory}{path to directory containing all the files saved from readers}
 
 \item{string}{pattern of characters shared among parent folders containing the files from readers}
 
-\item{remove.dup}{whether duplicate detections (no including reads of test tag) should be dropped; remove.dup defaults to FALSE such that all tag reads are retained}
-
 \item{map.file1}{name of m1, best used with an object returned from the 'format_m1' formatter function.}
+
+\item{remove.dup}{whether duplicate detections (no including reads of test tag) should be dropped; remove.dup defaults to FALSE such that all tag reads are retained}
 }
 \description{
-workhorse searches across subfolders of a specified directory to extract all tag reads
+Search across subfolders of a specified directory to extract all tag reads and assemble to single dataframe object
 }
 \details{
 This function iteratively searches among subfolders for each of the different file types in which tag reads can be stored. Each detection is stored as a row with the respected systems information (serial.number, site, folder location)
 stored with the output. ELABORATE ON MORE SPECIFICS!
+}
+\examples{
+# pm <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/inst/dummy_MW",
+# string="LOGGER",
+# remove.dup = TRUE,
+# map.file1 = m1)
 }

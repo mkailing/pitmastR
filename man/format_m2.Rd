@@ -2,7 +2,7 @@
 % Please edit documentation in R/1formatRs.R
 \name{format_m2}
 \alias{format_m2}
-\title{formatter for map2 file}
+\title{Formatter for map2 file}
 \usage{
 format_m2(path.csv, date1, id.colname = id, keep.cols)
 }
@@ -16,9 +16,16 @@ format_m2(path.csv, date1, id.colname = id, keep.cols)
 \item{keep.cols}{list of columns to keep from map2 file i.e., which variables do you want carried over?}
 }
 \description{
-format_m2 formats the map2 file
+Return the second map file that contains the biological variables to link to Tag IDs
+in an object formatted to be compatible with an object from 'workhorse'.
 }
 \details{
-This function automatically formats the second map file that contains the 
-biological information associated with pit_tag IDs.
+this seems optional!
+}
+\examples{
+# m2 <- format_m2(
+# path.csv = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/inst/dummy_MW/sn_map.csv",
+# date1 = date,
+# id.colname = pit_id,
+# keep.cols = c(sex, species, age, mass, site))
 }

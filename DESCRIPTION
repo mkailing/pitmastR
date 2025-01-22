@@ -2,30 +2,25 @@ Package: pitmastr
 Type: Package
 Title: Pipeline to Wrangle PIT Tag Data
 Version: 0.1.0
-Author: Kailing, Macy
-Maintainer: The package maintainer <macykailing@gmail.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: 
+  c(person("Macy J", "Kailing", email = 'macykailing@gmail.com', role = c("aut","cre")),
+  person("Joseph R", "Hoyt", role = "aut"),
+  person("Kate E", "Langwig", role = "aut"))
+Maintainer: Macy Kailing <macykailing@gmail.com>
+Description: Provides a suite of user-friendly functions to assemble, manipulate, and 
+    format datasets associated with PIT tag systems.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
   chron,
-  tidyverse,
-  reshape2,
   stringr,
-  ggplot2,
-  scales,
   lubridate,
-  anytime,
   readxl,
-  mark,
-  gridExtra,
-  igraph,
-  tidygraph,
-  ggraph,
-  cowplot
+  tidyr
+Depends: dplyr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

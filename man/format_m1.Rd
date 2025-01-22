@@ -14,9 +14,15 @@ format_m1(path.csv, date1, date2)
 \item{date2}{Name of reader end date column}
 }
 \description{
-format_m1 formats the map1 file to be compatible with pit_master
+Formats the first map file that contains the names, deployment dates, and
+serial numbers of each reader to be compatible with 'workhorse' function.
 }
 \details{
-This function automatically formats the first map file that contains the 
-names, deployment dates, and serial numbers of each reader.
+this seems optional!
+}
+\examples{
+# m1 <- pitmastr:::format_m1(
+# path.csv = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/inst/dummy_MW/sn_map.csv",
+# date1 = start,
+# date2 = end)
 }

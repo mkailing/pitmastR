@@ -5,20 +5,29 @@
 ### NOTES ON WORKHORSE: NEED TO DROP DUPLICATES THAT AREN'T TEST TAGS, BETTER: WRITE TEST TAG FILE FIRST!!
 
 #' @title
-#' primary assembler for joining detections
+#' Primary assembler for finding files containing and extracting tag reads
 #' 
 #' @description
-#' workhorse searches across subfolders of a specified directory to extract all tag reads
+#' Search across subfolders of a specified directory to extract all tag reads and assemble to single dataframe object
 #' 
-#' @details 
-#' This function iteratively searches among subfolders for each of the different file types in which tag reads can be stored. Each detection is stored as a row with the respected systems information (serial.number, site, folder location)
-#' stored with the output. ELABORATE ON MORE SPECIFICS!
 #' @param directory path to directory containing all the files saved from readers
 #' @param string pattern of characters shared among parent folders containing the files from readers
 #' @param remove.dup whether duplicate detections (no including reads of test tag) should be dropped; remove.dup defaults to FALSE such that all tag reads are retained
 #' @param map.file1 name of m1, best used with an object returned from the 'format_m1' formatter function.
-workhorse <- function(directory, string, remove.dup = FALSE, map.file1){
-  setwd(directory)
+#' @export
+#' @details 
+#' This function iteratively searches among subfolders for each of the different file types in which tag reads can be stored. Each detection is stored as a row with the respected systems information (serial.number, site, folder location)
+#' stored with the output. ELABORATE ON MORE SPECIFICS!
+#' @examples
+#' # pm <- workhorse(directory = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/inst/dummy_MW",
+#' # string="LOGGER",
+#' # remove.dup = TRUE,
+#' # map.file1 = m1)
+workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
+  d1 <- getwd()
+  d2 <- directory
+  setwd(d2)
+  #setwd(directory)
   dirs <- list.dirs()
   #use this function to get full file path name, so we can filter to desired directories (ie those containing reader files /'LOGGER_')
   parent_prefix <- function(x, path = basename(normalizePath(".")), sep = ""){
@@ -43,11 +52,11 @@ workhorse <- function(directory, string, remove.dup = FALSE, map.file1){
         out1<-rbind(out1,tmp)
       }
       colnames(out1) <- 'xx'
-      x1<-data.frame(date=str_extract(out1$xx, "[0-9]{2}/[0-9]{2}/[0-9]{4}"),
-                     time=chron(times=str_extract(out1$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
-                     id=str_extract(out1$xx, "\\d{3}[.]\\d{12}"),
-                     serial.num = str_extract(out1$xx, "\\d{4}[.]\\d{4}"),
-                     path = str_extract(out1$xx, getwd()),
+      x1<-data.frame(date=stringr::str_extract(out1$xx, "[0-9]{2}/[0-9]{2}/[0-9]{4}"),
+                     time=chron::chron(times=stringr::str_extract(out1$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")),
+                     id=stringr::str_extract(out1$xx, "\\d{3}[.]\\d{12}"),
+                     serial.num = stringr::str_extract(out1$xx, "\\d{4}[.]\\d{4}"),
+                     path = stringr::str_extract(out1$xx, getwd()),
                      source = ".log") #time=substr
       all <- rbind(all, x1)
     }
@@ -61,11 +70,11 @@ workhorse <- function(directory, string, remove.dup = FALSE, map.file1){
         out2<-rbind(out2,tmp)
       }
       colnames(out2)<-'xx'
-      x2<-data.frame(date = str_extract(out2$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #does this change with PC vs MAC?
-                     time=chron(times=str_extract(out2$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
-                     id = str_extract(out2$xx, "\\d{3}[.]\\d{12}"),
-                     serial.num = str_extract(out2$xx, "\\d{4}[.]\\d{4}"),
-                     path = str_extract(out2$xx, getwd()),
+      x2<-data.frame(date = stringr::str_extract(out2$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #does this change with PC vs MAC?
+                     time=chron::chron(times=stringr::str_extract(out2$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
+                     id = stringr::str_extract(out2$xx, "\\d{3}[.]\\d{12}"),
+                     serial.num = stringr::str_extract(out2$xx, "\\d{4}[.]\\d{4}"),
+                     path = stringr::str_extract(out2$xx, getwd()),
                      source = ".txt")
       all <- rbind(all, x2)
     }
@@ -73,7 +82,7 @@ workhorse <- function(directory, string, remove.dup = FALSE, map.file1){
     if (length(xlsx_files)>0){
       out3 <- data.frame()
       for (i in 1:length(xlsx_files)) {
-        eg <-read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
+        eg <- readxl::read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
         out3<-rbind(out3,eg)
       }
       x3<-out3 %>%
@@ -84,35 +93,46 @@ workhorse <- function(directory, string, remove.dup = FALSE, map.file1){
                serial.num = 4) %>%
         mutate(path = getwd(),
                source = ".xlsx")
-      x3$time <- chron(times=gsub('.{1}$',"",x3$time));
+      x3$time <- chron::chron(times=gsub('.{1}$',"",x3$time))
       all <- rbind(all, x3)
     }
-    all = all %>% mutate(serial.num = format(as.numeric(serial.num), nsmall = 4),
-                         date = as.Date(format(as.Date(date,"%m/%d/%Y"),"%Y-%m-%d")))
+    # na.sn <- data.frame(unique(all$path[is.na(all$serial.num)])) %>%
+    #   mutate(serial.num = sprintf("%09.4f", 0.9999+seq_along(1)))
+    all = all %>% 
+      mutate(serial.num = ifelse(is.na(serial.num),
+                                 sprintf("%09.4f", 0.9999+seq_along(serial.num[is.na(serial.num)])),
+                                 format(as.numeric(serial.num), nsmall = 4)),
+             date = as.Date(format(as.Date(date,"%m/%d/%Y"),"%Y-%m-%d"))) %>%
+      ungroup()
     if (missing(map.file1)) {
       df <- rbind(df, all)
     }
     else {
       z = map.file1 %>%
-      group_by(serial.num) %>%
-      inner_join(all, by = "serial.num", relationship='many-to-many') %>%
-      filter(date %within% interval(start.date,end.date)) ## THIS WILL DROP ROWS THAT ARE NOT ASSOCIATED WITH A SERIAL NUMBER!!!!
+        right_join(all, by = c("serial.num")) #%>% #inner_join(relationship = 'many-to-many')
+        #filter(lubridate::`%within%`(date, lubridate::interval(start.date,end.date))) ## THIS WILL DROP ROWS THAT ARE NOT ASSOCIATED WITH A SERIAL NUMBER!!!!
       df <- rbind(df, z) #%>%
     }
   }
   if (remove.dup==TRUE) {
     #df = df[!duplicated(df),]
     #df = df %>% filter(!duplicated(cbind(date,time,id))) #remove rows of duplicated (regardless of file source)
-    
+
     #still need to return df and df3
-    df1 = df %>% distinct(date, time, id, .keep_all = TRUE)
-    df2 = df[!distinct(date, time, id, .keep_all = TRUE)]
-    df3 = df[df$pit_id %in% m1$test.tag]
+    df1 <- df %>% distinct(date, time, id, .keep_all = TRUE)
+#    df2 = df[!distinct(date, time, id, .keep_all = TRUE)]
+#    df3 = df[df$pit_id %in% m1$test.tag]
     #date, times, and pit_id (ie no bat can be detected >1x at same timepoint) # NEED TO SORT OUT WHAT TO DO WITH TEST TAGS -- WILL LIKELY BE DUPS AND NEED TO KEEP!
   }
-  return(c(df1, df2, df3))
+  else {
+    df1 <- df
+  }
+  #  return(c(df1, df2, df3))
+  setwd(d1)
+  return(df1)
 }
 
+#how to handle missing serial numbers in txt or xls files?? assign placeholder and then match by directory?
 
 # # Working with .log files in a single folder
 # extract_log <- function(path,
