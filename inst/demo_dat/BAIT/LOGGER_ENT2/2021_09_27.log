@@ -1,0 +1,2046 @@
+MSG: 01 09/27/2021 00:25:58.100 Test Tag Single Shot Fired
+TAG: 01 09/27/2021 00:25:58.130 999.000000007425
+MSG: 01 09/27/2021 00:25:58.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3114
+  Date:                               09/27/2021
+  Time:                                 00:26:08
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       3
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       382
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                       85
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        2590
+  Tags In Memory:                      3109 (3%)
+  Status Reports In Memory:            530 (51%)
+  Input Voltage:                          23.5 V
+  Exciter Voltage:                        15.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.7 A
+  Tuning Capacitors:                         382
+  Tuning Phase:                              383
+  Tuning Relative Phase:                      -1
+  FDXB Signal Level:                262 mV (29%)
+  Temperature:                            18.1 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 09/27/2021 00:26:08.100 16,0,0,2,3,-1,382,3,51,235,159,47,29,383,181,0,0,0,0,0
+INF: End Of Full Status Report
+TAG: 01 09/27/2021 00:36:58.510 989.001038204065
+TAG: 01 09/27/2021 00:38:08.770 989.001038204065
+TAG: 01 09/27/2021 00:41:28.390 989.001038204018
+MSG: 01 09/27/2021 01:47:48.060 Set Caps = 381, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 01:47:48.460 Set Caps = 380, I = 4.8 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 01:48:08.660 Set Caps = 381, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 01:48:08.760 Set Caps = 382, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 01:48:08.860 Set Caps = 383, I = 4.6 A, PH = 371, dPH = 11
+MSG: 01 09/27/2021 01:48:08.960 Set Caps = 384, I = 4.0 A, PH = 359, dPH = 23
+MSG: 01 09/27/2021 01:48:09.060 Set Caps = 387, I = 4.2 A, PH = 349, dPH = 33
+MSG: 01 09/27/2021 01:48:09.160 Set Caps = 392, I = 3.9 A, PH = 337, dPH = 45
+MSG: 01 09/27/2021 01:48:09.260 Set Caps = 400, I = 3.0 A, PH = 307, dPH = 75
+MSG: 01 09/27/2021 01:48:09.360 Set Caps = 411, I = 2.4 A, PH = 289, dPH = 93
+MSG: 01 09/27/2021 01:48:09.460 Set Caps = 422, I = 2.3 A, PH = 285, dPH = 97
+MSG: 01 09/27/2021 01:48:09.560 Set Caps = 433, I = 2.4 A, PH = 293, dPH = 89
+MSG: 01 09/27/2021 01:48:09.660 Set Caps = 443, I = 2.7 A, PH = 300, dPH = 82
+MSG: 01 09/27/2021 01:48:09.760 Set Caps = 454, I = 2.6 A, PH = 288, dPH = 94
+MSG: 01 09/27/2021 01:48:09.860 Set Caps = 465, I = 2.5 A, PH = 293, dPH = 89
+MSG: 01 09/27/2021 01:48:09.960 Set Caps = 476, I = 2.4 A, PH = 292, dPH = 90
+MSG: 01 09/27/2021 01:48:10.060 Set Caps = 488, I = 2.2 A, PH = 282, dPH = 100
+MSG: 01 09/27/2021 01:48:10.160 Set Caps = 500, I = 2.0 A, PH = 277, dPH = 105
+MSG: 01 09/27/2021 01:48:10.260 Set Caps = 512, I = 2.0 A, PH = 275, dPH = 107
+MSG: 01 09/27/2021 01:48:10.360 Set Caps = 526, I = 1.7 A, PH = 265, dPH = 117
+MSG: 01 09/27/2021 01:48:10.460 Set Caps = 539, I = 1.8 A, PH = 267, dPH = 115
+MSG: 01 09/27/2021 01:48:10.560 Set Caps = 551, I = 2.0 A, PH = 277, dPH = 105
+MSG: 01 09/27/2021 01:48:10.660 Set Caps = 562, I = 2.4 A, PH = 290, dPH = 92
+MSG: 01 09/27/2021 01:48:10.760 Set Caps = 571, I = 3.0 A, PH = 310, dPH = 72
+MSG: 01 09/27/2021 01:48:10.860 Set Caps = 574, I = 4.2 A, PH = 353, dPH = 29
+MSG: 01 09/27/2021 01:48:10.960 Set Caps = 571, I = 4.3 A, PH = 419, dPH = -37
+MSG: 01 09/27/2021 01:48:11.060 Set Caps = 562, I = 2.7 A, PH = 466, dPH = -84
+MSG: 01 09/27/2021 01:48:11.160 Set Caps = 554, I = 3.1 A, PH = 450, dPH = -68
+MSG: 01 09/27/2021 01:48:11.260 Set Caps = 546, I = 3.0 A, PH = 456, dPH = -74
+MSG: 01 09/27/2021 01:48:11.360 Set Caps = 535, I = 2.2 A, PH = 477, dPH = -95
+MSG: 01 09/27/2021 01:48:11.460 Set Caps = 523, I = 2.1 A, PH = 483, dPH = -101
+MSG: 01 09/27/2021 01:48:11.560 Set Caps = 517, I = 3.6 A, PH = 427, dPH = -45
+MSG: 01 09/27/2021 01:48:11.660 Set Caps = 529, I = 1.9 A, PH = 266, dPH = 116
+MSG: 01 09/27/2021 01:48:11.760 Set Caps = 541, I = 2.3 A, PH = 297, dPH = 85
+MSG: 01 09/27/2021 01:48:11.860 Set Caps = 531, I = 2.5 A, PH = 473, dPH = -91
+MSG: 01 09/27/2021 01:48:11.960 Set Caps = 520, I = 2.1 A, PH = 482, dPH = -100
+MSG: 01 09/27/2021 01:48:12.060 Set Caps = 506, I = 1.4 A, PH = 509, dPH = -127
+MSG: 01 09/27/2021 01:48:12.160 Set Caps = 491, I = 1.3 A, PH = 513, dPH = -131
+MSG: 01 09/27/2021 01:48:12.260 Set Caps = 476, I = 1.3 A, PH = 513, dPH = -131
+MSG: 01 09/27/2021 01:48:12.360 Set Caps = 461, I = 1.3 A, PH = 512, dPH = -130
+MSG: 01 09/27/2021 01:48:12.460 Set Caps = 447, I = 1.5 A, PH = 505, dPH = -123
+MSG: 01 09/27/2021 01:48:12.560 Set Caps = 435, I = 1.9 A, PH = 485, dPH = -103
+MSG: 01 09/27/2021 01:48:12.660 Set Caps = 434, I = 4.4 A, PH = 370, dPH = 12
+MSG: 01 09/27/2021 01:48:12.760 Set Caps = 446, I = 2.0 A, PH = 276, dPH = 106
+MSG: 01 09/27/2021 01:48:12.860 Set Caps = 453, I = 3.6 A, PH = 335, dPH = 47
+MSG: 01 09/27/2021 01:48:12.960 Set Caps = 445, I = 2.7 A, PH = 466, dPH = -84
+MSG: 01 09/27/2021 01:48:13.060 Set Caps = 435, I = 2.7 A, PH = 462, dPH = -80
+MSG: 01 09/27/2021 01:48:13.160 Set Caps = 444, I = 2.8 A, PH = 294, dPH = 88
+MSG: 01 09/27/2021 01:48:13.260 Set Caps = 454, I = 2.9 A, PH = 298, dPH = 84
+MSG: 01 09/27/2021 01:48:13.360 Set Caps = 455, I = 4.7 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 01:48:13.460 Set Caps = 450, I = 4.1 A, PH = 432, dPH = -50
+MSG: 01 09/27/2021 01:48:13.560 Set Caps = 442, I = 2.9 A, PH = 463, dPH = -81
+MSG: 01 09/27/2021 01:48:13.660 Set Caps = 431, I = 2.4 A, PH = 478, dPH = -96
+MSG: 01 09/27/2021 01:48:13.760 Set Caps = 419, I = 2.0 A, PH = 487, dPH = -105
+MSG: 01 09/27/2021 01:48:13.860 Set Caps = 407, I = 1.9 A, PH = 488, dPH = -106
+MSG: 01 09/27/2021 01:48:13.960 Set Caps = 396, I = 2.2 A, PH = 478, dPH = -96
+MSG: 01 09/27/2021 01:48:14.060 Set Caps = 389, I = 3.6 A, PH = 433, dPH = -51
+MSG: 01 09/27/2021 01:48:14.160 Set Caps = 388, I = 4.7 A, PH = 383, dPH = -1
+MSG: 01 09/27/2021 01:48:14.260 Set Caps = 389, I = 4.6 A, PH = 367, dPH = 15
+MSG: 01 09/27/2021 01:48:14.360 Set Caps = 390, I = 4.7 A, PH = 369, dPH = 13
+MSG: 01 09/27/2021 01:48:14.460 Set Caps = 389, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 01:48:14.560 Set Caps = 386, I = 4.4 A, PH = 411, dPH = -29
+MSG: 01 09/27/2021 01:48:14.660 Set Caps = 383, I = 3.8 A, PH = 426, dPH = -44
+MSG: 01 09/27/2021 01:48:14.760 Set Caps = 382, I = 4.8 A, PH = 383, dPH = -1
+MSG: 01 09/27/2021 01:48:14.860 Set Caps = 389, I = 3.3 A, PH = 321, dPH = 61
+MSG: 01 09/27/2021 01:48:14.960 Set Caps = 397, I = 3.3 A, PH = 316, dPH = 66
+MSG: 01 09/27/2021 01:48:15.060 Set Caps = 405, I = 3.3 A, PH = 315, dPH = 67
+MSG: 01 09/27/2021 01:48:15.160 Set Caps = 410, I = 4.1 A, PH = 347, dPH = 35
+MSG: 01 09/27/2021 01:48:15.260 Set Caps = 409, I = 4.7 A, PH = 395, dPH = -13
+MSG: 01 09/27/2021 01:48:15.360 Set Caps = 404, I = 3.9 A, PH = 432, dPH = -50
+MSG: 01 09/27/2021 01:48:15.460 Set Caps = 397, I = 3.4 A, PH = 446, dPH = -64
+MSG: 01 09/27/2021 01:48:15.560 Set Caps = 390, I = 3.5 A, PH = 438, dPH = -56
+MSG: 01 09/27/2021 01:48:15.660 Set Caps = 386, I = 4.3 A, PH = 414, dPH = -32
+MSG: 01 09/27/2021 01:48:15.860 Set Caps = 391, I = 4.0 A, PH = 337, dPH = 45
+MSG: 01 09/27/2021 01:48:15.960 Set Caps = 399, I = 3.2 A, PH = 314, dPH = 68
+MSG: 01 09/27/2021 01:48:16.060 Set Caps = 407, I = 3.2 A, PH = 312, dPH = 70
+MSG: 01 09/27/2021 01:48:16.160 Set Caps = 413, I = 3.8 A, PH = 335, dPH = 47
+MSG: 01 09/27/2021 01:48:16.260 Set Caps = 414, I = 4.6 A, PH = 363, dPH = 19
+MSG: 01 09/27/2021 01:48:16.460 Set Caps = 413, I = 4.8 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 01:48:16.760 Set Caps = 412, I = 4.7 A, PH = 392, dPH = -10
+MSG: 01 09/27/2021 01:48:16.860 Set Caps = 410, I = 4.5 A, PH = 407, dPH = -25
+MSG: 01 09/27/2021 01:48:16.960 Set Caps = 407, I = 4.3 A, PH = 416, dPH = -34
+MSG: 01 09/27/2021 01:48:17.060 Set Caps = 404, I = 4.4 A, PH = 414, dPH = -32
+MSG: 01 09/27/2021 01:48:17.160 Set Caps = 403, I = 4.6 A, PH = 398, dPH = -16
+MSG: 01 09/27/2021 01:48:17.260 Set Caps = 404, I = 4.7 A, PH = 374, dPH = 8
+MSG: 01 09/27/2021 01:48:17.360 Set Caps = 407, I = 4.3 A, PH = 349, dPH = 33
+MSG: 01 09/27/2021 01:48:17.460 Set Caps = 412, I = 4.0 A, PH = 338, dPH = 44
+MSG: 01 09/27/2021 01:48:17.560 Set Caps = 417, I = 4.2 A, PH = 343, dPH = 39
+MSG: 01 09/27/2021 01:48:17.660 Set Caps = 420, I = 4.4 A, PH = 357, dPH = 25
+MSG: 01 09/27/2021 01:48:17.760 Set Caps = 421, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 01:48:17.860 Set Caps = 420, I = 4.7 A, PH = 394, dPH = -12
+MSG: 01 09/27/2021 01:48:17.960 Set Caps = 418, I = 4.6 A, PH = 403, dPH = -21
+MSG: 01 09/27/2021 01:48:18.060 Set Caps = 416, I = 4.5 A, PH = 408, dPH = -26
+MSG: 01 09/27/2021 01:48:18.160 Set Caps = 414, I = 4.3 A, PH = 410, dPH = -28
+MSG: 01 09/27/2021 01:48:18.260 Set Caps = 412, I = 4.6 A, PH = 406, dPH = -24
+MSG: 01 09/27/2021 01:48:18.360 Set Caps = 411, I = 4.7 A, PH = 400, dPH = -18
+MSG: 01 09/27/2021 01:48:18.460 Set Caps = 410, I = 4.7 A, PH = 390, dPH = -8
+MSG: 01 09/27/2021 01:48:18.660 Set Caps = 411, I = 4.7 A, PH = 368, dPH = 14
+MSG: 01 09/27/2021 01:48:18.760 Set Caps = 412, I = 4.6 A, PH = 363, dPH = 19
+MSG: 01 09/27/2021 01:48:18.860 Set Caps = 414, I = 4.5 A, PH = 360, dPH = 22
+MSG: 01 09/27/2021 01:48:18.960 Set Caps = 415, I = 4.6 A, PH = 362, dPH = 20
+MSG: 01 09/27/2021 01:48:19.060 Set Caps = 416, I = 4.6 A, PH = 370, dPH = 12
+MSG: 01 09/27/2021 01:48:19.160 Set Caps = 417, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 01:48:19.360 Set Caps = 416, I = 4.7 A, PH = 392, dPH = -10
+MSG: 01 09/27/2021 01:48:19.460 Set Caps = 415, I = 4.5 A, PH = 399, dPH = -17
+MSG: 01 09/27/2021 01:48:19.560 Set Caps = 414, I = 4.7 A, PH = 400, dPH = -18
+MSG: 01 09/27/2021 01:48:19.660 Set Caps = 413, I = 4.7 A, PH = 400, dPH = -18
+MSG: 01 09/27/2021 01:48:19.760 Set Caps = 412, I = 4.7 A, PH = 394, dPH = -12
+MSG: 01 09/27/2021 01:48:19.860 Set Caps = 411, I = 4.8 A, PH = 383, dPH = -1
+MSG: 01 09/27/2021 01:48:19.960 Set Caps = 412, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 01:48:20.060 Set Caps = 413, I = 4.7 A, PH = 367, dPH = 15
+MSG: 01 09/27/2021 01:48:20.160 Set Caps = 414, I = 4.6 A, PH = 363, dPH = 19
+MSG: 01 09/27/2021 01:48:20.260 Set Caps = 415, I = 4.6 A, PH = 364, dPH = 18
+MSG: 01 09/27/2021 01:48:20.360 Set Caps = 416, I = 4.6 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 01:48:20.460 Set Caps = 417, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 01:48:20.660 Set Caps = 416, I = 4.7 A, PH = 389, dPH = -7
+MSG: 01 09/27/2021 01:48:20.760 Set Caps = 415, I = 4.5 A, PH = 393, dPH = -11
+MSG: 01 09/27/2021 01:48:20.860 Set Caps = 414, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 01:48:20.960 Set Caps = 413, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 01:48:21.260 Set Caps = 414, I = 4.7 A, PH = 375, dPH = 7
+MSG: 01 09/27/2021 01:48:21.360 Set Caps = 415, I = 4.7 A, PH = 370, dPH = 12
+MSG: 01 09/27/2021 01:48:21.460 Set Caps = 416, I = 4.6 A, PH = 372, dPH = 10
+MSG: 01 09/27/2021 01:48:21.560 Set Caps = 417, I = 4.6 A, PH = 367, dPH = 15
+MSG: 01 09/27/2021 01:48:21.660 Set Caps = 418, I = 4.7 A, PH = 369, dPH = 13
+MSG: 01 09/27/2021 01:48:21.760 Set Caps = 419, I = 4.7 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 01:48:21.860 Set Caps = 420, I = 4.7 A, PH = 381, dPH = 1
+MSG: 01 09/27/2021 01:48:22.060 Set Caps = 419, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 01:48:22.160 Set Caps = 418, I = 4.7 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 01:48:22.260 Set Caps = 417, I = 4.7 A, PH = 390, dPH = -8
+MSG: 01 09/27/2021 01:48:22.360 Set Caps = 416, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 01:48:22.660 Set Caps = 417, I = 4.7 A, PH = 375, dPH = 7
+MSG: 01 09/27/2021 01:48:22.760 Set Caps = 418, I = 4.7 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 01:48:22.860 Set Caps = 419, I = 4.7 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 01:48:22.960 Set Caps = 420, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 01:48:23.360 Set Caps = 419, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 01:48:23.560 Set Caps = 418, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 01:48:23.660 Set Caps = 417, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 01:48:24.160 Set Caps = 418, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 01:48:24.260 Set Caps = 419, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 01:48:24.760 Set Caps = 418, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 01:48:24.860 Set Caps = 417, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 01:48:25.560 Set Caps = 418, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:02:36.660 Set Caps = 419, I = 4.7 A, PH = 380, dPH = 2
+MSG: 01 09/27/2021 04:02:37.560 Set Caps = 420, I = 4.7 A, PH = 381, dPH = 1
+MSG: 01 09/27/2021 04:02:39.960 Set Caps = 419, I = 4.8 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:07.460 Set Caps = 420, I = 4.8 A, PH = 381, dPH = 1
+MSG: 01 09/27/2021 04:03:07.660 Set Caps = 416, I = 4.2 A, PH = 424, dPH = -42
+MSG: 01 09/27/2021 04:03:07.760 Set Caps = 406, I = 2.6 A, PH = 469, dPH = -87
+MSG: 01 09/27/2021 04:03:07.860 Set Caps = 395, I = 2.3 A, PH = 475, dPH = -93
+MSG: 01 09/27/2021 04:03:07.960 Set Caps = 386, I = 2.9 A, PH = 455, dPH = -73
+MSG: 01 09/27/2021 04:03:08.060 Set Caps = 385, I = 4.6 A, PH = 393, dPH = -11
+MSG: 01 09/27/2021 04:03:08.160 Set Caps = 392, I = 3.5 A, PH = 319, dPH = 63
+MSG: 01 09/27/2021 04:03:08.260 Set Caps = 404, I = 2.2 A, PH = 282, dPH = 100
+MSG: 01 09/27/2021 04:03:08.360 Set Caps = 416, I = 2.3 A, PH = 285, dPH = 97
+MSG: 01 09/27/2021 04:03:08.460 Set Caps = 423, I = 3.7 A, PH = 333, dPH = 49
+MSG: 01 09/27/2021 04:03:08.560 Set Caps = 422, I = 4.6 A, PH = 407, dPH = -25
+MSG: 01 09/27/2021 04:03:08.660 Set Caps = 416, I = 3.8 A, PH = 433, dPH = -51
+MSG: 01 09/27/2021 04:03:08.760 Set Caps = 413, I = 4.1 A, PH = 411, dPH = -29
+MSG: 01 09/27/2021 04:03:08.860 Set Caps = 414, I = 4.5 A, PH = 354, dPH = 28
+MSG: 01 09/27/2021 04:03:08.960 Set Caps = 421, I = 3.6 A, PH = 319, dPH = 63
+MSG: 01 09/27/2021 04:03:09.060 Set Caps = 429, I = 3.3 A, PH = 316, dPH = 66
+MSG: 01 09/27/2021 04:03:09.160 Set Caps = 433, I = 4.2 A, PH = 346, dPH = 36
+MSG: 01 09/27/2021 04:03:09.260 Set Caps = 432, I = 4.7 A, PH = 397, dPH = -15
+MSG: 01 09/27/2021 04:03:09.360 Set Caps = 427, I = 3.9 A, PH = 433, dPH = -51
+MSG: 01 09/27/2021 04:03:09.460 Set Caps = 420, I = 3.6 A, PH = 440, dPH = -58
+MSG: 01 09/27/2021 04:03:09.560 Set Caps = 415, I = 3.8 A, PH = 429, dPH = -47
+MSG: 01 09/27/2021 04:03:09.660 Set Caps = 414, I = 4.7 A, PH = 394, dPH = -12
+MSG: 01 09/27/2021 04:03:09.760 Set Caps = 416, I = 4.4 A, PH = 352, dPH = 30
+MSG: 01 09/27/2021 04:03:09.860 Set Caps = 423, I = 3.5 A, PH = 322, dPH = 60
+MSG: 01 09/27/2021 04:03:09.960 Set Caps = 432, I = 3.0 A, PH = 308, dPH = 74
+MSG: 01 09/27/2021 04:03:10.060 Set Caps = 439, I = 3.4 A, PH = 325, dPH = 57
+MSG: 01 09/27/2021 04:03:10.160 Set Caps = 441, I = 4.4 A, PH = 359, dPH = 23
+MSG: 01 09/27/2021 04:03:10.360 Set Caps = 439, I = 4.4 A, PH = 406, dPH = -24
+MSG: 01 09/27/2021 04:03:10.460 Set Caps = 435, I = 4.2 A, PH = 417, dPH = -35
+MSG: 01 09/27/2021 04:03:10.560 Set Caps = 432, I = 4.4 A, PH = 410, dPH = -28
+MSG: 01 09/27/2021 04:03:10.660 Set Caps = 431, I = 4.6 A, PH = 393, dPH = -11
+MSG: 01 09/27/2021 04:03:10.760 Set Caps = 432, I = 4.6 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 04:03:10.860 Set Caps = 434, I = 4.5 A, PH = 359, dPH = 23
+MSG: 01 09/27/2021 04:03:10.960 Set Caps = 436, I = 4.5 A, PH = 363, dPH = 19
+MSG: 01 09/27/2021 04:03:11.060 Set Caps = 437, I = 4.7 A, PH = 380, dPH = 2
+MSG: 01 09/27/2021 04:03:11.160 Set Caps = 436, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 04:03:11.260 Set Caps = 435, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 04:03:11.360 Set Caps = 434, I = 4.7 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:03:11.460 Set Caps = 433, I = 4.6 A, PH = 396, dPH = -14
+MSG: 01 09/27/2021 04:03:11.560 Set Caps = 432, I = 4.6 A, PH = 396, dPH = -14
+MSG: 01 09/27/2021 04:03:11.660 Set Caps = 431, I = 4.6 A, PH = 394, dPH = -12
+MSG: 01 09/27/2021 04:03:12.160 Set Caps = 430, I = 4.8 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:03:12.560 Set Caps = 429, I = 4.7 A, PH = 396, dPH = -14
+MSG: 01 09/27/2021 04:03:12.660 Set Caps = 427, I = 4.6 A, PH = 407, dPH = -25
+MSG: 01 09/27/2021 04:03:12.760 Set Caps = 424, I = 4.4 A, PH = 414, dPH = -32
+MSG: 01 09/27/2021 04:03:12.860 Set Caps = 421, I = 4.4 A, PH = 413, dPH = -31
+MSG: 01 09/27/2021 04:03:12.960 Set Caps = 419, I = 4.6 A, PH = 404, dPH = -22
+MSG: 01 09/27/2021 04:03:13.060 Set Caps = 418, I = 4.8 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:03:13.260 Set Caps = 419, I = 4.8 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:13.360 Set Caps = 420, I = 4.8 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:14.160 Set Caps = 419, I = 4.8 A, PH = 390, dPH = -8
+MSG: 01 09/27/2021 04:03:14.260 Set Caps = 418, I = 4.8 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:03:14.360 Set Caps = 417, I = 4.8 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:03:14.460 Set Caps = 416, I = 4.8 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:03:14.660 Set Caps = 417, I = 4.8 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:14.760 Set Caps = 418, I = 4.8 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 04:03:14.860 Set Caps = 419, I = 4.8 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:14.960 Set Caps = 420, I = 4.8 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:15.360 Set Caps = 419, I = 4.8 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:15.660 Set Caps = 418, I = 4.8 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:03:16.360 Set Caps = 419, I = 4.8 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:24.460 Set Caps = 420, I = 4.8 A, PH = 381, dPH = 1
+MSG: 01 09/27/2021 04:03:24.660 Set Caps = 421, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:24.760 Set Caps = 422, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:24.860 Set Caps = 423, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:24.960 Set Caps = 424, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:25.060 Set Caps = 425, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:25.560 Set Caps = 426, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:25.960 Set Caps = 427, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:26.060 Set Caps = 428, I = 4.7 A, PH = 380, dPH = 2
+MSG: 01 09/27/2021 04:03:26.260 Set Caps = 429, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 04:03:26.360 Set Caps = 430, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:26.460 Set Caps = 431, I = 4.7 A, PH = 375, dPH = 7
+MSG: 01 09/27/2021 04:03:26.560 Set Caps = 432, I = 4.6 A, PH = 374, dPH = 8
+MSG: 01 09/27/2021 04:03:26.660 Set Caps = 433, I = 4.6 A, PH = 370, dPH = 12
+MSG: 01 09/27/2021 04:03:26.760 Set Caps = 434, I = 4.6 A, PH = 369, dPH = 13
+MSG: 01 09/27/2021 04:03:26.860 Set Caps = 435, I = 4.6 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 04:03:27.260 Set Caps = 436, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:27.360 Set Caps = 437, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:27.660 Set Caps = 436, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:28.060 Set Caps = 437, I = 4.7 A, PH = 375, dPH = 7
+MSG: 01 09/27/2021 04:03:28.160 Set Caps = 438, I = 4.6 A, PH = 371, dPH = 11
+MSG: 01 09/27/2021 04:03:28.260 Set Caps = 439, I = 4.6 A, PH = 368, dPH = 14
+MSG: 01 09/27/2021 04:03:28.360 Set Caps = 440, I = 4.6 A, PH = 368, dPH = 14
+MSG: 01 09/27/2021 04:03:28.460 Set Caps = 441, I = 4.6 A, PH = 368, dPH = 14
+MSG: 01 09/27/2021 04:03:28.560 Set Caps = 442, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:28.760 Set Caps = 441, I = 4.7 A, PH = 395, dPH = -13
+MSG: 01 09/27/2021 04:03:28.860 Set Caps = 440, I = 4.6 A, PH = 394, dPH = -12
+MSG: 01 09/27/2021 04:03:28.960 Set Caps = 439, I = 4.7 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:03:29.260 Set Caps = 440, I = 4.7 A, PH = 380, dPH = 2
+MSG: 01 09/27/2021 04:03:29.460 Set Caps = 439, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 04:03:29.560 Set Caps = 438, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:03:29.760 Set Caps = 439, I = 4.7 A, PH = 375, dPH = 7
+MSG: 01 09/27/2021 04:03:29.860 Set Caps = 440, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:29.960 Set Caps = 441, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 04:03:30.260 Set Caps = 442, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:31.160 Set Caps = 443, I = 4.7 A, PH = 374, dPH = 8
+MSG: 01 09/27/2021 04:03:31.260 Set Caps = 444, I = 4.7 A, PH = 374, dPH = 8
+MSG: 01 09/27/2021 04:03:31.460 Set Caps = 443, I = 4.7 A, PH = 393, dPH = -11
+MSG: 01 09/27/2021 04:03:31.560 Set Caps = 442, I = 4.7 A, PH = 393, dPH = -11
+MSG: 01 09/27/2021 04:03:31.760 Set Caps = 443, I = 4.6 A, PH = 370, dPH = 12
+MSG: 01 09/27/2021 04:03:31.860 Set Caps = 444, I = 4.6 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 04:03:32.060 Set Caps = 443, I = 4.7 A, PH = 392, dPH = -10
+MSG: 01 09/27/2021 04:03:32.160 Set Caps = 442, I = 4.6 A, PH = 395, dPH = -13
+MSG: 01 09/27/2021 04:03:32.260 Set Caps = 441, I = 4.6 A, PH = 396, dPH = -14
+MSG: 01 09/27/2021 04:03:32.360 Set Caps = 440, I = 4.7 A, PH = 392, dPH = -10
+MSG: 01 09/27/2021 04:03:32.460 Set Caps = 439, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:03:32.660 Set Caps = 440, I = 4.6 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 04:03:32.760 Set Caps = 441, I = 4.6 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 04:03:32.960 Set Caps = 440, I = 4.7 A, PH = 389, dPH = -7
+MSG: 01 09/27/2021 04:03:33.060 Set Caps = 439, I = 4.6 A, PH = 392, dPH = -10
+MSG: 01 09/27/2021 04:03:33.260 Set Caps = 440, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:33.360 Set Caps = 441, I = 4.6 A, PH = 373, dPH = 9
+MSG: 01 09/27/2021 04:03:33.460 Set Caps = 442, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:34.060 Set Caps = 441, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:03:34.160 Set Caps = 440, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:03:34.260 Set Caps = 439, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:34.560 Set Caps = 440, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:34.660 Set Caps = 441, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:34.960 Set Caps = 440, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:03:35.060 Set Caps = 439, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:03:37.460 Set Caps = 438, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:37.560 Set Caps = 437, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:03:37.660 Set Caps = 436, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 04:03:37.760 Set Caps = 435, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:38.160 Set Caps = 436, I = 4.7 A, PH = 381, dPH = 1
+MSG: 01 09/27/2021 04:03:38.260 Set Caps = 437, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:38.360 Set Caps = 438, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:38.460 Set Caps = 439, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:38.560 Set Caps = 440, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:03:38.760 Set Caps = 439, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:38.860 Set Caps = 438, I = 4.7 A, PH = 389, dPH = -7
+MSG: 01 09/27/2021 04:03:38.960 Set Caps = 437, I = 4.7 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:03:39.060 Set Caps = 436, I = 4.7 A, PH = 388, dPH = -6
+MSG: 01 09/27/2021 04:03:39.360 Set Caps = 437, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:03:42.260 Set Caps = 436, I = 4.7 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:03:42.360 Set Caps = 435, I = 4.7 A, PH = 384, dPH = -2
+MSG: 01 09/27/2021 04:03:42.660 Set Caps = 436, I = 4.7 A, PH = 375, dPH = 7
+MSG: 01 09/27/2021 04:03:42.760 Set Caps = 437, I = 4.6 A, PH = 374, dPH = 8
+MSG: 01 09/27/2021 04:03:42.860 Set Caps = 438, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:03:43.160 Set Caps = 437, I = 4.7 A, PH = 389, dPH = -7
+MSG: 01 09/27/2021 04:03:43.260 Set Caps = 436, I = 4.7 A, PH = 389, dPH = -7
+MSG: 01 09/27/2021 04:03:43.360 Set Caps = 435, I = 4.7 A, PH = 384, dPH = -2
+MSG: 01 09/27/2021 04:03:43.560 Set Caps = 436, I = 4.7 A, PH = 375, dPH = 7
+MSG: 01 09/27/2021 04:03:43.660 Set Caps = 437, I = 4.6 A, PH = 374, dPH = 8
+MSG: 01 09/27/2021 04:03:43.760 Set Caps = 438, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 04:03:44.060 Set Caps = 437, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:04:39.260 Set Caps = 436, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:04:50.660 Set Caps = 437, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 04:04:50.760 Set Caps = 438, I = 4.7 A, PH = 377, dPH = 5
+MSG: 01 09/27/2021 04:04:50.860 Set Caps = 439, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:04:52.560 Set Caps = 440, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:04:52.860 Set Caps = 439, I = 4.7 A, PH = 389, dPH = -7
+MSG: 01 09/27/2021 04:04:52.960 Set Caps = 438, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:04:53.560 Set Caps = 437, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:04:53.860 Set Caps = 438, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:04:53.960 Set Caps = 439, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:04:54.060 Set Caps = 440, I = 4.7 A, PH = 380, dPH = 2
+MSG: 01 09/27/2021 04:04:54.260 Set Caps = 439, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:04:54.360 Set Caps = 438, I = 4.7 A, PH = 390, dPH = -8
+MSG: 01 09/27/2021 04:04:54.460 Set Caps = 437, I = 4.7 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:04:54.560 Set Caps = 436, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:04:54.760 Set Caps = 437, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:04:54.860 Set Caps = 438, I = 4.7 A, PH = 379, dPH = 3
+MSG: 01 09/27/2021 04:05:17.760 Set Caps = 437, I = 4.7 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:05:17.860 Set Caps = 436, I = 4.7 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:05:19.760 Set Caps = 437, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:05:19.860 Set Caps = 438, I = 4.7 A, PH = 376, dPH = 6
+MSG: 01 09/27/2021 04:05:19.960 Set Caps = 439, I = 4.7 A, PH = 378, dPH = 4
+MSG: 01 09/27/2021 04:05:20.160 Set Caps = 438, I = 4.7 A, PH = 392, dPH = -10
+MSG: 01 09/27/2021 04:05:20.260 Set Caps = 437, I = 4.7 A, PH = 398, dPH = -16
+MSG: 01 09/27/2021 04:05:20.360 Set Caps = 436, I = 4.7 A, PH = 401, dPH = -19
+MSG: 01 09/27/2021 04:05:20.460 Set Caps = 435, I = 4.6 A, PH = 402, dPH = -20
+MSG: 01 09/27/2021 04:05:20.560 Set Caps = 434, I = 4.7 A, PH = 402, dPH = -20
+MSG: 01 09/27/2021 04:05:20.660 Set Caps = 433, I = 4.7 A, PH = 403, dPH = -21
+MSG: 01 09/27/2021 04:05:20.760 Set Caps = 432, I = 4.7 A, PH = 403, dPH = -21
+MSG: 01 09/27/2021 04:05:20.860 Set Caps = 431, I = 4.6 A, PH = 404, dPH = -22
+MSG: 01 09/27/2021 04:05:20.960 Set Caps = 430, I = 4.7 A, PH = 402, dPH = -20
+MSG: 01 09/27/2021 04:05:21.060 Set Caps = 429, I = 4.7 A, PH = 401, dPH = -19
+MSG: 01 09/27/2021 04:05:21.160 Set Caps = 428, I = 4.7 A, PH = 400, dPH = -18
+MSG: 01 09/27/2021 04:05:21.260 Set Caps = 427, I = 4.7 A, PH = 398, dPH = -16
+MSG: 01 09/27/2021 04:05:21.360 Set Caps = 426, I = 4.7 A, PH = 397, dPH = -15
+MSG: 01 09/27/2021 04:05:21.460 Set Caps = 425, I = 4.7 A, PH = 396, dPH = -14
+MSG: 01 09/27/2021 04:05:21.560 Set Caps = 424, I = 4.8 A, PH = 393, dPH = -11
+MSG: 01 09/27/2021 04:05:21.660 Set Caps = 423, I = 4.7 A, PH = 391, dPH = -9
+MSG: 01 09/27/2021 04:05:21.760 Set Caps = 422, I = 4.8 A, PH = 387, dPH = -5
+MSG: 01 09/27/2021 04:05:21.860 Set Caps = 421, I = 4.8 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:05:22.760 Set Caps = 420, I = 4.8 A, PH = 385, dPH = -3
+MSG: 01 09/27/2021 04:05:26.260 Set Caps = 419, I = 4.8 A, PH = 386, dPH = -4
+MSG: 01 09/27/2021 04:05:30.660 Set Caps = 420, I = 4.7 A, PH = 380, dPH = 2
+MSG: 01 09/27/2021 04:05:31.160 Set Caps = 421, I = 4.7 A, PH = 378, dPH = 4
+ALM: 01 09/27/2021 07:14:06.130 Noise High
+MSG: 01 09/27/2021 07:14:06.530 Noise In Spec.
+ALM: 01 09/27/2021 07:14:12.330 Noise High
+MSG: 01 09/27/2021 07:14:15.730 Noise In Spec.
+ALM: 01 09/27/2021 07:14:32.830 Noise High
+MSG: 01 09/27/2021 07:14:33.830 Noise In Spec.
+ALM: 01 09/27/2021 07:14:34.530 Noise High
+MSG: 01 09/27/2021 07:14:35.530 Noise In Spec.
+ALM: 01 09/27/2021 07:15:11.830 Noise High
+MSG: 01 09/27/2021 07:15:13.030 Noise In Spec.
+ALM: 01 09/27/2021 07:15:50.730 Noise High
+MSG: 01 09/27/2021 07:15:53.330 Noise In Spec.
+ALM: 01 09/27/2021 07:16:29.730 Noise High
+MSG: 01 09/27/2021 07:16:32.230 Noise In Spec.
+ALM: 01 09/27/2021 07:17:08.630 Noise High
+MSG: 01 09/27/2021 07:17:11.230 Noise In Spec.
+ALM: 01 09/27/2021 07:17:47.630 Noise High
+MSG: 01 09/27/2021 07:17:50.130 Noise In Spec.
+ALM: 01 09/27/2021 07:18:26.630 Noise High
+MSG: 01 09/27/2021 07:18:29.130 Noise In Spec.
+ALM: 01 09/27/2021 07:19:05.030 Noise High
+MSG: 01 09/27/2021 07:19:07.530 Noise In Spec.
+ALM: 01 09/27/2021 07:19:57.430 Noise High
+MSG: 01 09/27/2021 07:19:59.830 Noise In Spec.
+ALM: 01 09/27/2021 07:20:36.430 Noise High
+MSG: 01 09/27/2021 07:20:39.330 Noise In Spec.
+ALM: 01 09/27/2021 07:21:15.630 Noise High
+MSG: 01 09/27/2021 07:21:18.230 Noise In Spec.
+ALM: 01 09/27/2021 07:21:54.830 Noise High
+MSG: 01 09/27/2021 07:21:57.330 Noise In Spec.
+ALM: 01 09/27/2021 07:22:33.830 Noise High
+MSG: 01 09/27/2021 07:22:36.630 Noise In Spec.
+ALM: 01 09/27/2021 07:23:52.230 Noise High
+MSG: 01 09/27/2021 07:23:54.730 Noise In Spec.
+ALM: 01 09/27/2021 07:25:27.830 Noise High
+MSG: 01 09/27/2021 07:25:30.530 Noise In Spec.
+ALM: 01 09/27/2021 07:25:41.630 Noise High
+MSG: 01 09/27/2021 07:25:44.330 Noise In Spec.
+ALM: 01 09/27/2021 07:26:20.530 Noise High
+MSG: 01 09/27/2021 07:26:22.830 Noise In Spec.
+ALM: 01 09/27/2021 07:26:28.930 Noise High
+MSG: 01 09/27/2021 07:26:31.430 Noise In Spec.
+ALM: 01 09/27/2021 07:26:40.430 Noise High
+MSG: 01 09/27/2021 07:26:42.930 Noise In Spec.
+ALM: 01 09/27/2021 07:26:51.330 Noise High
+MSG: 01 09/27/2021 07:26:54.130 Noise In Spec.
+ALM: 01 09/27/2021 07:27:10.030 Noise High
+MSG: 01 09/27/2021 07:27:12.130 Noise In Spec.
+ALM: 01 09/27/2021 07:27:19.830 Noise High
+MSG: 01 09/27/2021 07:27:21.930 Noise In Spec.
+ALM: 01 09/27/2021 07:27:52.530 Noise High
+MSG: 01 09/27/2021 07:27:54.330 Noise In Spec.
+ALM: 01 09/27/2021 07:28:07.330 Noise High
+MSG: 01 09/27/2021 07:28:08.730 Noise In Spec.
+ALM: 01 09/27/2021 07:28:43.430 Noise High
+MSG: 01 09/27/2021 07:28:44.030 Noise In Spec.
+ALM: 01 09/27/2021 07:29:29.730 Noise High
+MSG: 01 09/27/2021 07:29:30.430 Noise In Spec.
+ALM: 01 09/27/2021 07:29:35.330 Noise High
+MSG: 01 09/27/2021 07:29:35.830 Noise In Spec.
+ALM: 01 09/27/2021 07:31:49.030 Noise High
+MSG: 01 09/27/2021 07:31:49.730 Noise In Spec.
+ALM: 01 09/27/2021 07:32:29.430 Noise High
+MSG: 01 09/27/2021 07:32:30.230 Noise In Spec.
+ALM: 01 09/27/2021 07:35:02.230 Noise High
+MSG: 01 09/27/2021 07:35:02.830 Noise In Spec.
+ALM: 01 09/27/2021 07:35:41.830 Noise High
+MSG: 01 09/27/2021 07:35:42.430 Noise In Spec.
+ALM: 01 09/27/2021 07:35:50.630 Noise High
+MSG: 01 09/27/2021 07:35:51.330 Noise In Spec.
+ALM: 01 09/27/2021 07:38:48.030 Noise High
+MSG: 01 09/27/2021 07:38:48.630 Noise In Spec.
+ALM: 01 09/27/2021 07:39:04.230 Noise High
+MSG: 01 09/27/2021 07:39:04.630 Noise In Spec.
+ALM: 01 09/27/2021 07:39:25.430 Noise High
+MSG: 01 09/27/2021 07:39:26.030 Noise In Spec.
+ALM: 01 09/27/2021 07:40:15.630 Noise High
+MSG: 01 09/27/2021 07:40:17.830 Noise In Spec.
+ALM: 01 09/27/2021 07:44:24.130 Noise High
+MSG: 01 09/27/2021 07:44:24.530 Noise In Spec.
+ALM: 01 09/27/2021 08:19:48.630 Noise High
+MSG: 01 09/27/2021 08:19:49.030 Noise In Spec.
+ALM: 01 09/27/2021 08:20:02.330 Noise High
+MSG: 01 09/27/2021 08:20:02.730 Noise In Spec.
+ALM: 01 09/27/2021 08:20:03.130 Noise High
+MSG: 01 09/27/2021 08:20:03.530 Noise In Spec.
+ALM: 01 09/27/2021 08:20:16.930 Noise High
+MSG: 01 09/27/2021 08:20:17.330 Noise In Spec.
+ALM: 01 09/27/2021 08:29:59.630 Noise High
+MSG: 01 09/27/2021 08:30:00.230 Noise In Spec.
+ALM: 01 09/27/2021 08:30:15.030 Noise High
+MSG: 01 09/27/2021 08:30:15.530 Noise In Spec.
+ALM: 01 09/27/2021 08:31:04.330 Noise High
+MSG: 01 09/27/2021 08:31:04.730 Noise In Spec.
+ALM: 01 09/27/2021 08:38:01.230 Noise High
+MSG: 01 09/27/2021 08:38:01.830 Noise In Spec.
+ALM: 01 09/27/2021 08:38:04.330 Noise High
+MSG: 01 09/27/2021 08:38:04.730 Noise In Spec.
+ALM: 01 09/27/2021 08:38:08.230 Noise High
+MSG: 01 09/27/2021 08:38:08.830 Noise In Spec.
+ALM: 01 09/27/2021 08:39:27.330 Noise High
+MSG: 01 09/27/2021 08:39:27.830 Noise In Spec.
+ALM: 01 09/27/2021 08:39:55.430 Noise High
+MSG: 01 09/27/2021 08:39:55.930 Noise In Spec.
+ALM: 01 09/27/2021 08:40:20.830 Noise High
+MSG: 01 09/27/2021 08:40:21.430 Noise In Spec.
+ALM: 01 09/27/2021 08:41:25.030 Noise High
+MSG: 01 09/27/2021 08:41:25.430 Noise In Spec.
+ALM: 01 09/27/2021 08:42:32.730 Noise High
+MSG: 01 09/27/2021 08:42:33.130 Noise In Spec.
+ALM: 01 09/27/2021 08:42:33.730 Noise High
+MSG: 01 09/27/2021 08:42:34.130 Noise In Spec.
+ALM: 01 09/27/2021 08:42:34.830 Noise High
+MSG: 01 09/27/2021 08:42:35.330 Noise In Spec.
+ALM: 01 09/27/2021 08:42:39.030 Noise High
+MSG: 01 09/27/2021 08:42:39.430 Noise In Spec.
+ALM: 01 09/27/2021 08:48:13.330 Noise High
+MSG: 01 09/27/2021 08:48:13.730 Noise In Spec.
+ALM: 01 09/27/2021 08:49:42.730 Noise High
+MSG: 01 09/27/2021 08:49:43.630 Noise In Spec.
+ALM: 01 09/27/2021 08:49:44.830 Noise High
+MSG: 01 09/27/2021 08:49:45.430 Noise In Spec.
+ALM: 01 09/27/2021 08:49:57.030 Noise High
+MSG: 01 09/27/2021 08:49:57.630 Noise In Spec.
+ALM: 01 09/27/2021 08:55:57.830 Noise High
+MSG: 01 09/27/2021 08:55:58.230 Noise In Spec.
+ALM: 01 09/27/2021 08:56:34.830 Noise High
+MSG: 01 09/27/2021 08:56:35.230 Noise In Spec.
+ALM: 01 09/27/2021 08:56:37.230 Noise High
+MSG: 01 09/27/2021 08:56:37.630 Noise In Spec.
+ALM: 01 09/27/2021 08:59:41.230 Noise High
+MSG: 01 09/27/2021 08:59:42.030 Noise In Spec.
+ALM: 01 09/27/2021 08:59:43.230 Noise High
+MSG: 01 09/27/2021 08:59:44.130 Noise In Spec.
+ALM: 01 09/27/2021 08:59:55.530 Noise High
+MSG: 01 09/27/2021 08:59:56.230 Noise In Spec.
+ALM: 01 09/27/2021 08:59:57.330 Noise High
+MSG: 01 09/27/2021 08:59:57.730 Noise In Spec.
+ALM: 01 09/27/2021 09:09:51.030 Noise High
+MSG: 01 09/27/2021 09:09:51.930 Noise In Spec.
+ALM: 01 09/27/2021 09:09:52.830 Noise High
+MSG: 01 09/27/2021 09:09:53.830 Noise In Spec.
+ALM: 01 09/27/2021 09:10:06.630 Noise High
+MSG: 01 09/27/2021 09:10:07.030 Noise In Spec.
+ALM: 01 09/27/2021 09:10:07.630 Noise High
+MSG: 01 09/27/2021 09:10:08.130 Noise In Spec.
+ALM: 01 09/27/2021 09:10:21.030 Noise High
+MSG: 01 09/27/2021 09:10:21.830 Noise In Spec.
+ALM: 01 09/27/2021 09:15:58.130 Noise High
+MSG: 01 09/27/2021 09:15:58.530 Noise In Spec.
+ALM: 01 09/27/2021 09:16:07.630 Noise High
+MSG: 01 09/27/2021 09:16:08.030 Noise In Spec.
+ALM: 01 09/27/2021 09:16:15.330 Noise High
+MSG: 01 09/27/2021 09:16:15.930 Noise In Spec.
+ALM: 01 09/27/2021 09:16:19.430 Noise High
+MSG: 01 09/27/2021 09:16:19.830 Noise In Spec.
+ALM: 01 09/27/2021 09:16:56.630 Noise High
+MSG: 01 09/27/2021 09:16:57.130 Noise In Spec.
+ALM: 01 09/27/2021 09:16:57.730 Noise High
+MSG: 01 09/27/2021 09:16:58.130 Noise In Spec.
+ALM: 01 09/27/2021 09:17:05.430 Noise High
+MSG: 01 09/27/2021 09:17:05.830 Noise In Spec.
+ALM: 01 09/27/2021 09:17:06.230 Noise High
+MSG: 01 09/27/2021 09:17:06.630 Noise In Spec.
+ALM: 01 09/27/2021 09:17:10.730 Noise High
+MSG: 01 09/27/2021 09:17:11.130 Noise In Spec.
+ALM: 01 09/27/2021 09:17:16.130 Noise High
+MSG: 01 09/27/2021 09:17:16.530 Noise In Spec.
+ALM: 01 09/27/2021 09:17:20.330 Noise High
+MSG: 01 09/27/2021 09:17:20.730 Noise In Spec.
+ALM: 01 09/27/2021 09:17:25.330 Noise High
+MSG: 01 09/27/2021 09:17:25.730 Noise In Spec.
+ALM: 01 09/27/2021 09:18:50.930 Noise High
+MSG: 01 09/27/2021 09:18:51.330 Noise In Spec.
+ALM: 01 09/27/2021 09:18:51.730 Noise High
+MSG: 01 09/27/2021 09:18:52.130 Noise In Spec.
+ALM: 01 09/27/2021 09:19:38.630 Noise High
+MSG: 01 09/27/2021 09:19:39.630 Noise In Spec.
+ALM: 01 09/27/2021 09:19:53.530 Noise High
+MSG: 01 09/27/2021 09:19:54.130 Noise In Spec.
+ALM: 01 09/27/2021 09:19:55.230 Noise High
+MSG: 01 09/27/2021 09:19:56.230 Noise In Spec.
+ALM: 01 09/27/2021 09:29:37.630 Noise High
+MSG: 01 09/27/2021 09:29:38.730 Noise In Spec.
+ALM: 01 09/27/2021 09:29:39.430 Noise High
+MSG: 01 09/27/2021 09:29:40.230 Noise In Spec.
+ALM: 01 09/27/2021 09:29:52.330 Noise High
+MSG: 01 09/27/2021 09:29:53.330 Noise In Spec.
+ALM: 01 09/27/2021 09:30:07.030 Noise High
+MSG: 01 09/27/2021 09:30:07.930 Noise In Spec.
+ALM: 01 09/27/2021 09:30:09.130 Noise High
+MSG: 01 09/27/2021 09:30:10.030 Noise In Spec.
+ALM: 01 09/27/2021 09:39:33.230 Noise High
+MSG: 01 09/27/2021 09:39:33.630 Noise In Spec.
+ALM: 01 09/27/2021 09:39:34.330 Noise High
+MSG: 01 09/27/2021 09:39:34.730 Noise In Spec.
+ALM: 01 09/27/2021 09:39:35.530 Noise High
+MSG: 01 09/27/2021 09:39:36.430 Noise In Spec.
+ALM: 01 09/27/2021 09:39:38.630 Noise High
+MSG: 01 09/27/2021 09:39:39.730 Noise In Spec.
+ALM: 01 09/27/2021 09:39:49.830 Noise High
+MSG: 01 09/27/2021 09:39:50.930 Noise In Spec.
+ALM: 01 09/27/2021 09:39:52.330 Noise High
+MSG: 01 09/27/2021 09:39:53.330 Noise In Spec.
+ALM: 01 09/27/2021 09:39:56.430 Noise High
+MSG: 01 09/27/2021 09:39:56.830 Noise In Spec.
+ALM: 01 09/27/2021 09:40:01.130 Noise High
+MSG: 01 09/27/2021 09:40:01.530 Noise In Spec.
+ALM: 01 09/27/2021 09:40:07.230 Noise High
+MSG: 01 09/27/2021 09:40:07.930 Noise In Spec.
+ALM: 01 09/27/2021 09:40:14.730 Noise High
+MSG: 01 09/27/2021 09:40:15.130 Noise In Spec.
+ALM: 01 09/27/2021 09:40:18.430 Noise High
+MSG: 01 09/27/2021 09:40:18.830 Noise In Spec.
+ALM: 01 09/27/2021 09:40:19.230 Noise High
+MSG: 01 09/27/2021 09:40:20.130 Noise In Spec.
+ALM: 01 09/27/2021 09:40:21.630 Noise High
+MSG: 01 09/27/2021 09:40:22.130 Noise In Spec.
+ALM: 01 09/27/2021 09:40:22.830 Noise High
+MSG: 01 09/27/2021 09:40:23.230 Noise In Spec.
+ALM: 01 09/27/2021 09:40:24.930 Noise High
+MSG: 01 09/27/2021 09:40:25.430 Noise In Spec.
+ALM: 01 09/27/2021 09:40:25.930 Noise High
+MSG: 01 09/27/2021 09:40:26.430 Noise In Spec.
+ALM: 01 09/27/2021 09:40:27.630 Noise High
+MSG: 01 09/27/2021 09:40:28.330 Noise In Spec.
+ALM: 01 09/27/2021 09:40:28.730 Noise High
+MSG: 01 09/27/2021 09:40:29.330 Noise In Spec.
+ALM: 01 09/27/2021 09:40:30.730 Noise High
+MSG: 01 09/27/2021 09:40:31.230 Noise In Spec.
+ALM: 01 09/27/2021 09:40:31.630 Noise High
+MSG: 01 09/27/2021 09:40:32.230 Noise In Spec.
+ALM: 01 09/27/2021 09:40:32.630 Noise High
+MSG: 01 09/27/2021 09:40:33.330 Noise In Spec.
+ALM: 01 09/27/2021 09:40:35.930 Noise High
+MSG: 01 09/27/2021 09:40:36.430 Noise In Spec.
+ALM: 01 09/27/2021 09:40:36.930 Noise High
+MSG: 01 09/27/2021 09:40:37.430 Noise In Spec.
+ALM: 01 09/27/2021 09:40:38.030 Noise High
+MSG: 01 09/27/2021 09:40:38.430 Noise In Spec.
+ALM: 01 09/27/2021 09:40:41.230 Noise High
+MSG: 01 09/27/2021 09:40:41.630 Noise In Spec.
+ALM: 01 09/27/2021 09:40:45.430 Noise High
+MSG: 01 09/27/2021 09:40:45.830 Noise In Spec.
+ALM: 01 09/27/2021 09:40:46.230 Noise High
+MSG: 01 09/27/2021 09:40:46.630 Noise In Spec.
+ALM: 01 09/27/2021 09:41:13.530 Noise High
+MSG: 01 09/27/2021 09:41:13.930 Noise In Spec.
+ALM: 01 09/27/2021 09:41:17.330 Noise High
+MSG: 01 09/27/2021 09:41:17.830 Noise In Spec.
+ALM: 01 09/27/2021 09:41:47.530 Noise High
+MSG: 01 09/27/2021 09:41:49.630 Noise In Spec.
+ALM: 01 09/27/2021 09:41:50.030 Noise High
+MSG: 01 09/27/2021 09:41:51.030 Noise In Spec.
+ALM: 01 09/27/2021 09:41:52.530 Noise High
+MSG: 01 09/27/2021 09:41:53.630 Noise In Spec.
+ALM: 01 09/27/2021 09:42:18.830 Noise High
+MSG: 01 09/27/2021 09:42:20.130 Noise In Spec.
+ALM: 01 09/27/2021 09:42:21.830 Noise High
+MSG: 01 09/27/2021 09:42:23.330 Noise In Spec.
+ALM: 01 09/27/2021 09:42:49.030 Noise High
+MSG: 01 09/27/2021 09:42:50.230 Noise In Spec.
+ALM: 01 09/27/2021 09:43:00.630 Noise High
+MSG: 01 09/27/2021 09:43:01.130 Noise In Spec.
+ALM: 01 09/27/2021 09:43:01.730 Noise High
+MSG: 01 09/27/2021 09:43:06.030 Noise In Spec.
+ALM: 01 09/27/2021 09:43:07.230 Noise High
+MSG: 01 09/27/2021 09:43:07.930 Noise In Spec.
+ALM: 01 09/27/2021 09:43:30.130 Noise High
+MSG: 01 09/27/2021 09:43:31.030 Noise In Spec.
+ALM: 01 09/27/2021 09:43:33.630 Noise High
+MSG: 01 09/27/2021 09:43:34.030 Noise In Spec.
+ALM: 01 09/27/2021 09:43:36.030 Noise High
+MSG: 01 09/27/2021 09:43:37.630 Noise In Spec.
+ALM: 01 09/27/2021 09:43:40.930 Noise High
+MSG: 01 09/27/2021 09:43:41.430 Noise In Spec.
+ALM: 01 09/27/2021 09:43:48.430 Noise High
+MSG: 01 09/27/2021 09:43:48.830 Noise In Spec.
+ALM: 01 09/27/2021 09:43:49.230 Noise High
+MSG: 01 09/27/2021 09:43:49.630 Noise In Spec.
+ALM: 01 09/27/2021 09:43:59.330 Noise High
+MSG: 01 09/27/2021 09:44:01.730 Noise In Spec.
+ALM: 01 09/27/2021 09:44:08.430 Noise High
+MSG: 01 09/27/2021 09:44:08.930 Noise In Spec.
+ALM: 01 09/27/2021 09:44:09.330 Noise High
+MSG: 01 09/27/2021 09:44:10.030 Noise In Spec.
+ALM: 01 09/27/2021 09:44:12.430 Noise High
+MSG: 01 09/27/2021 09:44:12.930 Noise In Spec.
+ALM: 01 09/27/2021 09:44:13.530 Noise High
+MSG: 01 09/27/2021 09:44:14.830 Noise In Spec.
+ALM: 01 09/27/2021 09:44:29.330 Noise High
+MSG: 01 09/27/2021 09:44:29.730 Noise In Spec.
+ALM: 01 09/27/2021 09:44:30.330 Noise High
+MSG: 01 09/27/2021 09:44:31.330 Noise In Spec.
+ALM: 01 09/27/2021 09:44:38.630 Noise High
+MSG: 01 09/27/2021 09:44:39.130 Noise In Spec.
+ALM: 01 09/27/2021 09:44:39.530 Noise High
+MSG: 01 09/27/2021 09:44:39.930 Noise In Spec.
+ALM: 01 09/27/2021 09:44:43.630 Noise High
+MSG: 01 09/27/2021 09:44:44.030 Noise In Spec.
+ALM: 01 09/27/2021 09:44:48.630 Noise High
+MSG: 01 09/27/2021 09:44:49.730 Noise In Spec.
+ALM: 01 09/27/2021 09:44:56.330 Noise High
+MSG: 01 09/27/2021 09:44:57.430 Noise In Spec.
+ALM: 01 09/27/2021 09:45:14.730 Noise High
+MSG: 01 09/27/2021 09:45:16.830 Noise In Spec.
+ALM: 01 09/27/2021 09:45:17.230 Noise High
+MSG: 01 09/27/2021 09:45:18.330 Noise In Spec.
+ALM: 01 09/27/2021 09:45:19.330 Noise High
+MSG: 01 09/27/2021 09:45:19.730 Noise In Spec.
+ALM: 01 09/27/2021 09:45:24.030 Noise High
+MSG: 01 09/27/2021 09:45:24.430 Noise In Spec.
+ALM: 01 09/27/2021 09:45:24.830 Noise High
+MSG: 01 09/27/2021 09:45:25.530 Noise In Spec.
+ALM: 01 09/27/2021 09:45:26.430 Noise High
+MSG: 01 09/27/2021 09:45:27.430 Noise In Spec.
+ALM: 01 09/27/2021 09:45:41.030 Noise High
+MSG: 01 09/27/2021 09:45:42.230 Noise In Spec.
+ALM: 01 09/27/2021 09:45:46.430 Noise High
+MSG: 01 09/27/2021 09:45:48.730 Noise In Spec.
+ALM: 01 09/27/2021 09:45:51.130 Noise High
+MSG: 01 09/27/2021 09:45:52.030 Noise In Spec.
+ALM: 01 09/27/2021 09:45:57.130 Noise High
+MSG: 01 09/27/2021 09:45:57.630 Noise In Spec.
+ALM: 01 09/27/2021 09:45:58.230 Noise High
+MSG: 01 09/27/2021 09:45:58.930 Noise In Spec.
+ALM: 01 09/27/2021 09:46:01.130 Noise High
+MSG: 01 09/27/2021 09:46:02.330 Noise In Spec.
+ALM: 01 09/27/2021 09:46:07.130 Noise High
+MSG: 01 09/27/2021 09:46:07.530 Noise In Spec.
+ALM: 01 09/27/2021 09:46:09.630 Noise High
+MSG: 01 09/27/2021 09:46:10.130 Noise In Spec.
+ALM: 01 09/27/2021 09:46:10.530 Noise High
+MSG: 01 09/27/2021 09:46:10.930 Noise In Spec.
+ALM: 01 09/27/2021 09:46:12.030 Noise High
+MSG: 01 09/27/2021 09:46:12.530 Noise In Spec.
+ALM: 01 09/27/2021 09:46:13.330 Noise High
+MSG: 01 09/27/2021 09:46:14.030 Noise In Spec.
+ALM: 01 09/27/2021 09:46:24.630 Noise High
+MSG: 01 09/27/2021 09:46:29.830 Noise In Spec.
+ALM: 01 09/27/2021 09:46:35.830 Noise High
+MSG: 01 09/27/2021 09:46:39.030 Noise In Spec.
+ALM: 01 09/27/2021 09:46:46.630 Noise High
+MSG: 01 09/27/2021 09:46:49.630 Noise In Spec.
+ALM: 01 09/27/2021 09:46:50.030 Noise High
+MSG: 01 09/27/2021 09:46:51.230 Noise In Spec.
+ALM: 01 09/27/2021 09:46:55.030 Noise High
+MSG: 01 09/27/2021 09:46:57.430 Noise In Spec.
+ALM: 01 09/27/2021 09:46:59.430 Noise High
+MSG: 01 09/27/2021 09:47:02.530 Noise In Spec.
+ALM: 01 09/27/2021 09:47:02.930 Noise High
+MSG: 01 09/27/2021 09:47:03.330 Noise In Spec.
+ALM: 01 09/27/2021 09:47:03.730 Noise High
+MSG: 01 09/27/2021 09:47:04.930 Noise In Spec.
+ALM: 01 09/27/2021 09:47:05.530 Noise High
+MSG: 01 09/27/2021 09:47:07.330 Noise In Spec.
+ALM: 01 09/27/2021 09:47:11.330 Noise High
+MSG: 01 09/27/2021 09:47:12.830 Noise In Spec.
+ALM: 01 09/27/2021 09:47:14.930 Noise High
+MSG: 01 09/27/2021 09:47:17.630 Noise In Spec.
+ALM: 01 09/27/2021 09:47:22.330 Noise High
+MSG: 01 09/27/2021 09:47:24.030 Noise In Spec.
+ALM: 01 09/27/2021 09:47:24.430 Noise High
+MSG: 01 09/27/2021 09:47:26.530 Noise In Spec.
+ALM: 01 09/27/2021 09:47:26.930 Noise High
+MSG: 01 09/27/2021 09:47:27.330 Noise In Spec.
+ALM: 01 09/27/2021 09:47:28.230 Noise High
+MSG: 01 09/27/2021 09:47:30.230 Noise In Spec.
+ALM: 01 09/27/2021 09:47:33.730 Noise High
+MSG: 01 09/27/2021 09:47:34.930 Noise In Spec.
+ALM: 01 09/27/2021 09:47:41.430 Noise High
+MSG: 01 09/27/2021 09:47:42.730 Noise In Spec.
+ALM: 01 09/27/2021 09:47:51.730 Noise High
+MSG: 01 09/27/2021 09:47:54.030 Noise In Spec.
+ALM: 01 09/27/2021 09:48:01.730 Noise High
+MSG: 01 09/27/2021 09:48:03.630 Noise In Spec.
+ALM: 01 09/27/2021 09:48:04.330 Noise High
+MSG: 01 09/27/2021 09:48:13.530 Noise In Spec.
+ALM: 01 09/27/2021 09:48:15.030 Noise High
+MSG: 01 09/27/2021 09:48:17.330 Noise In Spec.
+ALM: 01 09/27/2021 09:48:24.630 Noise High
+MSG: 01 09/27/2021 09:48:26.430 Noise In Spec.
+ALM: 01 09/27/2021 09:48:27.430 Noise High
+MSG: 01 09/27/2021 09:48:29.630 Noise In Spec.
+ALM: 01 09/27/2021 09:48:35.330 Noise High
+MSG: 01 09/27/2021 09:48:36.230 Noise In Spec.
+ALM: 01 09/27/2021 09:48:36.630 Noise High
+MSG: 01 09/27/2021 09:48:41.230 Noise In Spec.
+ALM: 01 09/27/2021 09:48:41.630 Noise High
+MSG: 01 09/27/2021 09:48:43.730 Noise In Spec.
+ALM: 01 09/27/2021 09:48:45.230 Noise High
+MSG: 01 09/27/2021 09:48:49.930 Noise In Spec.
+ALM: 01 09/27/2021 09:48:51.030 Noise High
+MSG: 01 09/27/2021 09:48:54.230 Noise In Spec.
+ALM: 01 09/27/2021 09:48:54.630 Noise High
+MSG: 01 09/27/2021 09:48:59.030 Noise In Spec.
+ALM: 01 09/27/2021 09:48:59.930 Noise High
+MSG: 01 09/27/2021 09:49:03.130 Noise In Spec.
+ALM: 01 09/27/2021 09:49:03.530 Noise High
+MSG: 01 09/27/2021 09:49:09.430 Noise In Spec.
+ALM: 01 09/27/2021 09:49:11.830 Noise High
+MSG: 01 09/27/2021 09:49:12.530 Noise In Spec.
+ALM: 01 09/27/2021 09:49:13.230 Noise High
+MSG: 01 09/27/2021 09:49:14.130 Noise In Spec.
+ALM: 01 09/27/2021 09:49:16.030 Noise High
+MSG: 01 09/27/2021 09:49:18.630 Noise In Spec.
+ALM: 01 09/27/2021 09:49:25.130 Noise High
+MSG: 01 09/27/2021 09:49:26.330 Noise In Spec.
+ALM: 01 09/27/2021 09:49:31.530 Noise High
+MSG: 01 09/27/2021 09:49:32.730 Noise In Spec.
+ALM: 01 09/27/2021 09:49:33.330 Noise High
+MSG: 01 09/27/2021 09:49:33.730 Noise In Spec.
+ALM: 01 09/27/2021 09:49:41.130 Noise High
+MSG: 01 09/27/2021 09:49:41.730 Noise In Spec.
+ALM: 01 09/27/2021 09:49:44.030 Noise High
+MSG: 01 09/27/2021 09:49:44.530 Noise In Spec.
+ALM: 01 09/27/2021 09:49:56.130 Noise High
+MSG: 01 09/27/2021 09:49:56.930 Noise In Spec.
+ALM: 01 09/27/2021 09:50:10.430 Noise High
+MSG: 01 09/27/2021 09:50:14.230 Noise In Spec.
+ALM: 01 09/27/2021 09:50:22.230 Noise High
+MSG: 01 09/27/2021 09:50:22.930 Noise In Spec.
+ALM: 01 09/27/2021 09:50:25.230 Noise High
+MSG: 01 09/27/2021 09:50:25.630 Noise In Spec.
+ALM: 01 09/27/2021 09:50:26.230 Noise High
+MSG: 01 09/27/2021 09:50:26.630 Noise In Spec.
+ALM: 01 09/27/2021 09:50:28.330 Noise High
+MSG: 01 09/27/2021 09:50:28.830 Noise In Spec.
+ALM: 01 09/27/2021 09:50:29.730 Noise High
+MSG: 01 09/27/2021 09:50:30.130 Noise In Spec.
+ALM: 01 09/27/2021 09:50:30.530 Noise High
+MSG: 01 09/27/2021 09:50:31.430 Noise In Spec.
+ALM: 01 09/27/2021 09:50:32.130 Noise High
+MSG: 01 09/27/2021 09:50:32.530 Noise In Spec.
+ALM: 01 09/27/2021 09:50:32.930 Noise High
+MSG: 01 09/27/2021 09:50:33.330 Noise In Spec.
+ALM: 01 09/27/2021 09:50:34.730 Noise High
+MSG: 01 09/27/2021 09:50:35.730 Noise In Spec.
+ALM: 01 09/27/2021 09:50:36.330 Noise High
+MSG: 01 09/27/2021 09:50:36.730 Noise In Spec.
+ALM: 01 09/27/2021 09:50:37.130 Noise High
+MSG: 01 09/27/2021 09:50:38.030 Noise In Spec.
+ALM: 01 09/27/2021 09:50:39.230 Noise High
+MSG: 01 09/27/2021 09:50:39.630 Noise In Spec.
+ALM: 01 09/27/2021 09:50:40.030 Noise High
+MSG: 01 09/27/2021 09:50:40.430 Noise In Spec.
+ALM: 01 09/27/2021 09:50:40.830 Noise High
+MSG: 01 09/27/2021 09:50:41.230 Noise In Spec.
+ALM: 01 09/27/2021 09:50:41.630 Noise High
+MSG: 01 09/27/2021 09:50:42.130 Noise In Spec.
+ALM: 01 09/27/2021 09:50:42.630 Noise High
+MSG: 01 09/27/2021 09:50:49.830 Noise In Spec.
+ALM: 01 09/27/2021 09:50:51.630 Noise High
+MSG: 01 09/27/2021 09:50:53.230 Noise In Spec.
+ALM: 01 09/27/2021 09:50:53.730 Noise High
+MSG: 01 09/27/2021 09:50:54.430 Noise In Spec.
+ALM: 01 09/27/2021 09:50:54.830 Noise High
+MSG: 01 09/27/2021 09:50:55.230 Noise In Spec.
+ALM: 01 09/27/2021 09:50:55.830 Noise High
+MSG: 01 09/27/2021 09:51:00.830 Noise In Spec.
+ALM: 01 09/27/2021 09:51:02.130 Noise High
+MSG: 01 09/27/2021 09:51:02.530 Noise In Spec.
+ALM: 01 09/27/2021 09:51:02.930 Noise High
+MSG: 01 09/27/2021 09:51:04.830 Noise In Spec.
+ALM: 01 09/27/2021 09:51:05.230 Noise High
+MSG: 01 09/27/2021 09:51:06.530 Noise In Spec.
+ALM: 01 09/27/2021 09:51:07.830 Noise High
+MSG: 01 09/27/2021 09:51:10.530 Noise In Spec.
+ALM: 01 09/27/2021 09:51:12.830 Noise High
+MSG: 01 09/27/2021 09:51:13.230 Noise In Spec.
+ALM: 01 09/27/2021 09:51:15.730 Noise High
+MSG: 01 09/27/2021 09:51:16.130 Noise In Spec.
+ALM: 01 09/27/2021 09:51:19.130 Noise High
+MSG: 01 09/27/2021 09:51:19.530 Noise In Spec.
+ALM: 01 09/27/2021 09:51:19.930 Noise High
+MSG: 01 09/27/2021 09:51:20.330 Noise In Spec.
+ALM: 01 09/27/2021 09:51:21.830 Noise High
+MSG: 01 09/27/2021 09:51:22.230 Noise In Spec.
+ALM: 01 09/27/2021 09:51:23.330 Noise High
+MSG: 01 09/27/2021 09:51:23.730 Noise In Spec.
+ALM: 01 09/27/2021 09:51:25.730 Noise High
+MSG: 01 09/27/2021 09:51:26.130 Noise In Spec.
+ALM: 01 09/27/2021 09:51:26.530 Noise High
+MSG: 01 09/27/2021 09:51:26.930 Noise In Spec.
+ALM: 01 09/27/2021 09:51:28.130 Noise High
+MSG: 01 09/27/2021 09:51:28.530 Noise In Spec.
+ALM: 01 09/27/2021 09:51:29.930 Noise High
+MSG: 01 09/27/2021 09:51:30.330 Noise In Spec.
+ALM: 01 09/27/2021 09:51:30.730 Noise High
+MSG: 01 09/27/2021 09:51:32.230 Noise In Spec.
+ALM: 01 09/27/2021 09:51:33.030 Noise High
+MSG: 01 09/27/2021 09:51:33.430 Noise In Spec.
+ALM: 01 09/27/2021 09:51:33.930 Noise High
+MSG: 01 09/27/2021 09:51:38.030 Noise In Spec.
+ALM: 01 09/27/2021 09:51:38.430 Noise High
+MSG: 01 09/27/2021 09:51:40.630 Noise In Spec.
+ALM: 01 09/27/2021 09:51:41.030 Noise High
+MSG: 01 09/27/2021 09:51:41.730 Noise In Spec.
+ALM: 01 09/27/2021 09:51:43.130 Noise High
+MSG: 01 09/27/2021 09:51:43.830 Noise In Spec.
+ALM: 01 09/27/2021 09:51:44.830 Noise High
+MSG: 01 09/27/2021 09:51:45.230 Noise In Spec.
+ALM: 01 09/27/2021 09:51:46.030 Noise High
+MSG: 01 09/27/2021 09:51:46.430 Noise In Spec.
+ALM: 01 09/27/2021 09:51:46.830 Noise High
+MSG: 01 09/27/2021 09:51:47.230 Noise In Spec.
+ALM: 01 09/27/2021 09:51:48.930 Noise High
+MSG: 01 09/27/2021 09:51:49.330 Noise In Spec.
+ALM: 01 09/27/2021 09:51:51.530 Noise High
+MSG: 01 09/27/2021 09:51:52.130 Noise In Spec.
+ALM: 01 09/27/2021 09:51:52.630 Noise High
+MSG: 01 09/27/2021 09:51:53.030 Noise In Spec.
+ALM: 01 09/27/2021 09:51:53.630 Noise High
+MSG: 01 09/27/2021 09:51:54.630 Noise In Spec.
+ALM: 01 09/27/2021 09:51:55.030 Noise High
+MSG: 01 09/27/2021 09:51:55.430 Noise In Spec.
+ALM: 01 09/27/2021 09:51:56.730 Noise High
+MSG: 01 09/27/2021 09:51:57.730 Noise In Spec.
+ALM: 01 09/27/2021 09:51:58.930 Noise High
+MSG: 01 09/27/2021 09:51:59.430 Noise In Spec.
+ALM: 01 09/27/2021 09:52:01.730 Noise High
+MSG: 01 09/27/2021 09:52:02.130 Noise In Spec.
+ALM: 01 09/27/2021 09:52:03.030 Noise High
+MSG: 01 09/27/2021 09:52:03.430 Noise In Spec.
+ALM: 01 09/27/2021 09:52:04.830 Noise High
+MSG: 01 09/27/2021 09:52:05.930 Noise In Spec.
+ALM: 01 09/27/2021 09:52:07.730 Noise High
+MSG: 01 09/27/2021 09:52:08.930 Noise In Spec.
+ALM: 01 09/27/2021 09:52:41.530 Noise High
+MSG: 01 09/27/2021 09:52:42.030 Noise In Spec.
+ALM: 01 09/27/2021 09:52:55.330 Noise High
+MSG: 01 09/27/2021 09:52:55.730 Noise In Spec.
+ALM: 01 09/27/2021 09:52:56.330 Noise High
+MSG: 01 09/27/2021 09:52:56.730 Noise In Spec.
+ALM: 01 09/27/2021 09:53:04.530 Noise High
+MSG: 01 09/27/2021 09:53:05.230 Noise In Spec.
+ALM: 01 09/27/2021 09:53:13.530 Noise High
+MSG: 01 09/27/2021 09:53:14.030 Noise In Spec.
+ALM: 01 09/27/2021 09:53:20.330 Noise High
+MSG: 01 09/27/2021 09:53:20.730 Noise In Spec.
+ALM: 01 09/27/2021 09:57:44.230 Noise High
+MSG: 01 09/27/2021 09:57:44.630 Noise In Spec.
+ALM: 01 09/27/2021 09:59:32.630 Noise High
+MSG: 01 09/27/2021 09:59:33.530 Noise In Spec.
+ALM: 01 09/27/2021 09:59:35.830 Noise High
+MSG: 01 09/27/2021 09:59:36.730 Noise In Spec.
+ALM: 01 09/27/2021 09:59:49.730 Noise High
+MSG: 01 09/27/2021 09:59:50.630 Noise In Spec.
+ALM: 01 09/27/2021 10:00:00.630 Noise High
+MSG: 01 09/27/2021 10:00:01.230 Noise In Spec.
+ALM: 01 09/27/2021 10:00:05.930 Noise High
+MSG: 01 09/27/2021 10:00:10.130 Noise In Spec.
+ALM: 01 09/27/2021 10:00:11.330 Noise High
+MSG: 01 09/27/2021 10:00:11.730 Noise In Spec.
+ALM: 01 09/27/2021 10:00:12.130 Noise High
+MSG: 01 09/27/2021 10:00:13.630 Noise In Spec.
+ALM: 01 09/27/2021 10:00:14.530 Noise High
+MSG: 01 09/27/2021 10:00:22.730 Noise In Spec.
+ALM: 01 09/27/2021 10:00:23.530 Noise High
+MSG: 01 09/27/2021 10:00:24.130 Noise In Spec.
+ALM: 01 09/27/2021 10:00:25.330 Noise High
+MSG: 01 09/27/2021 10:00:29.930 Noise In Spec.
+ALM: 01 09/27/2021 10:00:34.830 Noise High
+MSG: 01 09/27/2021 10:00:37.530 Noise In Spec.
+ALM: 01 09/27/2021 10:00:40.730 Noise High
+MSG: 01 09/27/2021 10:00:43.830 Noise In Spec.
+ALM: 01 09/27/2021 10:01:31.630 Noise High
+MSG: 01 09/27/2021 10:01:37.330 Noise In Spec.
+ALM: 01 09/27/2021 10:01:40.430 Noise High
+MSG: 01 09/27/2021 10:01:57.530 Noise In Spec.
+ALM: 01 09/27/2021 10:01:58.430 Noise High
+MSG: 01 09/27/2021 10:02:06.930 Noise In Spec.
+ALM: 01 09/27/2021 10:02:07.930 Noise High
+MSG: 01 09/27/2021 10:02:11.930 Noise In Spec.
+ALM: 01 09/27/2021 10:02:18.230 Noise High
+MSG: 01 09/27/2021 10:02:19.530 Noise In Spec.
+ALM: 01 09/27/2021 10:02:21.130 Noise High
+MSG: 01 09/27/2021 10:02:21.630 Noise In Spec.
+ALM: 01 09/27/2021 10:02:22.030 Noise High
+MSG: 01 09/27/2021 10:02:24.030 Noise In Spec.
+ALM: 01 09/27/2021 10:02:36.930 Noise High
+MSG: 01 09/27/2021 10:02:37.530 Noise In Spec.
+ALM: 01 09/27/2021 10:02:40.330 Noise High
+MSG: 01 09/27/2021 10:02:41.930 Noise In Spec.
+ALM: 01 09/27/2021 10:02:42.330 Noise High
+MSG: 01 09/27/2021 10:02:55.130 Noise In Spec.
+ALM: 01 09/27/2021 10:02:56.130 Noise High
+MSG: 01 09/27/2021 10:02:57.330 Noise In Spec.
+ALM: 01 09/27/2021 10:02:57.730 Noise High
+MSG: 01 09/27/2021 10:02:59.330 Noise In Spec.
+ALM: 01 09/27/2021 10:03:04.030 Noise High
+MSG: 01 09/27/2021 10:03:04.430 Noise In Spec.
+ALM: 01 09/27/2021 10:03:04.830 Noise High
+MSG: 01 09/27/2021 10:03:05.230 Noise In Spec.
+ALM: 01 09/27/2021 10:03:08.230 Noise High
+MSG: 01 09/27/2021 10:03:10.030 Noise In Spec.
+ALM: 01 09/27/2021 10:03:13.230 Noise High
+MSG: 01 09/27/2021 10:03:13.630 Noise In Spec.
+ALM: 01 09/27/2021 10:03:16.430 Noise High
+MSG: 01 09/27/2021 10:03:17.230 Noise In Spec.
+ALM: 01 09/27/2021 10:03:17.730 Noise High
+MSG: 01 09/27/2021 10:03:18.130 Noise In Spec.
+ALM: 01 09/27/2021 10:03:18.530 Noise High
+MSG: 01 09/27/2021 10:03:20.530 Noise In Spec.
+ALM: 01 09/27/2021 10:03:20.930 Noise High
+MSG: 01 09/27/2021 10:03:21.330 Noise In Spec.
+ALM: 01 09/27/2021 10:03:21.930 Noise High
+MSG: 01 09/27/2021 10:03:22.630 Noise In Spec.
+ALM: 01 09/27/2021 10:03:25.130 Noise High
+MSG: 01 09/27/2021 10:03:25.530 Noise In Spec.
+ALM: 01 09/27/2021 10:03:27.930 Noise High
+MSG: 01 09/27/2021 10:03:30.130 Noise In Spec.
+ALM: 01 09/27/2021 10:03:31.330 Noise High
+MSG: 01 09/27/2021 10:03:32.030 Noise In Spec.
+ALM: 01 09/27/2021 10:03:33.930 Noise High
+MSG: 01 09/27/2021 10:03:34.330 Noise In Spec.
+ALM: 01 09/27/2021 10:03:34.730 Noise High
+MSG: 01 09/27/2021 10:03:36.830 Noise In Spec.
+ALM: 01 09/27/2021 10:03:39.730 Noise High
+MSG: 01 09/27/2021 10:03:40.930 Noise In Spec.
+ALM: 01 09/27/2021 10:03:44.330 Noise High
+MSG: 01 09/27/2021 10:03:48.230 Noise In Spec.
+ALM: 01 09/27/2021 10:03:56.230 Noise High
+MSG: 01 09/27/2021 10:03:57.030 Noise In Spec.
+ALM: 01 09/27/2021 10:03:58.230 Noise High
+MSG: 01 09/27/2021 10:03:59.830 Noise In Spec.
+ALM: 01 09/27/2021 10:04:17.430 Noise High
+MSG: 01 09/27/2021 10:04:21.730 Noise In Spec.
+ALM: 01 09/27/2021 10:04:32.330 Noise High
+MSG: 01 09/27/2021 10:04:34.030 Noise In Spec.
+ALM: 01 09/27/2021 10:04:50.930 Noise High
+MSG: 01 09/27/2021 10:04:51.430 Noise In Spec.
+ALM: 01 09/27/2021 10:04:51.830 Noise High
+MSG: 01 09/27/2021 10:04:52.430 Noise In Spec.
+ALM: 01 09/27/2021 10:05:05.730 Noise High
+MSG: 01 09/27/2021 10:05:06.130 Noise In Spec.
+ALM: 01 09/27/2021 10:05:06.530 Noise High
+MSG: 01 09/27/2021 10:05:06.930 Noise In Spec.
+ALM: 01 09/27/2021 10:05:27.930 Noise High
+MSG: 01 09/27/2021 10:05:29.730 Noise In Spec.
+ALM: 01 09/27/2021 10:05:31.530 Noise High
+MSG: 01 09/27/2021 10:05:31.930 Noise In Spec.
+ALM: 01 09/27/2021 10:05:41.330 Noise High
+MSG: 01 09/27/2021 10:05:41.930 Noise In Spec.
+ALM: 01 09/27/2021 10:05:42.330 Noise High
+MSG: 01 09/27/2021 10:05:43.030 Noise In Spec.
+ALM: 01 09/27/2021 10:05:43.430 Noise High
+MSG: 01 09/27/2021 10:05:43.830 Noise In Spec.
+ALM: 01 09/27/2021 10:05:44.230 Noise High
+MSG: 01 09/27/2021 10:05:44.830 Noise In Spec.
+ALM: 01 09/27/2021 10:05:45.230 Noise High
+MSG: 01 09/27/2021 10:05:47.030 Noise In Spec.
+ALM: 01 09/27/2021 10:05:51.630 Noise High
+MSG: 01 09/27/2021 10:05:52.530 Noise In Spec.
+ALM: 01 09/27/2021 10:05:52.930 Noise High
+MSG: 01 09/27/2021 10:05:54.630 Noise In Spec.
+ALM: 01 09/27/2021 10:05:55.030 Noise High
+MSG: 01 09/27/2021 10:05:55.830 Noise In Spec.
+ALM: 01 09/27/2021 10:06:04.930 Noise High
+MSG: 01 09/27/2021 10:06:05.630 Noise In Spec.
+ALM: 01 09/27/2021 10:06:08.330 Noise High
+MSG: 01 09/27/2021 10:06:08.730 Noise In Spec.
+ALM: 01 09/27/2021 10:06:09.730 Noise High
+MSG: 01 09/27/2021 10:06:10.530 Noise In Spec.
+ALM: 01 09/27/2021 10:06:14.330 Noise High
+MSG: 01 09/27/2021 10:06:15.030 Noise In Spec.
+ALM: 01 09/27/2021 10:06:15.630 Noise High
+MSG: 01 09/27/2021 10:06:16.030 Noise In Spec.
+ALM: 01 09/27/2021 10:06:17.230 Noise High
+MSG: 01 09/27/2021 10:06:17.730 Noise In Spec.
+ALM: 01 09/27/2021 10:06:18.530 Noise High
+MSG: 01 09/27/2021 10:06:18.930 Noise In Spec.
+ALM: 01 09/27/2021 10:06:33.630 Noise High
+MSG: 01 09/27/2021 10:06:34.430 Noise In Spec.
+ALM: 01 09/27/2021 10:06:35.230 Noise High
+MSG: 01 09/27/2021 10:06:35.630 Noise In Spec.
+ALM: 01 09/27/2021 10:06:36.930 Noise High
+MSG: 01 09/27/2021 10:06:40.730 Noise In Spec.
+ALM: 01 09/27/2021 10:06:44.230 Noise High
+MSG: 01 09/27/2021 10:06:45.830 Noise In Spec.
+ALM: 01 09/27/2021 10:07:21.130 Noise High
+MSG: 01 09/27/2021 10:07:21.530 Noise In Spec.
+ALM: 01 09/27/2021 10:07:22.230 Noise High
+MSG: 01 09/27/2021 10:07:22.830 Noise In Spec.
+ALM: 01 09/27/2021 10:07:23.230 Noise High
+MSG: 01 09/27/2021 10:07:23.730 Noise In Spec.
+ALM: 01 09/27/2021 10:07:34.430 Noise High
+MSG: 01 09/27/2021 10:07:38.630 Noise In Spec.
+ALM: 01 09/27/2021 10:07:43.230 Noise High
+MSG: 01 09/27/2021 10:07:43.630 Noise In Spec.
+ALM: 01 09/27/2021 10:07:47.230 Noise High
+MSG: 01 09/27/2021 10:07:47.630 Noise In Spec.
+ALM: 01 09/27/2021 10:07:49.030 Noise High
+MSG: 01 09/27/2021 10:07:49.730 Noise In Spec.
+ALM: 01 09/27/2021 10:07:50.130 Noise High
+MSG: 01 09/27/2021 10:07:50.530 Noise In Spec.
+ALM: 01 09/27/2021 10:07:53.330 Noise High
+MSG: 01 09/27/2021 10:07:53.930 Noise In Spec.
+ALM: 01 09/27/2021 10:07:54.630 Noise High
+MSG: 01 09/27/2021 10:07:55.530 Noise In Spec.
+ALM: 01 09/27/2021 10:08:05.430 Noise High
+MSG: 01 09/27/2021 10:08:05.830 Noise In Spec.
+ALM: 01 09/27/2021 10:08:06.230 Noise High
+MSG: 01 09/27/2021 10:08:08.430 Noise In Spec.
+ALM: 01 09/27/2021 10:08:10.830 Noise High
+MSG: 01 09/27/2021 10:08:13.330 Noise In Spec.
+ALM: 01 09/27/2021 10:08:13.830 Noise High
+MSG: 01 09/27/2021 10:08:14.330 Noise In Spec.
+ALM: 01 09/27/2021 10:08:14.930 Noise High
+MSG: 01 09/27/2021 10:08:15.330 Noise In Spec.
+ALM: 01 09/27/2021 10:08:16.430 Noise High
+MSG: 01 09/27/2021 10:08:17.430 Noise In Spec.
+ALM: 01 09/27/2021 10:08:27.630 Noise High
+MSG: 01 09/27/2021 10:08:35.530 Noise In Spec.
+ALM: 01 09/27/2021 10:08:36.230 Noise High
+MSG: 01 09/27/2021 10:08:36.630 Noise In Spec.
+ALM: 01 09/27/2021 10:08:37.930 Noise High
+MSG: 01 09/27/2021 10:08:40.330 Noise In Spec.
+ALM: 01 09/27/2021 10:08:40.730 Noise High
+MSG: 01 09/27/2021 10:08:47.030 Noise In Spec.
+ALM: 01 09/27/2021 10:08:47.430 Noise High
+MSG: 01 09/27/2021 10:08:50.030 Noise In Spec.
+ALM: 01 09/27/2021 10:08:51.330 Noise High
+MSG: 01 09/27/2021 10:08:55.230 Noise In Spec.
+ALM: 01 09/27/2021 10:08:55.730 Noise High
+MSG: 01 09/27/2021 10:08:58.130 Noise In Spec.
+ALM: 01 09/27/2021 10:08:58.530 Noise High
+MSG: 01 09/27/2021 10:09:00.030 Noise In Spec.
+ALM: 01 09/27/2021 10:09:00.630 Noise High
+MSG: 01 09/27/2021 10:09:24.930 Noise In Spec.
+ALM: 01 09/27/2021 10:09:25.330 Noise High
+MSG: 01 09/27/2021 10:09:25.930 Noise In Spec.
+ALM: 01 09/27/2021 10:09:26.330 Noise High
+MSG: 01 09/27/2021 10:09:29.830 Noise In Spec.
+ALM: 01 09/27/2021 10:09:31.330 Noise High
+MSG: 01 09/27/2021 10:09:33.330 Noise In Spec.
+ALM: 01 09/27/2021 10:09:45.730 Noise High
+MSG: 01 09/27/2021 10:09:46.630 Noise In Spec.
+ALM: 01 09/27/2021 10:09:49.730 Noise High
+MSG: 01 09/27/2021 10:09:51.030 Noise In Spec.
+ALM: 01 09/27/2021 10:09:59.330 Noise High
+MSG: 01 09/27/2021 10:10:00.230 Noise In Spec.
+ALM: 01 09/27/2021 10:10:07.730 Noise High
+MSG: 01 09/27/2021 10:10:09.330 Noise In Spec.
+ALM: 01 09/27/2021 10:10:13.330 Noise High
+MSG: 01 09/27/2021 10:10:14.130 Noise In Spec.
+ALM: 01 09/27/2021 10:10:14.630 Noise High
+MSG: 01 09/27/2021 10:10:18.130 Noise In Spec.
+ALM: 01 09/27/2021 10:10:18.630 Noise High
+MSG: 01 09/27/2021 10:10:24.130 Noise In Spec.
+ALM: 01 09/27/2021 10:10:24.530 Noise High
+MSG: 01 09/27/2021 10:10:25.030 Noise In Spec.
+ALM: 01 09/27/2021 10:10:25.630 Noise High
+MSG: 01 09/27/2021 10:10:27.230 Noise In Spec.
+ALM: 01 09/27/2021 10:10:30.530 Noise High
+MSG: 01 09/27/2021 10:10:31.230 Noise In Spec.
+ALM: 01 09/27/2021 10:10:38.130 Noise High
+MSG: 01 09/27/2021 10:10:42.930 Noise In Spec.
+ALM: 01 09/27/2021 10:10:50.130 Noise High
+MSG: 01 09/27/2021 10:10:53.230 Noise In Spec.
+ALM: 01 09/27/2021 10:10:57.230 Noise High
+MSG: 01 09/27/2021 10:10:58.630 Noise In Spec.
+ALM: 01 09/27/2021 10:11:02.130 Noise High
+MSG: 01 09/27/2021 10:11:02.730 Noise In Spec.
+ALM: 01 09/27/2021 10:11:03.130 Noise High
+MSG: 01 09/27/2021 10:11:09.230 Noise In Spec.
+ALM: 01 09/27/2021 10:11:18.330 Noise High
+MSG: 01 09/27/2021 10:11:23.030 Noise In Spec.
+ALM: 01 09/27/2021 10:11:26.830 Noise High
+MSG: 01 09/27/2021 10:11:28.630 Noise In Spec.
+ALM: 01 09/27/2021 10:11:29.030 Noise High
+MSG: 01 09/27/2021 10:11:29.830 Noise In Spec.
+ALM: 01 09/27/2021 10:11:32.030 Noise High
+MSG: 01 09/27/2021 10:11:33.530 Noise In Spec.
+ALM: 01 09/27/2021 10:11:36.430 Noise High
+MSG: 01 09/27/2021 10:11:38.430 Noise In Spec.
+ALM: 01 09/27/2021 10:11:38.830 Noise High
+MSG: 01 09/27/2021 10:11:39.730 Noise In Spec.
+ALM: 01 09/27/2021 10:11:40.130 Noise High
+MSG: 01 09/27/2021 10:11:41.530 Noise In Spec.
+ALM: 01 09/27/2021 10:11:42.030 Noise High
+MSG: 01 09/27/2021 10:11:42.630 Noise In Spec.
+ALM: 01 09/27/2021 10:11:43.030 Noise High
+MSG: 01 09/27/2021 10:11:43.430 Noise In Spec.
+ALM: 01 09/27/2021 10:11:43.830 Noise High
+MSG: 01 09/27/2021 10:11:44.230 Noise In Spec.
+ALM: 01 09/27/2021 10:11:45.130 Noise High
+MSG: 01 09/27/2021 10:11:45.530 Noise In Spec.
+ALM: 01 09/27/2021 10:11:46.430 Noise High
+MSG: 01 09/27/2021 10:11:46.830 Noise In Spec.
+ALM: 01 09/27/2021 10:11:47.230 Noise High
+MSG: 01 09/27/2021 10:11:47.630 Noise In Spec.
+ALM: 01 09/27/2021 10:11:48.530 Noise High
+MSG: 01 09/27/2021 10:11:48.930 Noise In Spec.
+ALM: 01 09/27/2021 10:11:49.330 Noise High
+MSG: 01 09/27/2021 10:11:49.730 Noise In Spec.
+ALM: 01 09/27/2021 10:11:54.330 Noise High
+MSG: 01 09/27/2021 10:11:54.730 Noise In Spec.
+ALM: 01 09/27/2021 10:12:05.430 Noise High
+MSG: 01 09/27/2021 10:12:06.330 Noise In Spec.
+ALM: 01 09/27/2021 10:12:07.030 Noise High
+MSG: 01 09/27/2021 10:12:08.430 Noise In Spec.
+ALM: 01 09/27/2021 10:12:10.430 Noise High
+MSG: 01 09/27/2021 10:12:14.230 Noise In Spec.
+ALM: 01 09/27/2021 10:12:16.630 Noise High
+MSG: 01 09/27/2021 10:12:19.130 Noise In Spec.
+ALM: 01 09/27/2021 10:12:19.930 Noise High
+MSG: 01 09/27/2021 10:12:21.230 Noise In Spec.
+ALM: 01 09/27/2021 10:12:21.730 Noise High
+MSG: 01 09/27/2021 10:12:23.030 Noise In Spec.
+ALM: 01 09/27/2021 10:12:26.830 Noise High
+MSG: 01 09/27/2021 10:12:27.530 Noise In Spec.
+ALM: 01 09/27/2021 10:12:28.430 Noise High
+MSG: 01 09/27/2021 10:12:29.930 Noise In Spec.
+ALM: 01 09/27/2021 10:12:31.130 Noise High
+MSG: 01 09/27/2021 10:12:31.730 Noise In Spec.
+ALM: 01 09/27/2021 10:12:32.830 Noise High
+MSG: 01 09/27/2021 10:12:34.030 Noise In Spec.
+ALM: 01 09/27/2021 10:12:35.730 Noise High
+MSG: 01 09/27/2021 10:12:36.830 Noise In Spec.
+ALM: 01 09/27/2021 10:12:37.430 Noise High
+MSG: 01 09/27/2021 10:12:38.830 Noise In Spec.
+ALM: 01 09/27/2021 10:12:39.530 Noise High
+MSG: 01 09/27/2021 10:12:40.330 Noise In Spec.
+ALM: 01 09/27/2021 10:12:41.130 Noise High
+MSG: 01 09/27/2021 10:12:41.730 Noise In Spec.
+ALM: 01 09/27/2021 10:12:42.330 Noise High
+MSG: 01 09/27/2021 10:12:44.230 Noise In Spec.
+ALM: 01 09/27/2021 10:12:46.830 Noise High
+MSG: 01 09/27/2021 10:12:47.630 Noise In Spec.
+ALM: 01 09/27/2021 10:12:48.030 Noise High
+MSG: 01 09/27/2021 10:12:48.430 Noise In Spec.
+ALM: 01 09/27/2021 10:13:02.030 Noise High
+MSG: 01 09/27/2021 10:13:02.430 Noise In Spec.
+ALM: 01 09/27/2021 10:13:13.230 Noise High
+MSG: 01 09/27/2021 10:13:13.630 Noise In Spec.
+ALM: 01 09/27/2021 10:13:14.630 Noise High
+MSG: 01 09/27/2021 10:13:17.730 Noise In Spec.
+ALM: 01 09/27/2021 10:13:28.930 Noise High
+MSG: 01 09/27/2021 10:13:29.330 Noise In Spec.
+ALM: 01 09/27/2021 10:13:32.030 Noise High
+MSG: 01 09/27/2021 10:13:33.330 Noise In Spec.
+ALM: 01 09/27/2021 10:13:34.530 Noise High
+MSG: 01 09/27/2021 10:13:35.530 Noise In Spec.
+ALM: 01 09/27/2021 10:13:35.930 Noise High
+MSG: 01 09/27/2021 10:13:37.630 Noise In Spec.
+ALM: 01 09/27/2021 10:13:38.130 Noise High
+MSG: 01 09/27/2021 10:13:40.630 Noise In Spec.
+ALM: 01 09/27/2021 10:13:41.030 Noise High
+MSG: 01 09/27/2021 10:13:43.330 Noise In Spec.
+ALM: 01 09/27/2021 10:14:01.230 Noise High
+MSG: 01 09/27/2021 10:14:03.630 Noise In Spec.
+ALM: 01 09/27/2021 10:14:04.330 Noise High
+MSG: 01 09/27/2021 10:14:04.730 Noise In Spec.
+ALM: 01 09/27/2021 10:14:07.230 Noise High
+MSG: 01 09/27/2021 10:14:09.830 Noise In Spec.
+ALM: 01 09/27/2021 10:14:14.730 Noise High
+MSG: 01 09/27/2021 10:14:16.430 Noise In Spec.
+ALM: 01 09/27/2021 10:14:22.830 Noise High
+MSG: 01 09/27/2021 10:14:23.430 Noise In Spec.
+ALM: 01 09/27/2021 10:14:27.630 Noise High
+MSG: 01 09/27/2021 10:14:29.930 Noise In Spec.
+ALM: 01 09/27/2021 10:14:33.330 Noise High
+MSG: 01 09/27/2021 10:14:34.130 Noise In Spec.
+ALM: 01 09/27/2021 10:14:34.630 Noise High
+MSG: 01 09/27/2021 10:14:35.430 Noise In Spec.
+ALM: 01 09/27/2021 10:14:36.030 Noise High
+MSG: 01 09/27/2021 10:14:38.830 Noise In Spec.
+ALM: 01 09/27/2021 10:14:39.230 Noise High
+MSG: 01 09/27/2021 10:14:40.630 Noise In Spec.
+ALM: 01 09/27/2021 10:14:44.630 Noise High
+MSG: 01 09/27/2021 10:14:47.730 Noise In Spec.
+ALM: 01 09/27/2021 10:14:49.330 Noise High
+MSG: 01 09/27/2021 10:14:50.430 Noise In Spec.
+ALM: 01 09/27/2021 10:14:52.830 Noise High
+MSG: 01 09/27/2021 10:14:55.030 Noise In Spec.
+ALM: 01 09/27/2021 10:15:02.430 Noise High
+MSG: 01 09/27/2021 10:15:03.230 Noise In Spec.
+ALM: 01 09/27/2021 10:15:09.830 Noise High
+MSG: 01 09/27/2021 10:15:11.630 Noise In Spec.
+ALM: 01 09/27/2021 10:15:12.730 Noise High
+MSG: 01 09/27/2021 10:15:13.430 Noise In Spec.
+ALM: 01 09/27/2021 10:15:14.130 Noise High
+MSG: 01 09/27/2021 10:15:15.430 Noise In Spec.
+ALM: 01 09/27/2021 10:15:18.030 Noise High
+MSG: 01 09/27/2021 10:15:20.830 Noise In Spec.
+ALM: 01 09/27/2021 10:15:23.830 Noise High
+MSG: 01 09/27/2021 10:15:32.330 Noise In Spec.
+ALM: 01 09/27/2021 10:15:33.630 Noise High
+MSG: 01 09/27/2021 10:15:34.030 Noise In Spec.
+ALM: 01 09/27/2021 10:15:35.630 Noise High
+MSG: 01 09/27/2021 10:15:37.330 Noise In Spec.
+ALM: 01 09/27/2021 10:15:37.730 Noise High
+MSG: 01 09/27/2021 10:15:38.130 Noise In Spec.
+ALM: 01 09/27/2021 10:15:43.730 Noise High
+MSG: 01 09/27/2021 10:15:44.130 Noise In Spec.
+ALM: 01 09/27/2021 10:15:47.430 Noise High
+MSG: 01 09/27/2021 10:15:47.930 Noise In Spec.
+ALM: 01 09/27/2021 10:15:48.730 Noise High
+MSG: 01 09/27/2021 10:15:49.130 Noise In Spec.
+ALM: 01 09/27/2021 10:15:50.530 Noise High
+MSG: 01 09/27/2021 10:15:51.030 Noise In Spec.
+ALM: 01 09/27/2021 10:15:51.630 Noise High
+MSG: 01 09/27/2021 10:15:53.130 Noise In Spec.
+ALM: 01 09/27/2021 10:15:54.430 Noise High
+MSG: 01 09/27/2021 10:15:54.930 Noise In Spec.
+ALM: 01 09/27/2021 10:15:55.630 Noise High
+MSG: 01 09/27/2021 10:15:57.030 Noise In Spec.
+ALM: 01 09/27/2021 10:16:07.230 Noise High
+MSG: 01 09/27/2021 10:16:08.130 Noise In Spec.
+ALM: 01 09/27/2021 10:16:15.530 Noise High
+MSG: 01 09/27/2021 10:16:16.830 Noise In Spec.
+ALM: 01 09/27/2021 10:16:19.930 Noise High
+MSG: 01 09/27/2021 10:16:21.730 Noise In Spec.
+ALM: 01 09/27/2021 10:16:22.430 Noise High
+MSG: 01 09/27/2021 10:16:23.530 Noise In Spec.
+ALM: 01 09/27/2021 10:16:24.130 Noise High
+MSG: 01 09/27/2021 10:16:24.630 Noise In Spec.
+ALM: 01 09/27/2021 10:16:27.330 Noise High
+MSG: 01 09/27/2021 10:16:27.730 Noise In Spec.
+ALM: 01 09/27/2021 10:16:28.630 Noise High
+MSG: 01 09/27/2021 10:16:29.030 Noise In Spec.
+ALM: 01 09/27/2021 10:16:29.630 Noise High
+MSG: 01 09/27/2021 10:16:30.930 Noise In Spec.
+ALM: 01 09/27/2021 10:16:37.530 Noise High
+MSG: 01 09/27/2021 10:16:38.030 Noise In Spec.
+ALM: 01 09/27/2021 10:16:38.630 Noise High
+MSG: 01 09/27/2021 10:16:39.230 Noise In Spec.
+ALM: 01 09/27/2021 10:16:41.530 Noise High
+MSG: 01 09/27/2021 10:16:43.030 Noise In Spec.
+ALM: 01 09/27/2021 10:16:53.930 Noise High
+MSG: 01 09/27/2021 10:16:55.330 Noise In Spec.
+ALM: 01 09/27/2021 10:17:01.530 Noise High
+MSG: 01 09/27/2021 10:17:05.030 Noise In Spec.
+ALM: 01 09/27/2021 10:17:09.930 Noise High
+MSG: 01 09/27/2021 10:17:12.130 Noise In Spec.
+ALM: 01 09/27/2021 10:17:25.730 Noise High
+MSG: 01 09/27/2021 10:17:29.230 Noise In Spec.
+ALM: 01 09/27/2021 10:17:31.030 Noise High
+MSG: 01 09/27/2021 10:17:37.530 Noise In Spec.
+ALM: 01 09/27/2021 10:17:37.930 Noise High
+MSG: 01 09/27/2021 10:17:38.630 Noise In Spec.
+ALM: 01 09/27/2021 10:17:46.830 Noise High
+MSG: 01 09/27/2021 10:17:48.630 Noise In Spec.
+ALM: 01 09/27/2021 10:17:49.730 Noise High
+MSG: 01 09/27/2021 10:17:53.830 Noise In Spec.
+ALM: 01 09/27/2021 10:17:56.830 Noise High
+MSG: 01 09/27/2021 10:17:57.430 Noise In Spec.
+ALM: 01 09/27/2021 10:17:58.030 Noise High
+MSG: 01 09/27/2021 10:17:59.730 Noise In Spec.
+ALM: 01 09/27/2021 10:18:01.730 Noise High
+MSG: 01 09/27/2021 10:18:04.030 Noise In Spec.
+ALM: 01 09/27/2021 10:18:10.830 Noise High
+MSG: 01 09/27/2021 10:18:12.230 Noise In Spec.
+ALM: 01 09/27/2021 10:18:12.630 Noise High
+MSG: 01 09/27/2021 10:18:15.630 Noise In Spec.
+ALM: 01 09/27/2021 10:18:16.330 Noise High
+MSG: 01 09/27/2021 10:18:17.530 Noise In Spec.
+ALM: 01 09/27/2021 10:18:18.130 Noise High
+MSG: 01 09/27/2021 10:18:19.230 Noise In Spec.
+ALM: 01 09/27/2021 10:18:19.730 Noise High
+MSG: 01 09/27/2021 10:18:20.430 Noise In Spec.
+ALM: 01 09/27/2021 10:18:21.830 Noise High
+MSG: 01 09/27/2021 10:18:22.230 Noise In Spec.
+ALM: 01 09/27/2021 10:18:22.730 Noise High
+MSG: 01 09/27/2021 10:18:24.630 Noise In Spec.
+ALM: 01 09/27/2021 10:18:25.030 Noise High
+MSG: 01 09/27/2021 10:18:26.830 Noise In Spec.
+ALM: 01 09/27/2021 10:18:27.530 Noise High
+MSG: 01 09/27/2021 10:18:27.930 Noise In Spec.
+ALM: 01 09/27/2021 10:18:28.530 Noise High
+MSG: 01 09/27/2021 10:18:28.930 Noise In Spec.
+ALM: 01 09/27/2021 10:18:29.930 Noise High
+MSG: 01 09/27/2021 10:18:32.230 Noise In Spec.
+ALM: 01 09/27/2021 10:18:33.130 Noise High
+MSG: 01 09/27/2021 10:18:34.230 Noise In Spec.
+ALM: 01 09/27/2021 10:18:34.630 Noise High
+MSG: 01 09/27/2021 10:18:35.030 Noise In Spec.
+ALM: 01 09/27/2021 10:18:35.630 Noise High
+MSG: 01 09/27/2021 10:18:36.030 Noise In Spec.
+ALM: 01 09/27/2021 10:18:36.430 Noise High
+MSG: 01 09/27/2021 10:18:37.130 Noise In Spec.
+ALM: 01 09/27/2021 10:18:37.530 Noise High
+MSG: 01 09/27/2021 10:18:38.930 Noise In Spec.
+ALM: 01 09/27/2021 10:18:39.630 Noise High
+MSG: 01 09/27/2021 10:18:40.230 Noise In Spec.
+ALM: 01 09/27/2021 10:18:40.630 Noise High
+MSG: 01 09/27/2021 10:18:41.530 Noise In Spec.
+ALM: 01 09/27/2021 10:18:42.230 Noise High
+MSG: 01 09/27/2021 10:18:43.430 Noise In Spec.
+ALM: 01 09/27/2021 10:18:43.830 Noise High
+MSG: 01 09/27/2021 10:18:45.230 Noise In Spec.
+ALM: 01 09/27/2021 10:18:45.630 Noise High
+MSG: 01 09/27/2021 10:18:46.330 Noise In Spec.
+ALM: 01 09/27/2021 10:18:47.030 Noise High
+MSG: 01 09/27/2021 10:18:47.630 Noise In Spec.
+ALM: 01 09/27/2021 10:18:48.030 Noise High
+MSG: 01 09/27/2021 10:18:48.730 Noise In Spec.
+ALM: 01 09/27/2021 10:18:49.130 Noise High
+MSG: 01 09/27/2021 10:18:50.030 Noise In Spec.
+ALM: 01 09/27/2021 10:18:50.430 Noise High
+MSG: 01 09/27/2021 10:18:50.830 Noise In Spec.
+ALM: 01 09/27/2021 10:18:51.730 Noise High
+MSG: 01 09/27/2021 10:18:52.930 Noise In Spec.
+ALM: 01 09/27/2021 10:18:53.330 Noise High
+MSG: 01 09/27/2021 10:18:53.930 Noise In Spec.
+ALM: 01 09/27/2021 10:18:54.330 Noise High
+MSG: 01 09/27/2021 10:18:57.030 Noise In Spec.
+ALM: 01 09/27/2021 10:18:57.530 Noise High
+MSG: 01 09/27/2021 10:18:58.730 Noise In Spec.
+ALM: 01 09/27/2021 10:18:59.130 Noise High
+MSG: 01 09/27/2021 10:19:04.530 Noise In Spec.
+ALM: 01 09/27/2021 10:19:04.930 Noise High
+MSG: 01 09/27/2021 10:19:08.430 Noise In Spec.
+ALM: 01 09/27/2021 10:19:08.830 Noise High
+MSG: 01 09/27/2021 10:19:10.430 Noise In Spec.
+ALM: 01 09/27/2021 10:19:12.530 Noise High
+MSG: 01 09/27/2021 10:19:12.930 Noise In Spec.
+ALM: 01 09/27/2021 10:19:14.330 Noise High
+MSG: 01 09/27/2021 10:19:15.330 Noise In Spec.
+ALM: 01 09/27/2021 10:19:15.930 Noise High
+MSG: 01 09/27/2021 10:19:18.330 Noise In Spec.
+ALM: 01 09/27/2021 10:19:20.830 Noise High
+MSG: 01 09/27/2021 10:19:21.230 Noise In Spec.
+ALM: 01 09/27/2021 10:19:21.630 Noise High
+MSG: 01 09/27/2021 10:19:22.830 Noise In Spec.
+ALM: 01 09/27/2021 10:19:27.330 Noise High
+MSG: 01 09/27/2021 10:19:28.630 Noise In Spec.
+ALM: 01 09/27/2021 10:19:39.430 Noise High
+MSG: 01 09/27/2021 10:19:40.430 Noise In Spec.
+ALM: 01 09/27/2021 10:19:48.930 Noise High
+MSG: 01 09/27/2021 10:19:49.430 Noise In Spec.
+ALM: 01 09/27/2021 10:19:52.130 Noise High
+MSG: 01 09/27/2021 10:19:57.330 Noise In Spec.
+ALM: 01 09/27/2021 10:19:58.130 Noise High
+MSG: 01 09/27/2021 10:19:58.530 Noise In Spec.
+ALM: 01 09/27/2021 10:19:58.930 Noise High
+MSG: 01 09/27/2021 10:20:02.830 Noise In Spec.
+ALM: 01 09/27/2021 10:20:03.830 Noise High
+MSG: 01 09/27/2021 10:20:05.330 Noise In Spec.
+ALM: 01 09/27/2021 10:20:06.930 Noise High
+MSG: 01 09/27/2021 10:20:12.230 Noise In Spec.
+ALM: 01 09/27/2021 10:20:13.430 Noise High
+MSG: 01 09/27/2021 10:20:18.230 Noise In Spec.
+ALM: 01 09/27/2021 10:20:18.930 Noise High
+MSG: 01 09/27/2021 10:20:26.130 Noise In Spec.
+ALM: 01 09/27/2021 10:20:31.830 Noise High
+MSG: 01 09/27/2021 10:20:44.730 Noise In Spec.
+ALM: 01 09/27/2021 10:20:49.330 Noise High
+MSG: 01 09/27/2021 10:21:06.030 Noise In Spec.
+ALM: 01 09/27/2021 10:21:07.130 Noise High
+MSG: 01 09/27/2021 10:21:20.030 Noise In Spec.
+ALM: 01 09/27/2021 10:21:20.730 Noise High
+MSG: 01 09/27/2021 10:21:23.130 Noise In Spec.
+ALM: 01 09/27/2021 10:21:26.230 Noise High
+MSG: 01 09/27/2021 10:21:28.930 Noise In Spec.
+ALM: 01 09/27/2021 10:21:35.730 Noise High
+MSG: 01 09/27/2021 10:21:38.130 Noise In Spec.
+ALM: 01 09/27/2021 10:21:39.530 Noise High
+MSG: 01 09/27/2021 10:21:39.930 Noise In Spec.
+ALM: 01 09/27/2021 10:21:40.330 Noise High
+MSG: 01 09/27/2021 10:21:40.930 Noise In Spec.
+ALM: 01 09/27/2021 10:21:42.130 Noise High
+MSG: 01 09/27/2021 10:21:43.630 Noise In Spec.
+ALM: 01 09/27/2021 10:21:44.130 Noise High
+MSG: 01 09/27/2021 10:21:47.430 Noise In Spec.
+ALM: 01 09/27/2021 10:21:48.130 Noise High
+MSG: 01 09/27/2021 10:21:50.230 Noise In Spec.
+ALM: 01 09/27/2021 10:22:00.030 Noise High
+MSG: 01 09/27/2021 10:22:02.130 Noise In Spec.
+ALM: 01 09/27/2021 10:22:07.730 Noise High
+MSG: 01 09/27/2021 10:22:10.830 Noise In Spec.
+ALM: 01 09/27/2021 10:22:18.730 Noise High
+MSG: 01 09/27/2021 10:22:21.230 Noise In Spec.
+ALM: 01 09/27/2021 10:22:21.930 Noise High
+MSG: 01 09/27/2021 10:22:24.430 Noise In Spec.
+ALM: 01 09/27/2021 10:22:25.030 Noise High
+MSG: 01 09/27/2021 10:22:31.930 Noise In Spec.
+ALM: 01 09/27/2021 10:22:32.530 Noise High
+MSG: 01 09/27/2021 10:22:40.130 Noise In Spec.
+ALM: 01 09/27/2021 10:22:40.730 Noise High
+MSG: 01 09/27/2021 10:22:45.130 Noise In Spec.
+ALM: 01 09/27/2021 10:22:45.530 Noise High
+MSG: 01 09/27/2021 10:22:46.430 Noise In Spec.
+ALM: 01 09/27/2021 10:22:47.630 Noise High
+MSG: 01 09/27/2021 10:22:50.930 Noise In Spec.
+ALM: 01 09/27/2021 10:22:55.230 Noise High
+MSG: 01 09/27/2021 10:23:00.030 Noise In Spec.
+ALM: 01 09/27/2021 10:23:00.530 Noise High
+MSG: 01 09/27/2021 10:23:01.130 Noise In Spec.
+ALM: 01 09/27/2021 10:23:02.930 Noise High
+MSG: 01 09/27/2021 10:23:03.330 Noise In Spec.
+ALM: 01 09/27/2021 10:25:33.930 Noise High
+MSG: 01 09/27/2021 10:25:35.230 Noise In Spec.
+ALM: 01 09/27/2021 10:25:37.730 Noise High
+MSG: 01 09/27/2021 10:25:39.330 Noise In Spec.
+ALM: 01 09/27/2021 10:25:40.430 Noise High
+MSG: 01 09/27/2021 10:25:42.530 Noise In Spec.
+ALM: 01 09/27/2021 10:25:45.530 Noise High
+MSG: 01 09/27/2021 10:25:47.830 Noise In Spec.
+ALM: 01 09/27/2021 10:25:49.130 Noise High
+MSG: 01 09/27/2021 10:25:49.730 Noise In Spec.
+ALM: 01 09/27/2021 10:25:50.630 Noise High
+MSG: 01 09/27/2021 10:25:53.830 Noise In Spec.
+ALM: 01 09/27/2021 10:25:54.730 Noise High
+MSG: 01 09/27/2021 10:25:55.830 Noise In Spec.
+ALM: 01 09/27/2021 10:25:56.430 Noise High
+MSG: 01 09/27/2021 10:25:58.230 Noise In Spec.
+ALM: 01 09/27/2021 10:25:58.930 Noise High
+MSG: 01 09/27/2021 10:26:00.830 Noise In Spec.
+ALM: 01 09/27/2021 10:26:01.530 Noise High
+MSG: 01 09/27/2021 10:26:03.530 Noise In Spec.
+ALM: 01 09/27/2021 10:26:04.630 Noise High
+MSG: 01 09/27/2021 10:26:05.730 Noise In Spec.
+ALM: 01 09/27/2021 10:26:09.230 Noise High
+MSG: 01 09/27/2021 10:26:09.630 Noise In Spec.
+ALM: 01 09/27/2021 10:26:11.130 Noise High
+MSG: 01 09/27/2021 10:26:11.630 Noise In Spec.
+ALM: 01 09/27/2021 10:26:16.930 Noise High
+MSG: 01 09/27/2021 10:26:17.330 Noise In Spec.
+ALM: 01 09/27/2021 10:26:17.930 Noise High
+MSG: 01 09/27/2021 10:26:19.030 Noise In Spec.
+ALM: 01 09/27/2021 10:26:20.030 Noise High
+MSG: 01 09/27/2021 10:26:20.430 Noise In Spec.
+ALM: 01 09/27/2021 10:26:22.230 Noise High
+MSG: 01 09/27/2021 10:26:23.430 Noise In Spec.
+ALM: 01 09/27/2021 10:26:24.030 Noise High
+MSG: 01 09/27/2021 10:26:26.630 Noise In Spec.
+ALM: 01 09/27/2021 10:26:27.730 Noise High
+MSG: 01 09/27/2021 10:26:30.230 Noise In Spec.
+ALM: 01 09/27/2021 10:26:31.530 Noise High
+MSG: 01 09/27/2021 10:26:52.430 Noise In Spec.
+ALM: 01 09/27/2021 10:26:52.830 Noise High
+MSG: 01 09/27/2021 10:26:53.930 Noise In Spec.
+ALM: 01 09/27/2021 10:26:54.430 Noise High
+MSG: 01 09/27/2021 10:26:56.130 Noise In Spec.
+ALM: 01 09/27/2021 10:26:57.030 Noise High
+MSG: 01 09/27/2021 10:26:57.430 Noise In Spec.
+ALM: 01 09/27/2021 10:26:58.030 Noise High
+MSG: 01 09/27/2021 10:27:00.130 Noise In Spec.
+ALM: 01 09/27/2021 10:27:00.830 Noise High
+MSG: 01 09/27/2021 10:27:06.330 Noise In Spec.
+ALM: 01 09/27/2021 10:27:07.230 Noise High
+MSG: 01 09/27/2021 10:27:12.730 Noise In Spec.
+ALM: 01 09/27/2021 10:27:13.130 Noise High
+MSG: 01 09/27/2021 10:27:15.330 Noise In Spec.
+ALM: 01 09/27/2021 10:27:16.730 Noise High
+MSG: 01 09/27/2021 10:27:17.430 Noise In Spec.
+ALM: 01 09/27/2021 10:27:17.930 Noise High
+MSG: 01 09/27/2021 10:27:18.530 Noise In Spec.
+ALM: 01 09/27/2021 10:27:18.930 Noise High
+MSG: 01 09/27/2021 10:27:24.030 Noise In Spec.
+ALM: 01 09/27/2021 10:27:25.330 Noise High
+MSG: 01 09/27/2021 10:27:25.730 Noise In Spec.
+ALM: 01 09/27/2021 10:27:29.930 Noise High
+MSG: 01 09/27/2021 10:27:33.130 Noise In Spec.
+ALM: 01 09/27/2021 10:27:34.930 Noise High
+MSG: 01 09/27/2021 10:27:36.130 Noise In Spec.
+ALM: 01 09/27/2021 10:27:38.330 Noise High
+MSG: 01 09/27/2021 10:27:39.430 Noise In Spec.
+ALM: 01 09/27/2021 10:27:40.130 Noise High
+MSG: 01 09/27/2021 10:27:42.630 Noise In Spec.
+ALM: 01 09/27/2021 10:27:43.330 Noise High
+MSG: 01 09/27/2021 10:27:43.730 Noise In Spec.
+ALM: 01 09/27/2021 10:27:44.130 Noise High
+MSG: 01 09/27/2021 10:27:45.830 Noise In Spec.
+ALM: 01 09/27/2021 10:27:46.730 Noise High
+MSG: 01 09/27/2021 10:27:48.130 Noise In Spec.
+ALM: 01 09/27/2021 10:27:49.330 Noise High
+MSG: 01 09/27/2021 10:27:51.330 Noise In Spec.
+ALM: 01 09/27/2021 10:27:53.130 Noise High
+MSG: 01 09/27/2021 10:27:57.130 Noise In Spec.
+ALM: 01 09/27/2021 10:27:58.030 Noise High
+MSG: 01 09/27/2021 10:27:59.730 Noise In Spec.
+ALM: 01 09/27/2021 10:28:00.930 Noise High
+MSG: 01 09/27/2021 10:28:03.730 Noise In Spec.
+ALM: 01 09/27/2021 10:28:07.230 Noise High
+MSG: 01 09/27/2021 10:28:15.430 Noise In Spec.
+ALM: 01 09/27/2021 10:28:17.230 Noise High
+MSG: 01 09/27/2021 10:28:17.630 Noise In Spec.
+ALM: 01 09/27/2021 10:28:20.930 Noise High
+MSG: 01 09/27/2021 10:28:21.330 Noise In Spec.
+ALM: 01 09/27/2021 10:28:22.030 Noise High
+MSG: 01 09/27/2021 10:28:23.230 Noise In Spec.
+ALM: 01 09/27/2021 10:28:23.630 Noise High
+MSG: 01 09/27/2021 10:28:24.030 Noise In Spec.
+ALM: 01 09/27/2021 10:28:24.830 Noise High
+MSG: 01 09/27/2021 10:28:25.430 Noise In Spec.
+ALM: 01 09/27/2021 10:28:25.830 Noise High
+MSG: 01 09/27/2021 10:28:26.530 Noise In Spec.
+ALM: 01 09/27/2021 10:28:27.830 Noise High
+MSG: 01 09/27/2021 10:28:28.330 Noise In Spec.
+ALM: 01 09/27/2021 10:28:29.030 Noise High
+MSG: 01 09/27/2021 10:28:29.430 Noise In Spec.
+ALM: 01 09/27/2021 10:28:30.030 Noise High
+MSG: 01 09/27/2021 10:28:30.430 Noise In Spec.
+ALM: 01 09/27/2021 10:28:30.830 Noise High
+MSG: 01 09/27/2021 10:28:31.330 Noise In Spec.
+ALM: 01 09/27/2021 10:28:32.130 Noise High
+MSG: 01 09/27/2021 10:28:32.530 Noise In Spec.
+ALM: 01 09/27/2021 10:28:32.930 Noise High
+MSG: 01 09/27/2021 10:28:33.330 Noise In Spec.
+ALM: 01 09/27/2021 10:28:39.030 Noise High
+MSG: 01 09/27/2021 10:28:40.230 Noise In Spec.
+ALM: 01 09/27/2021 10:28:40.730 Noise High
+MSG: 01 09/27/2021 10:28:41.230 Noise In Spec.
+ALM: 01 09/27/2021 10:28:53.230 Noise High
+MSG: 01 09/27/2021 10:28:53.630 Noise In Spec.
+ALM: 01 09/27/2021 10:28:57.130 Noise High
+MSG: 01 09/27/2021 10:28:57.530 Noise In Spec.
+ALM: 01 09/27/2021 10:29:07.730 Noise High
+MSG: 01 09/27/2021 10:29:08.230 Noise In Spec.
+ALM: 01 09/27/2021 10:29:12.730 Noise High
+MSG: 01 09/27/2021 10:29:13.830 Noise In Spec.
+ALM: 01 09/27/2021 10:29:29.130 Noise High
+MSG: 01 09/27/2021 10:29:30.630 Noise In Spec.
+ALM: 01 09/27/2021 10:29:32.730 Noise High
+MSG: 01 09/27/2021 10:29:34.330 Noise In Spec.
+ALM: 01 09/27/2021 10:29:42.930 Noise High
+MSG: 01 09/27/2021 10:29:44.130 Noise In Spec.
+ALM: 01 09/27/2021 10:29:56.630 Noise High
+MSG: 01 09/27/2021 10:29:58.030 Noise In Spec.
+ALM: 01 09/27/2021 10:30:00.030 Noise High
+MSG: 01 09/27/2021 10:30:01.430 Noise In Spec.
+ALM: 01 09/27/2021 10:30:04.030 Noise High
+MSG: 01 09/27/2021 10:30:05.430 Noise In Spec.
+ALM: 01 09/27/2021 10:30:06.030 Noise High
+MSG: 01 09/27/2021 10:30:06.730 Noise In Spec.
+ALM: 01 09/27/2021 10:30:07.530 Noise High
+MSG: 01 09/27/2021 10:30:07.930 Noise In Spec.
+ALM: 01 09/27/2021 10:30:09.730 Noise High
+MSG: 01 09/27/2021 10:30:11.730 Noise In Spec.
+ALM: 01 09/27/2021 10:30:16.730 Noise High
+MSG: 01 09/27/2021 10:30:18.830 Noise In Spec.
+ALM: 01 09/27/2021 10:30:19.430 Noise High
+MSG: 01 09/27/2021 10:30:20.930 Noise In Spec.
+ALM: 01 09/27/2021 10:30:22.030 Noise High
+MSG: 01 09/27/2021 10:30:22.930 Noise In Spec.
+ALM: 01 09/27/2021 10:30:47.930 Noise High
+MSG: 01 09/27/2021 10:30:48.330 Noise In Spec.
+ALM: 01 09/27/2021 10:31:05.030 Noise High
+MSG: 01 09/27/2021 10:31:07.730 Noise In Spec.
+ALM: 01 09/27/2021 10:31:08.130 Noise High
+MSG: 01 09/27/2021 10:31:09.330 Noise In Spec.
+ALM: 01 09/27/2021 10:31:09.730 Noise High
+MSG: 01 09/27/2021 10:31:10.230 Noise In Spec.
+ALM: 01 09/27/2021 10:31:11.030 Noise High
+MSG: 01 09/27/2021 10:31:11.930 Noise In Spec.
+ALM: 01 09/27/2021 10:31:12.330 Noise High
+MSG: 01 09/27/2021 10:31:12.930 Noise In Spec.
+ALM: 01 09/27/2021 10:31:13.530 Noise High
+MSG: 01 09/27/2021 10:31:29.530 Noise In Spec.
+ALM: 01 09/27/2021 10:31:29.930 Noise High
+MSG: 01 09/27/2021 10:31:31.330 Noise In Spec.
+ALM: 01 09/27/2021 10:31:32.730 Noise High
+MSG: 01 09/27/2021 10:31:38.630 Noise In Spec.
+ALM: 01 09/27/2021 10:31:39.030 Noise High
+MSG: 01 09/27/2021 10:31:39.730 Noise In Spec.
+ALM: 01 09/27/2021 10:31:43.530 Noise High
+MSG: 01 09/27/2021 10:31:44.230 Noise In Spec.
+ALM: 01 09/27/2021 10:31:44.630 Noise High
+MSG: 01 09/27/2021 10:31:45.730 Noise In Spec.
+ALM: 01 09/27/2021 10:31:46.730 Noise High
+MSG: 01 09/27/2021 10:31:47.130 Noise In Spec.
+ALM: 01 09/27/2021 10:31:47.530 Noise High
+MSG: 01 09/27/2021 10:32:02.730 Noise In Spec.
+ALM: 01 09/27/2021 10:32:08.430 Noise High
+MSG: 01 09/27/2021 10:32:08.830 Noise In Spec.
+ALM: 01 09/27/2021 10:32:10.230 Noise High
+MSG: 01 09/27/2021 10:32:10.630 Noise In Spec.
+ALM: 01 09/27/2021 10:32:11.630 Noise High
+MSG: 01 09/27/2021 10:32:13.130 Noise In Spec.
+ALM: 01 09/27/2021 10:32:20.430 Noise High
+MSG: 01 09/27/2021 10:32:21.230 Noise In Spec.
+ALM: 01 09/27/2021 10:32:22.530 Noise High
+MSG: 01 09/27/2021 10:32:22.930 Noise In Spec.
+ALM: 01 09/27/2021 10:32:23.330 Noise High
+MSG: 01 09/27/2021 10:32:23.730 Noise In Spec.
+ALM: 01 09/27/2021 10:32:24.230 Noise High
+MSG: 01 09/27/2021 10:32:27.430 Noise In Spec.
+ALM: 01 09/27/2021 10:32:27.830 Noise High
+MSG: 01 09/27/2021 10:32:39.930 Noise In Spec.
+ALM: 01 09/27/2021 10:32:48.030 Noise High
+MSG: 01 09/27/2021 10:33:00.430 Noise In Spec.
+ALM: 01 09/27/2021 10:33:00.830 Noise High
+MSG: 01 09/27/2021 10:33:01.430 Noise In Spec.
+ALM: 01 09/27/2021 10:33:10.330 Noise High
+MSG: 01 09/27/2021 10:33:10.830 Noise In Spec.
+ALM: 01 09/27/2021 10:33:11.530 Noise High
+MSG: 01 09/27/2021 10:33:16.930 Noise In Spec.
+ALM: 01 09/27/2021 10:33:17.330 Noise High
+MSG: 01 09/27/2021 10:33:31.230 Noise In Spec.
+ALM: 01 09/27/2021 10:33:31.830 Noise High
+MSG: 01 09/27/2021 10:33:39.030 Noise In Spec.
+ALM: 01 09/27/2021 10:33:39.430 Noise High
+MSG: 01 09/27/2021 10:33:40.130 Noise In Spec.
+ALM: 01 09/27/2021 10:33:43.130 Noise High
+MSG: 01 09/27/2021 10:33:44.830 Noise In Spec.
+ALM: 01 09/27/2021 10:33:49.630 Noise High
+MSG: 01 09/27/2021 10:33:50.530 Noise In Spec.
+ALM: 01 09/27/2021 10:33:53.830 Noise High
+MSG: 01 09/27/2021 10:33:54.330 Noise In Spec.
+ALM: 01 09/27/2021 10:33:54.830 Noise High
+MSG: 01 09/27/2021 10:33:55.530 Noise In Spec.
+ALM: 01 09/27/2021 10:33:56.030 Noise High
+MSG: 01 09/27/2021 10:34:03.530 Noise In Spec.
+ALM: 01 09/27/2021 10:34:08.730 Noise High
+MSG: 01 09/27/2021 10:34:16.530 Noise In Spec.
+ALM: 01 09/27/2021 10:34:17.830 Noise High
+MSG: 01 09/27/2021 10:34:21.630 Noise In Spec.
+ALM: 01 09/27/2021 10:34:22.330 Noise High
+MSG: 01 09/27/2021 10:34:27.130 Noise In Spec.
+ALM: 01 09/27/2021 10:34:36.230 Noise High
+MSG: 01 09/27/2021 10:34:37.930 Noise In Spec.
+ALM: 01 09/27/2021 10:34:41.730 Noise High
+MSG: 01 09/27/2021 10:34:42.130 Noise In Spec.
+ALM: 01 09/27/2021 10:34:43.630 Noise High
+MSG: 01 09/27/2021 10:34:44.330 Noise In Spec.
+ALM: 01 09/27/2021 10:34:56.130 Noise High
+MSG: 01 09/27/2021 10:34:56.530 Noise In Spec.
+ALM: 01 09/27/2021 10:35:09.830 Noise High
+MSG: 01 09/27/2021 10:35:15.430 Noise In Spec.
+ALM: 01 09/27/2021 10:35:18.130 Noise High
+MSG: 01 09/27/2021 10:35:20.830 Noise In Spec.
+ALM: 01 09/27/2021 10:35:21.230 Noise High
+MSG: 01 09/27/2021 10:35:26.130 Noise In Spec.
+ALM: 01 09/27/2021 10:35:26.530 Noise High
+MSG: 01 09/27/2021 10:35:31.330 Noise In Spec.
+ALM: 01 09/27/2021 10:35:40.530 Noise High
+MSG: 01 09/27/2021 10:35:40.930 Noise In Spec.
+ALM: 01 09/27/2021 10:35:42.230 Noise High
+MSG: 01 09/27/2021 10:35:42.630 Noise In Spec.
+ALM: 01 09/27/2021 10:35:43.030 Noise High
+MSG: 01 09/27/2021 10:35:44.130 Noise In Spec.
+ALM: 01 09/27/2021 10:35:44.630 Noise High
+MSG: 01 09/27/2021 10:35:45.230 Noise In Spec.
+ALM: 01 09/27/2021 10:35:45.630 Noise High
+MSG: 01 09/27/2021 10:35:46.830 Noise In Spec.
+ALM: 01 09/27/2021 10:35:53.430 Noise High
+MSG: 01 09/27/2021 10:35:53.930 Noise In Spec.
+ALM: 01 09/27/2021 10:35:54.830 Noise High
+MSG: 01 09/27/2021 10:35:55.330 Noise In Spec.
+ALM: 01 09/27/2021 10:35:58.430 Noise High
+MSG: 01 09/27/2021 10:35:59.030 Noise In Spec.
+ALM: 01 09/27/2021 10:36:13.630 Noise High
+MSG: 01 09/27/2021 10:36:14.130 Noise In Spec.
+ALM: 01 09/27/2021 10:36:21.330 Noise High
+MSG: 01 09/27/2021 10:36:21.730 Noise In Spec.
+ALM: 01 09/27/2021 10:36:24.230 Noise High
+MSG: 01 09/27/2021 10:36:26.430 Noise In Spec.
+ALM: 01 09/27/2021 10:36:26.830 Noise High
+MSG: 01 09/27/2021 10:36:27.230 Noise In Spec.
+ALM: 01 09/27/2021 10:36:27.630 Noise High
+MSG: 01 09/27/2021 10:36:28.030 Noise In Spec.
+ALM: 01 09/27/2021 10:36:28.430 Noise High
+MSG: 01 09/27/2021 10:36:28.830 Noise In Spec.
+ALM: 01 09/27/2021 10:36:42.030 Noise High
+MSG: 01 09/27/2021 10:36:42.830 Noise In Spec.
+ALM: 01 09/27/2021 10:36:48.430 Noise High
+MSG: 01 09/27/2021 10:36:48.830 Noise In Spec.
+ALM: 01 09/27/2021 10:36:49.630 Noise High
+MSG: 01 09/27/2021 10:36:50.230 Noise In Spec.
+ALM: 01 09/27/2021 10:37:08.230 Noise High
+MSG: 01 09/27/2021 10:37:09.130 Noise In Spec.
+ALM: 01 09/27/2021 10:37:10.530 Noise High
+MSG: 01 09/27/2021 10:37:11.130 Noise In Spec.
+ALM: 01 09/27/2021 10:37:16.830 Noise High
+MSG: 01 09/27/2021 10:37:17.730 Noise In Spec.
+ALM: 01 09/27/2021 10:37:21.930 Noise High
+MSG: 01 09/27/2021 10:37:23.230 Noise In Spec.
+ALM: 01 09/27/2021 10:37:25.030 Noise High
+MSG: 01 09/27/2021 10:37:26.030 Noise In Spec.
+ALM: 01 09/27/2021 10:37:27.030 Noise High
+MSG: 01 09/27/2021 10:37:28.130 Noise In Spec.
+ALM: 01 09/27/2021 10:37:29.130 Noise High
+MSG: 01 09/27/2021 10:37:29.830 Noise In Spec.
+ALM: 01 09/27/2021 10:37:30.230 Noise High
+MSG: 01 09/27/2021 10:37:30.830 Noise In Spec.
+ALM: 01 09/27/2021 10:37:32.530 Noise High
+MSG: 01 09/27/2021 10:37:33.230 Noise In Spec.
+ALM: 01 09/27/2021 10:37:47.230 Noise High
+MSG: 01 09/27/2021 10:38:16.730 Noise In Spec.
+ALM: 01 09/27/2021 10:38:23.130 Noise High
+MSG: 01 09/27/2021 10:38:33.530 Noise In Spec.
+ALM: 01 09/27/2021 10:38:41.930 Noise High
+MSG: 01 09/27/2021 10:38:48.430 Noise In Spec.
+ALM: 01 09/27/2021 10:38:50.430 Noise High
+MSG: 01 09/27/2021 10:38:54.930 Noise In Spec.
+ALM: 01 09/27/2021 10:39:00.330 Noise High
+MSG: 01 09/27/2021 10:39:00.730 Noise In Spec.
+ALM: 01 09/27/2021 10:39:01.130 Noise High
+MSG: 01 09/27/2021 10:39:01.530 Noise In Spec.
+ALM: 01 09/27/2021 10:39:15.830 Noise High
+MSG: 01 09/27/2021 10:39:27.930 Noise In Spec.
+ALM: 01 09/27/2021 10:39:38.330 Noise High
+MSG: 01 09/27/2021 10:39:39.630 Noise In Spec.
+ALM: 01 09/27/2021 10:39:52.630 Noise High
+MSG: 01 09/27/2021 10:39:53.530 Noise In Spec.
+ALM: 01 09/27/2021 10:39:57.130 Noise High
+MSG: 01 09/27/2021 10:39:58.730 Noise In Spec.
+ALM: 01 09/27/2021 10:40:06.830 Noise High
+MSG: 01 09/27/2021 10:40:08.530 Noise In Spec.
+ALM: 01 09/27/2021 10:40:10.630 Noise High
+MSG: 01 09/27/2021 10:40:12.530 Noise In Spec.
+MSG: 01 09/27/2021 12:25:58.100 Test Tag Single Shot Fired
+TAG: 01 09/27/2021 12:25:58.140 999.000000007425
+MSG: 01 09/27/2021 12:25:58.140 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3114
+  Date:                               09/27/2021
+  Time:                                 12:26:08
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       3
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       382
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                       85
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        2593
+  Tags In Memory:                      3113 (3%)
+  Status Reports In Memory:            531 (51%)
+  Input Voltage:                          23.5 V
+  Exciter Voltage:                        15.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.7 A
+  Tuning Capacitors:                         421
+  Tuning Phase:                              384
+  Tuning Relative Phase:                      -2
+  FDXB Signal Level:                574 mV (63%)
+  Temperature:                            19.2 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 09/27/2021 12:26:08.100 16,0,0,2,3,-2,421,3,51,235,159,47,63,384,192,0,0,0,0,0
+INF: End Of Full Status Report
+ALM: 01 09/27/2021 16:12:59.730 Noise High
+MSG: 01 09/27/2021 16:13:01.830 Noise In Spec.
+ALM: 01 09/27/2021 16:13:03.330 Noise High
+MSG: 01 09/27/2021 16:13:06.130 Noise In Spec.
+ALM: 01 09/27/2021 16:13:07.030 Noise High
+MSG: 01 09/27/2021 16:13:09.730 Noise In Spec.
+ALM: 01 09/27/2021 16:14:02.630 Noise High
+MSG: 01 09/27/2021 16:14:04.730 Noise In Spec.
+ALM: 01 09/27/2021 16:14:16.730 Noise High
+MSG: 01 09/27/2021 16:14:17.930 Noise In Spec.
+ALM: 01 09/27/2021 16:34:14.730 Noise High
+MSG: 01 09/27/2021 16:34:15.130 Noise In Spec.
+ALM: 01 09/27/2021 16:43:51.630 Noise High
+MSG: 01 09/27/2021 16:43:53.530 Noise In Spec.
+ALM: 01 09/27/2021 16:44:08.930 Noise High
+MSG: 01 09/27/2021 16:44:11.630 Noise In Spec.
+ALM: 01 09/27/2021 16:44:27.430 Noise High
+MSG: 01 09/27/2021 16:44:29.130 Noise In Spec.
+ALM: 01 09/27/2021 16:53:57.530 Noise High
+MSG: 01 09/27/2021 16:53:58.630 Noise In Spec.
+ALM: 01 09/27/2021 16:54:24.130 Noise High
+MSG: 01 09/27/2021 16:54:26.130 Noise In Spec.
+ALM: 01 09/27/2021 16:54:51.130 Noise High
+MSG: 01 09/27/2021 16:54:53.030 Noise In Spec.
+ALM: 01 09/27/2021 17:03:51.130 Noise High
+MSG: 01 09/27/2021 17:03:53.130 Noise In Spec.
+ALM: 01 09/27/2021 17:04:10.530 Noise High
+MSG: 01 09/27/2021 17:04:11.930 Noise In Spec.
+ALM: 01 09/27/2021 17:04:29.130 Noise High
+MSG: 01 09/27/2021 17:04:31.130 Noise In Spec.
+ALM: 01 09/27/2021 17:13:56.830 Noise High
+MSG: 01 09/27/2021 17:13:58.330 Noise In Spec.
+ALM: 01 09/27/2021 17:14:24.830 Noise High
+MSG: 01 09/27/2021 17:14:25.630 Noise In Spec.
+ALM: 01 09/27/2021 17:23:55.530 Noise High
+MSG: 01 09/27/2021 17:23:56.530 Noise In Spec.
+ALM: 01 09/27/2021 17:24:23.530 Noise High
+MSG: 01 09/27/2021 17:24:24.330 Noise In Spec.
+ALM: 01 09/27/2021 17:24:24.830 Noise High
+MSG: 01 09/27/2021 17:24:25.930 Noise In Spec.
+ALM: 01 09/27/2021 17:24:52.230 Noise High
+MSG: 01 09/27/2021 17:24:53.030 Noise In Spec.
+ALM: 01 09/27/2021 17:33:54.730 Noise High
+MSG: 01 09/27/2021 17:33:55.330 Noise In Spec.
+ALM: 01 09/27/2021 17:43:42.330 Noise High
+MSG: 01 09/27/2021 17:43:42.830 Noise In Spec.
+ALM: 01 09/27/2021 17:44:12.030 Noise High
+MSG: 01 09/27/2021 17:44:12.630 Noise In Spec.
+ALM: 01 09/27/2021 18:38:33.030 Noise High
+MSG: 01 09/27/2021 18:38:33.530 Noise In Spec.
+ALM: 01 09/27/2021 18:39:15.830 Noise High
+MSG: 01 09/27/2021 18:39:17.030 Noise In Spec.
+ALM: 01 09/27/2021 18:39:17.430 Noise High
+MSG: 01 09/27/2021 18:39:18.230 Noise In Spec.
+ALM: 01 09/27/2021 18:41:42.830 Noise High
+MSG: 01 09/27/2021 18:41:43.330 Noise In Spec.
+ALM: 01 09/27/2021 18:41:46.630 Noise High
+MSG: 01 09/27/2021 18:41:47.430 Noise In Spec.
+ALM: 01 09/27/2021 18:44:48.030 Noise High
+MSG: 01 09/27/2021 18:44:49.230 Noise In Spec.
+ALM: 01 09/27/2021 18:45:26.130 Noise High
+MSG: 01 09/27/2021 18:45:27.130 Noise In Spec.
+ALM: 01 09/27/2021 18:45:27.730 Noise High
+MSG: 01 09/27/2021 18:45:28.730 Noise In Spec.
+ALM: 01 09/27/2021 18:46:23.130 Noise High
+MSG: 01 09/27/2021 18:46:23.730 Noise In Spec.
+ALM: 01 09/27/2021 18:46:43.330 Noise High
+MSG: 01 09/27/2021 18:46:43.730 Noise In Spec.
+ALM: 01 09/27/2021 18:46:53.930 Noise High
+MSG: 01 09/27/2021 18:46:54.430 Noise In Spec.
+ALM: 01 09/27/2021 18:47:08.030 Noise High
+MSG: 01 09/27/2021 18:47:08.630 Noise In Spec.
+ALM: 01 09/27/2021 18:47:19.130 Noise High
+MSG: 01 09/27/2021 18:47:19.830 Noise In Spec.
+ALM: 01 09/27/2021 18:47:29.930 Noise High
+MSG: 01 09/27/2021 18:47:30.330 Noise In Spec.
+ALM: 01 09/27/2021 18:47:40.230 Noise High
+MSG: 01 09/27/2021 18:47:40.630 Noise In Spec.
+ALM: 01 09/27/2021 18:47:51.830 Noise High
+MSG: 01 09/27/2021 18:47:52.430 Noise In Spec.
+ALM: 01 09/27/2021 18:48:03.330 Noise High
+MSG: 01 09/27/2021 18:48:03.930 Noise In Spec.
+ALM: 01 09/27/2021 18:48:14.530 Noise High
+MSG: 01 09/27/2021 18:48:15.130 Noise In Spec.
+ALM: 01 09/27/2021 18:48:24.830 Noise High
+MSG: 01 09/27/2021 18:48:25.430 Noise In Spec.
+ALM: 01 09/27/2021 18:48:35.330 Noise High
+MSG: 01 09/27/2021 18:48:36.030 Noise In Spec.
+ALM: 01 09/27/2021 18:48:45.830 Noise High
+MSG: 01 09/27/2021 18:48:46.230 Noise In Spec.
+ALM: 01 09/27/2021 18:48:55.930 Noise High
+MSG: 01 09/27/2021 18:48:56.630 Noise In Spec.
+ALM: 01 09/27/2021 18:49:16.730 Noise High
+MSG: 01 09/27/2021 18:49:17.130 Noise In Spec.
+ALM: 01 09/27/2021 18:49:27.030 Noise High
+MSG: 01 09/27/2021 18:49:27.430 Noise In Spec.
+ALM: 01 09/27/2021 18:49:37.230 Noise High
+MSG: 01 09/27/2021 18:49:37.730 Noise In Spec.
+ALM: 01 09/27/2021 18:49:47.530 Noise High
+MSG: 01 09/27/2021 18:49:47.930 Noise In Spec.
+ALM: 01 09/27/2021 18:49:57.630 Noise High
+MSG: 01 09/27/2021 18:49:58.230 Noise In Spec.
+ALM: 01 09/27/2021 18:51:07.530 Noise High
+MSG: 01 09/27/2021 18:51:08.630 Noise In Spec.
+ALM: 01 09/27/2021 18:51:09.330 Noise High
+MSG: 01 09/27/2021 18:51:10.230 Noise In Spec.
+ALM: 01 09/27/2021 18:51:46.730 Noise High
+MSG: 01 09/27/2021 18:51:47.730 Noise In Spec.
+ALM: 01 09/27/2021 18:51:50.230 Noise High
+MSG: 01 09/27/2021 18:51:51.330 Noise In Spec.
+ALM: 01 09/27/2021 18:52:27.530 Noise High
+MSG: 01 09/27/2021 18:52:28.730 Noise In Spec.
+ALM: 01 09/27/2021 18:53:06.630 Noise High
+MSG: 01 09/27/2021 18:53:07.830 Noise In Spec.
+ALM: 01 09/27/2021 18:53:46.230 Noise High
+MSG: 01 09/27/2021 18:53:47.330 Noise In Spec.
+ALM: 01 09/27/2021 18:54:25.930 Noise High
+MSG: 01 09/27/2021 18:54:27.130 Noise In Spec.
+ALM: 01 09/27/2021 18:54:27.930 Noise High
+MSG: 01 09/27/2021 18:54:29.130 Noise In Spec.
+ALM: 01 09/27/2021 18:55:05.130 Noise High
+MSG: 01 09/27/2021 18:55:06.330 Noise In Spec.
+ALM: 01 09/27/2021 18:55:06.930 Noise High
+MSG: 01 09/27/2021 18:55:07.930 Noise In Spec.
+ALM: 01 09/27/2021 18:55:43.530 Noise High
+MSG: 01 09/27/2021 18:55:44.530 Noise In Spec.
+ALM: 01 09/27/2021 18:55:57.530 Noise High
+MSG: 01 09/27/2021 18:55:58.030 Noise In Spec.
+ALM: 01 09/27/2021 18:55:58.430 Noise High
+MSG: 01 09/27/2021 18:55:59.030 Noise In Spec.
+TAG: 01 09/27/2021 19:27:32.970 989.001038204065
+TAG: 01 09/27/2021 19:43:49.450 989.001034179030
+TAG: 01 09/27/2021 20:43:54.400 989.001034179030
+TAG: 01 09/27/2021 21:19:19.330 989.001040545144
+TAG: 01 09/27/2021 21:19:26.330 989.001038204109
+TAG: 01 09/27/2021 21:56:35.110 989.001040545212
+TAG: 01 09/27/2021 21:57:35.020 989.001040545212
+TAG: 01 09/27/2021 22:18:08.690 989.001040545221
+TAG: 01 09/27/2021 23:27:35.580 989.001038204048

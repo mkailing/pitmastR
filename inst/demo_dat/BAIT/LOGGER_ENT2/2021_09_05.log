@@ -1,0 +1,197 @@
+MSG: 01 09/05/2021 00:25:58.100 Test Tag Single Shot Fired
+TAG: 01 09/05/2021 00:25:58.130 999.000000007425
+MSG: 01 09/05/2021 00:25:58.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3114
+  Date:                               09/05/2021
+  Time:                                 00:26:08
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       3
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       382
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                       85
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        2015
+  Tags In Memory:                      2490 (3%)
+  Status Reports In Memory:            485 (47%)
+  Input Voltage:                          23.5 V
+  Exciter Voltage:                        15.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.5 A
+  Tuning Capacitors:                         282
+  Tuning Phase:                              381
+  Tuning Relative Phase:                       1
+  FDXB Signal Level:                  60 mV (6%)
+  Temperature:                            17.6 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 09/05/2021 00:26:08.100 16,0,0,2,3,1,282,3,47,235,159,45,6,381,176,0,0,0,0,0
+INF: End Of Full Status Report
+TAG: 01 09/05/2021 00:28:32.450 989.001034179040
+TAG: 01 09/05/2021 00:37:00.150 989.001034179295
+MSG: 01 09/05/2021 01:22:58.850 Set Caps = 283, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/05/2021 01:22:59.650 Set Caps = 282, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/05/2021 01:24:13.450 Set Caps = 283, I = 4.5 A, PH = 382, dPH = 0
+TAG: 01 09/05/2021 02:32:00.210 989.001034179106
+TAG: 01 09/05/2021 02:52:54.190 989.001034179354
+TAG: 01 09/05/2021 02:54:41.100 989.001034179354
+TAG: 01 09/05/2021 03:02:42.750 989.001034179114
+TAG: 01 09/05/2021 03:16:14.280 989.001034179076
+TAG: 01 09/05/2021 03:17:46.780 989.001034179076
+TAG: 01 09/05/2021 03:19:10.400 989.001034179076
+TAG: 01 09/05/2021 03:20:11.570 989.001034179076
+TAG: 01 09/05/2021 03:21:13.910 989.001034179076
+TAG: 01 09/05/2021 03:22:19.250 989.001034179076
+MSG: 01 09/05/2021 12:25:58.100 Test Tag Single Shot Fired
+TAG: 01 09/05/2021 12:25:58.130 999.000000007425
+MSG: 01 09/05/2021 12:25:58.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3114
+  Date:                               09/05/2021
+  Time:                                 12:26:08
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       3
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       382
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                       85
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        2027
+  Tags In Memory:                      2503 (3%)
+  Status Reports In Memory:            486 (47%)
+  Input Voltage:                          23.5 V
+  Exciter Voltage:                        15.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.5 A
+  Tuning Capacitors:                         283
+  Tuning Phase:                              383
+  Tuning Relative Phase:                      -1
+  FDXB Signal Level:                156 mV (17%)
+  Temperature:                            18.6 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 09/05/2021 12:26:08.100 16,0,0,2,3,-1,283,3,47,235,159,45,17,383,186,0,0,0,0,0
+INF: End Of Full Status Report
+ALM: 01 09/05/2021 13:12:59.630 Noise High
+MSG: 01 09/05/2021 13:13:00.030 Noise In Spec.
+TAG: 01 09/05/2021 20:12:27.830 989.001034179040
+TAG: 01 09/05/2021 20:12:39.040 989.001034179268
+TAG: 01 09/05/2021 21:19:14.640 989.001034179354
+TAG: 01 09/05/2021 21:23:44.140 989.001034179277
+TAG: 01 09/05/2021 21:40:10.540 989.001034179253
+TAG: 01 09/05/2021 21:51:08.160 989.001034179045
+TAG: 01 09/05/2021 21:52:18.790 989.001034179008
+TAG: 01 09/05/2021 22:16:09.530 989.001032567391
+TAG: 01 09/05/2021 22:23:05.260 989.001034179106
+TAG: 01 09/05/2021 22:40:43.530 989.001034179085
+TAG: 01 09/05/2021 22:49:34.330 989.001034179044
+TAG: 01 09/05/2021 23:51:32.320 989.001034179288
+TAG: 01 09/05/2021 23:52:35.050 989.001034179288
+TAG: 01 09/05/2021 23:53:36.580 989.001034179288
+TAG: 01 09/05/2021 23:53:40.380 989.001034179045
+TAG: 01 09/05/2021 23:58:17.070 989.001034179242

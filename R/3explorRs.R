@@ -20,8 +20,8 @@
 #' # obs.groups =  c(id, sex, site.x),
 #' # obs.unit = "weeks",
 #' # date.colname = date)
-compress_ids_date <- function(x, #name of working dataframe
-                              obs.groups = c(pit_id), #list of columns to group by
+inds_by_dates <- function(x, #name of working dataframe
+                              obs.groups = c(id), #list of columns to group by
                               obs.unit = c("weeks","months","years"), #date units that the user wants to count number of days active by
                               date.colname) { #name of date column in x for function to search by
   if (obs.unit == "weeks") {

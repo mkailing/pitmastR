@@ -1,0 +1,248 @@
+MSG: 01 09/04/2021 00:25:58.100 Test Tag Single Shot Fired
+TAG: 01 09/04/2021 00:25:58.130 999.000000007425
+MSG: 01 09/04/2021 00:25:58.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3114
+  Date:                               09/04/2021
+  Time:                                 00:26:08
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       3
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       382
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                       85
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        2000
+  Tags In Memory:                      2473 (3%)
+  Status Reports In Memory:            483 (47%)
+  Input Voltage:                          23.5 V
+  Exciter Voltage:                        15.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.5 A
+  Tuning Capacitors:                         283
+  Tuning Phase:                              380
+  Tuning Relative Phase:                       2
+  FDXB Signal Level:                101 mV (11%)
+  Temperature:                            17.5 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 09/04/2021 00:26:08.100 16,0,0,2,3,2,283,3,47,235,159,45,11,380,175,0,0,0,0,0
+INF: End Of Full Status Report
+TAG: 01 09/04/2021 01:49:10.850 989.001034179127
+TAG: 01 09/04/2021 01:50:39.830 989.001034179127
+TAG: 01 09/04/2021 02:04:20.400 989.001034179127
+TAG: 01 09/04/2021 02:05:21.500 989.001034179127
+MSG: 01 09/04/2021 12:25:58.100 Test Tag Single Shot Fired
+TAG: 01 09/04/2021 12:25:58.130 999.000000007425
+MSG: 01 09/04/2021 12:25:58.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         01
+  Model:                                  IS1001
+  S/N:                                 1929.3114
+  Date:                               09/04/2021
+  Time:                                 12:26:08
+  Application Firmware Version:            1.7.0
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Reader Auto Standby Voltages:       16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       3
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       382
+  Tuning Target Phase Deviation Threshold:     3
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                       85
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:              Disabled
+  Auto Status Report Delay:              720 min
+ Diagnostics:
+  Detection Counter:                        2004
+  Tags In Memory:                      2478 (3%)
+  Status Reports In Memory:            484 (47%)
+  Input Voltage:                          23.5 V
+  Exciter Voltage:                        15.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         4.5 A
+  Tuning Capacitors:                         283
+  Tuning Phase:                              380
+  Tuning Relative Phase:                       2
+  FDXB Signal Level:                189 mV (21%)
+  Temperature:                            18.1 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  No Active Alarms
+SRP: 01 09/04/2021 12:26:08.100 16,0,0,2,3,2,283,3,47,235,159,45,21,380,181,0,0,0,0,0
+INF: End Of Full Status Report
+MSG: 01 09/04/2021 15:21:44.750 Set Caps = 284, I = 4.5 A, PH = 385, dPH = -3
+TAG: 01 09/04/2021 20:18:33.210 989.001034179106
+TAG: 01 09/04/2021 21:08:33.940 989.001034179277
+TAG: 01 09/04/2021 21:09:42.350 989.001034179277
+MSG: 01 09/04/2021 21:40:51.350 Set Caps = 283, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 21:40:51.650 Set Caps = 284, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 21:40:52.450 Set Caps = 283, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 21:40:52.950 Set Caps = 284, I = 4.5 A, PH = 385, dPH = -3
+TAG: 01 09/04/2021 21:50:50.330 989.001034179106
+TAG: 01 09/04/2021 21:53:26.880 989.001034179148
+TAG: 01 09/04/2021 22:01:03.960 989.001034179181
+TAG: 01 09/04/2021 22:09:11.390 989.001034179272
+MSG: 01 09/04/2021 22:36:10.350 Set Caps = 283, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 22:45:51.850 Set Caps = 284, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 23:07:27.250 Set Caps = 283, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 23:07:29.950 Set Caps = 284, I = 4.5 A, PH = 385, dPH = -3
+TAG: 01 09/04/2021 23:09:42.720 989.001034179076
+TAG: 01 09/04/2021 23:22:03.060 989.001034179162
+TAG: 01 09/04/2021 23:29:23.130 989.001034179253
+TAG: 01 09/04/2021 23:33:33.520 989.001034179114
+MSG: 01 09/04/2021 23:53:48.950 Set Caps = 283, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 23:53:50.850 Set Caps = 282, I = 4.6 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 23:56:20.950 Set Caps = 283, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 23:56:21.150 Set Caps = 282, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:21.350 Set Caps = 281, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:21.750 Set Caps = 282, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 23:56:22.450 Set Caps = 281, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:22.950 Set Caps = 282, I = 4.5 A, PH = 380, dPH = 2
+MSG: 01 09/04/2021 23:56:23.550 Set Caps = 281, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:24.050 Set Caps = 282, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 23:56:28.250 Set Caps = 283, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:28.750 Set Caps = 282, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:28.850 Set Caps = 281, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:29.250 Set Caps = 282, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 23:56:29.850 Set Caps = 281, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:30.450 Set Caps = 282, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 23:56:34.050 Set Caps = 283, I = 4.5 A, PH = 380, dPH = 2
+MSG: 01 09/04/2021 23:56:34.150 Set Caps = 284, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 23:56:34.650 Set Caps = 285, I = 4.5 A, PH = 376, dPH = 6
+MSG: 01 09/04/2021 23:56:34.750 Set Caps = 286, I = 4.5 A, PH = 370, dPH = 12
+MSG: 01 09/04/2021 23:56:34.850 Set Caps = 287, I = 4.5 A, PH = 371, dPH = 11
+MSG: 01 09/04/2021 23:56:34.950 Set Caps = 288, I = 4.3 A, PH = 380, dPH = 2
+MSG: 01 09/04/2021 23:56:35.350 Set Caps = 287, I = 4.2 A, PH = 388, dPH = -6
+MSG: 01 09/04/2021 23:56:35.450 Set Caps = 286, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 23:56:35.750 Set Caps = 285, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 23:56:35.850 Set Caps = 284, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 23:56:35.950 Set Caps = 283, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 23:56:36.050 Set Caps = 284, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:36.650 Set Caps = 283, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:36.750 Set Caps = 282, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:36.950 Set Caps = 283, I = 4.5 A, PH = 381, dPH = 1
+MSG: 01 09/04/2021 23:56:37.050 Set Caps = 284, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:37.250 Set Caps = 283, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:37.650 Set Caps = 284, I = 4.5 A, PH = 377, dPH = 5
+MSG: 01 09/04/2021 23:56:37.750 Set Caps = 285, I = 4.5 A, PH = 374, dPH = 8
+MSG: 01 09/04/2021 23:56:37.850 Set Caps = 286, I = 4.5 A, PH = 378, dPH = 4
+MSG: 01 09/04/2021 23:56:37.950 Set Caps = 285, I = 4.5 A, PH = 386, dPH = -4
+MSG: 01 09/04/2021 23:56:38.050 Set Caps = 284, I = 4.5 A, PH = 393, dPH = -11
+MSG: 01 09/04/2021 23:56:38.150 Set Caps = 283, I = 4.5 A, PH = 395, dPH = -13
+MSG: 01 09/04/2021 23:56:38.250 Set Caps = 282, I = 4.5 A, PH = 388, dPH = -6
+MSG: 01 09/04/2021 23:56:38.450 Set Caps = 283, I = 4.5 A, PH = 377, dPH = 5
+MSG: 01 09/04/2021 23:56:38.550 Set Caps = 284, I = 4.5 A, PH = 377, dPH = 5
+MSG: 01 09/04/2021 23:56:38.650 Set Caps = 285, I = 4.5 A, PH = 377, dPH = 5
+MSG: 01 09/04/2021 23:56:38.950 Set Caps = 284, I = 4.5 A, PH = 388, dPH = -6
+MSG: 01 09/04/2021 23:56:39.050 Set Caps = 283, I = 4.5 A, PH = 386, dPH = -4
+MSG: 01 09/04/2021 23:56:39.850 Set Caps = 284, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 23:56:40.250 Set Caps = 283, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 23:56:40.350 Set Caps = 282, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:40.550 Set Caps = 283, I = 4.5 A, PH = 379, dPH = 3
+MSG: 01 09/04/2021 23:56:40.650 Set Caps = 284, I = 4.5 A, PH = 380, dPH = 2
+MSG: 01 09/04/2021 23:56:40.950 Set Caps = 283, I = 4.5 A, PH = 385, dPH = -3
+MSG: 01 09/04/2021 23:56:41.050 Set Caps = 282, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:41.250 Set Caps = 281, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:41.450 Set Caps = 280, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:41.750 Set Caps = 281, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 23:56:41.950 Set Caps = 282, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 23:56:42.150 Set Caps = 283, I = 4.5 A, PH = 382, dPH = 0
+MSG: 01 09/04/2021 23:56:42.450 Set Caps = 282, I = 4.5 A, PH = 384, dPH = -2
+MSG: 01 09/04/2021 23:56:42.650 Set Caps = 281, I = 4.5 A, PH = 383, dPH = -1
+MSG: 01 09/04/2021 23:56:43.050 Set Caps = 282, I = 4.5 A, PH = 380, dPH = 2

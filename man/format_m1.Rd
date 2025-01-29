@@ -21,7 +21,7 @@ serial numbers of each reader to be compatible with 'workhorse' function.
 this seems optional!
 }
 \examples{
-# m1 <- pitmastr:::format_m1(
+# m1 <- format_m1(
 # path.csv = "/Users/mkailing/Dropbox/Kailing_Projects/pitmastr/inst/dummy_MW/sn_map.csv",
 # date1 = start,
 # date2 = end)

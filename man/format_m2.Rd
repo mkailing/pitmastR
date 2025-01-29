@@ -4,7 +4,7 @@
 \alias{format_m2}
 \title{Formatter for map2 file}
 \usage{
-format_m2(path.csv, date1, id.colname = id, keep.cols)
+format_m2(path.csv, date1, id.colname = id, keep.cols = c())
 }
 \arguments{
 \item{path.csv}{Path to map2 file location}
