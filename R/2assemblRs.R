@@ -45,9 +45,9 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
       out1 <- data.frame()
       for (i in 1:length(log_files)) {
         eg <-readLines(log_files[i]) #this makes distinct lines for log files
-        serial.num <- as.character(grep("S/N: ", eg, value = TRUE))
-        tmp<-as.data.frame(paste(grep("^TAG: ", eg, value=TRUE),
-                                 as.numeric(gsub("\\D.\\D","",serial.num)),
+        serial.num <-  ifelse(length(grep("S/N: ", eg, value = TRUE))==0, '1111.1111', as.character(grep("S/N: ", eg, value = TRUE)))
+        tmp<-as.data.frame(paste(grep("TAG: ", eg, value=TRUE),
+                                 as.numeric(gsub("\\D.\\D", "", serial.num)),
                                  as.character(getwd()), sep = " ")) #makes dataframe containing only tag detections
         out1<-rbind(out1,tmp)
       }
@@ -82,7 +82,7 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
     if (length(xlsx_files)>0){
       out3 <- data.frame()
       for (i in 1:length(xlsx_files)) {
-        eg <- readxl::read_excel(xlsx_files[i]) #this reads in and makes distinct lines for log files
+        eg <- readxl::read_excel(xlsx_files[i]) #this reads in and makes distinct lines for .xlsx files
         out3<-rbind(out3,eg)
       }
       x3<-out3 %>%
@@ -104,32 +104,44 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
                                  format(as.numeric(serial.num), nsmall = 4)),
              date = as.Date(format(as.Date(date,"%m/%d/%Y"),"%Y-%m-%d"))) %>%
       ungroup()
-    if (missing(map.file1)) {
+    
+    if (missing(map.file1)){ #need to figure out how to work in test tag file build with no m1
       df <- rbind(df, all)
-    }
+      
+      #tt <- NULL
+      }
     else {
       z = map.file1 %>%
-        right_join(all, by = c("serial.num")) #%>% #inner_join(relationship = 'many-to-many')
-        #filter(lubridate::`%within%`(date, lubridate::interval(start.date,end.date))) ## THIS WILL DROP ROWS THAT ARE NOT ASSOCIATED WITH A SERIAL NUMBER!!!!
-      df <- rbind(df, z) #%>%
+      right_join(all, by = c("serial.num")) #%>% #inner_join(relationship = 'many-to-many')
+    #filter(lubridate::`%within%`(date, lubridate::interval(start.date,end.date))) ## THIS WILL DROP ROWS THAT ARE NOT ASSOCIATED WITH A SERIAL NUMBER!!!!
+    df <- rbind(df, z)
+    
+    #tt <- df[df$id %in% map.file1$test.tag,]
     }
   }
+  df %>%
+    mutate(reader2 = path,
+           reader2 = gsub(d2, "", reader2),
+           reader2 = gsub("/", " ", reader2)) -> df
+  
   if (remove.dup==TRUE) {
     #df = df[!duplicated(df),]
     #df = df %>% filter(!duplicated(cbind(date,time,id))) #remove rows of duplicated (regardless of file source)
 
     #still need to return df and df3
     df1 <- df %>% distinct(date, time, id, .keep_all = TRUE)
+    tt <- df[df$id %in% map.file1$test.tag,]
 #    df2 = df[!distinct(date, time, id, .keep_all = TRUE)]
 #    df3 = df[df$pit_id %in% m1$test.tag]
     #date, times, and pit_id (ie no bat can be detected >1x at same timepoint) # NEED TO SORT OUT WHAT TO DO WITH TEST TAGS -- WILL LIKELY BE DUPS AND NEED TO KEEP!
   }
   else {
     df1 <- df
+    tt <- df[df$id %in% map.file1$test.tag,]
   }
-  #  return(c(df1, df2, df3))
   setwd(d1)
-  return(df1)
+  #return(df1)
+  return(list(df1,tt))
 }
 
 
@@ -246,7 +258,7 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
 #' # working_pit <- integrate_ids(mastr_pit, m2, 
 #' # joiner = 'pit_id',
 #' # remove.tt = "Y")
-integrate_ids <- function(x, y,
+integrate_bio <- function(x, y,
                           joiner = c(),
                           remove.tt = FALSE){
   if (remove.tt == TRUE) {

@@ -22,13 +22,13 @@
 #' # date.colname = date)
 inds_by_dates <- function(x, #name of working dataframe
                               obs.groups = c(id), #list of columns to group by
-                              obs.unit = c("weeks","months","years"), #date units that the user wants to count number of days active by
+                              obs.unit = c("weeks","months","years"), #date units that the user wants to summarize activity by
                               date.colname) { #name of date column in x for function to search by
   if (obs.unit == "weeks") {
     y = x %>%
       #mutate(date.colname=as.Date.POSIXlt(date.colname)) %>%
       group_by(across({{obs.groups}}), lubridate::year({{date.colname}}), lubridate::month({{date.colname}}), lubridate::week({{date.colname}})) %>%
-      summarise(n.days = length(unique({{date.colname}})))
+      summarise(n.days = length(unique({{date.colname}}))) #number of days they were active - can build this out to include more summary
     #    colnames(z)<-gsub("(date.detected)","",colnames(z))
     return(y)
   }

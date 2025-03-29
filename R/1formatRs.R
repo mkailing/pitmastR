@@ -98,7 +98,7 @@ format_m2 <- function(path.csv,
 #' this seems optional!
 #' @examples
 #' # TBD
-convert_biodate <- function(x, date.colname = date, set.hour = 7) {
+scale_biodate <- function(x, date.colname = date, set.hour = 7) {
   x %>%
     mutate(biodate = ifelse(lubridate::hour(time)>=0 & lubridate::hour(time)<set.hour, {{date.colname}}-1, {{date.colname}}))
   return(x)
@@ -108,6 +108,13 @@ convert_biodate <- function(x, date.colname = date, set.hour = 7) {
 }
 
 
+#write function to rescale the years to start at defined month or date
+# scale_bioyear <- function(x, date.colname = date, set.date = 7) {
+#   x %>%
+#     mutate(bioyear = lubridate::year(date.colname))
+#     mutate(bioyear = ifelse(biodate<set.date, biodate+12, biodate),
+#            bioyear = bioyear-min())
+# }
 
 #test functionality
 
