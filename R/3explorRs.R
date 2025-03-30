@@ -16,7 +16,7 @@
 #' @details 
 #' Optional section! 
 #' @examples
-#' # ids_wks <- compress_ids_date(x = pm2,
+#' # ids_wks <- bundle_by(x = pm2,
 #' # obs.groups =  c(id, sex, site.x),
 #' # obs.unit = "weeks",
 #' # date.colname = date)

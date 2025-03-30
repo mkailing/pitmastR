@@ -17,7 +17,9 @@ Imports:
   stringr,
   lubridate,
   readxl,
-  tidyr
+  tidyr,
+  ggplot2,
+  purrr
 Depends: dplyr
 Suggests: 
     testthat (>= 3.0.0)
