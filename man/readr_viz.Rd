@@ -8,13 +8,9 @@ readr_viz(df)
 }
 \arguments{
 \item{df}{dataframe with all test tag reads}
-
-\item{site.colname}{name of the column where unique system names are stored (the grouping variable by which to summarize tag reads)}
-
-\item{date.colname}{name of the column where date variable (the time grouping variable by which to summarize tag reads)}
 }
 \description{
-Plots the number of times a test tag was fired, indicating whether reader was on based on object returned by 'readr_check'.
+Plots the number of times a test tag was fired, indicating whether reader was operating.
 }
 \details{
 this seems optional!
