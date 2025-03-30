@@ -1,0 +1,1101 @@
+ALM: 05 07/27/2021 00:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 00:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    318 mV (35%)
+  Maximum Noise:                    394 mV (43%)
+  Average Noise:                    323 mV (35%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 00:03:43.000 35,43,35,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 00:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 00:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 00:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 00:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 00:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 00:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 00:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 00:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 00:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 00:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 00:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 00:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 00:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 00:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 00:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 00:55:05.500 Input Voltage Low
+MSG: 05 07/27/2021 01:00:36.540 Set Caps = 314, I = 5.4 A, PH = 392, dPH = -1
+ALM: 05 07/27/2021 01:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 01:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    311 mV (34%)
+  Maximum Noise:                    391 mV (43%)
+  Average Noise:                    322 mV (35%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 01:03:43.000 34,43,35,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 01:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 01:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 01:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 01:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 01:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 01:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 01:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 01:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 01:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 01:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 01:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 01:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 01:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 01:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 01:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 01:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 02:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/27/2021
+  Time:                                 02:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           7
+  Tags In Memory:                      1759 (2%)
+  Status Reports In Memory:           1020 (99%)
+  Input Voltage:                          20.7 V
+  Exciter Voltage:                        18.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.3 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              392
+  Tuning Relative Phase:                      -1
+  FDXB Signal Level:                315 mV (35%)
+  Temperature:                            34.1 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  VTT Test Failed
+  Input Voltage Low
+  Exciter Voltage Low
+  Reports Memory Full
+SRP: 05 07/27/2021 02:02:14.600 16,0,0,2,5,-1,314,2,99,207,189,53,35,392,341,6,11,12,21,0
+INF: End Of Full Status Report
+ALM: 05 07/27/2021 02:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    327 mV (36%)
+  Maximum Noise:                    395 mV (43%)
+  Average Noise:                    326 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 02:03:43.000 36,43,36,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 02:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 02:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 02:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 02:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 02:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 02:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 02:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 02:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 02:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 02:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 02:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 02:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 02:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 02:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 02:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 02:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 03:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 03:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    357 mV (39%)
+  Maximum Noise:                    391 mV (43%)
+  Average Noise:                    328 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 03:03:43.000 39,43,36,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 03:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 03:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 03:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 03:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 03:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 03:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 03:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 03:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 03:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 03:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 03:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 03:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 03:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 03:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 03:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 03:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 04:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 04:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    334 mV (37%)
+  Maximum Noise:                    390 mV (43%)
+  Average Noise:                    326 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 04:03:43.000 37,43,36,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 04:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 04:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 04:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 04:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 04:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 04:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 04:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 04:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 04:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 04:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 04:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 04:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 04:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 04:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 04:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 04:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 05:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 05:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    316 mV (35%)
+  Maximum Noise:                    390 mV (43%)
+  Average Noise:                    325 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 05:03:43.000 35,43,36,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 05:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 05:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 05:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 05:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 05:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 05:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 05:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 05:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 05:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 05:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 05:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 05:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 05:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 05:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 05:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 05:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 06:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/27/2021
+  Time:                                 06:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           7
+  Tags In Memory:                      1759 (2%)
+  Status Reports In Memory:           1021 (99%)
+  Input Voltage:                          20.7 V
+  Exciter Voltage:                        18.8 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.2 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              393
+  Tuning Relative Phase:                      -2
+  FDXB Signal Level:                311 mV (34%)
+  Temperature:                            33.4 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  VTT Test Failed
+  Input Voltage Low
+  Exciter Voltage Low
+  Reports Memory Full
+SRP: 05 07/27/2021 06:02:14.600 16,0,0,2,5,-2,314,2,99,207,188,52,34,393,334,6,11,12,21,0
+INF: End Of Full Status Report
+ALM: 05 07/27/2021 06:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    302 mV (33%)
+  Maximum Noise:                    391 mV (43%)
+  Average Noise:                    326 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 06:03:43.000 33,43,36,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 06:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 06:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 06:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 06:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 06:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 06:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 06:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 06:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 06:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 06:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 06:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 06:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 06:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 06:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 06:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 06:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 07:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 07:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    317 mV (35%)
+  Maximum Noise:                    391 mV (43%)
+  Average Noise:                    324 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 07:03:43.000 35,43,36,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 07:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 07:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 07:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 07:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 07:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 07:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 07:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 07:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 07:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 07:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 07:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 07:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 07:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 07:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 07:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 07:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 08:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 08:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    304 mV (33%)
+  Maximum Noise:                    396 mV (44%)
+  Average Noise:                    322 mV (35%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 08:03:43.000 33,44,35,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 08:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 08:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 08:13:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 08:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 08:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 08:23:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 08:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 08:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 08:33:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 08:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 08:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 08:43:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 08:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 08:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 08:53:18.100 Exciter Voltage Low
+ALM: 05 07/27/2021 08:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 09:02:13.000 Reports Memory Full
+ALM: 05 07/27/2021 09:03:18.100 Exciter Voltage Low
+INF: Start Of Noise Report
+  Present Noise:                    340 mV (37%)
+  Maximum Noise:                    407 mV (45%)
+  Average Noise:                    327 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 09:03:43.000 37,45,36,3600
+INF: End Of Noise Report
+MSG: 05 07/27/2021 09:04:53.860 Exciter Voltage In Spec.
+ALM: 05 07/27/2021 09:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 09:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 09:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 09:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 09:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 09:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 09:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 09:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 09:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 09:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 09:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 09:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 09:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 09:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 09:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 09:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 09:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 10:02:13.000 Reports Memory Full
+MSG: 05 07/27/2021 10:02:14.100 Test Tag Single Shot Fired
+ALM: 05 07/27/2021 10:02:14.210 VTT Test Failed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/27/2021
+  Time:                                 10:02:24
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           7
+  Tags In Memory:                      1759 (2%)
+  Status Reports In Memory:           1022 (99%)
+  Input Voltage:                          20.8 V
+  Exciter Voltage:                        18.9 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.2 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              395
+  Tuning Relative Phase:                      -4
+  FDXB Signal Level:                348 mV (38%)
+  Temperature:                            33.0 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  VTT Test Failed
+  Input Voltage Low
+  Exciter Voltage Low
+  Reports Memory Full
+SRP: 05 07/27/2021 10:02:24.100 16,0,0,2,5,-4,314,2,99,208,189,52,38,395,330,6,11,12,21,0
+INF: End Of Full Status Report
+MSG: 05 07/27/2021 10:03:04.340 Set Caps = 313, I = 5.2 A, PH = 394, dPH = -3
+INF: Start Of Noise Report
+  Present Noise:                    299 mV (33%)
+  Maximum Noise:                    494 mV (54%)
+  Average Noise:                    333 mV (37%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 10:03:43.000 33,54,37,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 10:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 10:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 10:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 10:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 10:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 10:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 10:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 10:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 10:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 10:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 10:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 10:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 10:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 10:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 10:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 10:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 10:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 11:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    314 mV (34%)
+  Maximum Noise:                    394 mV (43%)
+  Average Noise:                    324 mV (36%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 11:03:43.000 34,43,36,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 11:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 11:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 11:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 11:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 11:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 11:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 11:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 11:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 11:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 11:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 11:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 11:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 11:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 11:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 11:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 11:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 11:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 12:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    310 mV (34%)
+  Maximum Noise:                    390 mV (43%)
+  Average Noise:                    318 mV (35%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 12:03:43.000 34,43,35,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 12:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 12:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 12:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 12:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 12:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 12:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 12:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 12:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 12:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 12:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 12:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 12:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 12:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 12:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 12:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 12:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 12:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 13:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    320 mV (35%)
+  Maximum Noise:                    374 mV (41%)
+  Average Noise:                    306 mV (34%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 13:03:43.000 35,41,34,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 13:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 13:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 13:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 13:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 13:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 13:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 13:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 13:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 13:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 13:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 13:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 13:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 13:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 13:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 13:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 13:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 13:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 14:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/27/2021
+  Time:                                 14:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           7
+  Tags In Memory:                      1759 (2%)
+  Status Reports In Memory:          1023 (100%)
+  Input Voltage:                          20.3 V
+  Exciter Voltage:                        18.5 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.1 A
+  Tuning Capacitors:                         313
+  Tuning Phase:                              389
+  Tuning Relative Phase:                       2
+  FDXB Signal Level:                302 mV (33%)
+  Temperature:                            38.0 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  VTT Test Failed
+  Input Voltage Low
+  Exciter Voltage Low
+  Reports Memory Full
+SRP: 05 07/27/2021 14:02:14.600 16,0,0,2,5,1,313,2,100,203,185,51,33,390,380,6,11,12,21,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    279 mV (31%)
+  Maximum Noise:                    367 mV (40%)
+  Average Noise:                    303 mV (33%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 14:03:43.000 31,40,33,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 14:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 14:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 14:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 14:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 14:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 14:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 14:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 14:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 14:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 14:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 14:35:50.600 Exciter Voltage Low
+MSG: 05 07/27/2021 14:35:55.240 Set Caps = 314, I = 5.3 A, PH = 390, dPH = 1
+ALM: 05 07/27/2021 14:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 14:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 14:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 14:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 14:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 14:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 15:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    296 mV (32%)
+  Maximum Noise:                    360 mV (40%)
+  Average Noise:                    298 mV (33%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 15:03:43.000 32,40,33,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 15:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 15:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 15:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 15:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 15:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 15:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 15:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 15:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 15:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 15:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 15:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 15:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 15:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 15:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 15:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 15:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 15:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 16:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    274 mV (30%)
+  Maximum Noise:                    357 mV (39%)
+  Average Noise:                    297 mV (33%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 16:03:43.000 30,39,33,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 16:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 16:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 16:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 16:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 16:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 16:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 16:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 16:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 16:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 16:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 16:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 16:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 16:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 16:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 16:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 16:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 16:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 17:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    308 mV (34%)
+  Maximum Noise:                    353 mV (39%)
+  Average Noise:                    294 mV (32%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 17:03:43.000 34,39,32,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 17:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 17:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 17:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 17:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 17:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 17:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 17:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 17:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 17:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 17:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 17:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 17:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 17:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 17:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 17:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 17:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 17:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 18:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/27/2021
+  Time:                                 18:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           7
+  Tags In Memory:                      1759 (2%)
+  Status Reports In Memory:           1020 (99%)
+  Input Voltage:                          20.3 V
+  Exciter Voltage:                        18.5 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.1 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              390
+  Tuning Relative Phase:                       1
+  FDXB Signal Level:                299 mV (33%)
+  Temperature:                            37.3 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  VTT Test Failed
+  Input Voltage Low
+  Exciter Voltage Low
+  Reports Memory Full
+SRP: 05 07/27/2021 18:02:14.600 16,0,0,2,5,1,314,2,99,203,185,51,33,390,373,6,11,12,21,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    307 mV (34%)
+  Maximum Noise:                    361 mV (40%)
+  Average Noise:                    301 mV (33%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 18:03:43.000 34,40,33,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 18:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 18:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 18:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 18:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 18:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 18:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 18:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 18:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 18:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 18:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 18:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 18:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 18:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 18:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 18:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 18:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 18:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 19:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    306 mV (34%)
+  Maximum Noise:                    361 mV (40%)
+  Average Noise:                    302 mV (33%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 19:03:43.000 34,40,33,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 19:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 19:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 19:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 19:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 19:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 19:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 19:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 19:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 19:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 19:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 19:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 19:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 19:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 19:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 19:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 19:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 19:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 20:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    323 mV (35%)
+  Maximum Noise:                    384 mV (42%)
+  Average Noise:                    305 mV (33%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 20:03:43.000 35,42,33,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 20:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 20:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 20:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 20:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 20:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 20:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 20:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 20:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 20:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 20:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 20:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 20:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 20:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 20:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 20:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 20:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 20:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 21:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    339 mV (37%)
+  Maximum Noise:                    371 mV (41%)
+  Average Noise:                    306 mV (34%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 21:03:43.000 37,41,34,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 21:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 21:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 21:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 21:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 21:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 21:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 21:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 21:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 21:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 21:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 21:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 21:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 21:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 21:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 21:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 21:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 21:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 22:02:13.000 Reports Memory Full
+MSG: 05 07/27/2021 22:02:14.100 Test Tag Single Shot Fired
+ALM: 05 07/27/2021 22:02:14.220 VTT Test Failed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/27/2021
+  Time:                                 22:02:24
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           7
+  Tags In Memory:                      1759 (2%)
+  Status Reports In Memory:           1021 (99%)
+  Input Voltage:                          20.7 V
+  Exciter Voltage:                        18.8 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.1 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              391
+  Tuning Relative Phase:                       0
+  FDXB Signal Level:                331 mV (36%)
+  Temperature:                            35.5 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  VTT Test Failed
+  Input Voltage Low
+  Exciter Voltage Low
+  Reports Memory Full
+SRP: 05 07/27/2021 22:02:24.100 16,0,0,2,5,0,314,2,99,207,188,51,36,391,355,6,11,12,21,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    342 mV (38%)
+  Maximum Noise:                    386 mV (42%)
+  Average Noise:                    313 mV (34%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 22:03:43.000 38,42,34,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 22:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 22:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 22:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 22:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 22:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 22:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 22:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 22:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 22:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 22:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 22:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 22:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 22:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 22:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 22:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 22:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 22:55:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 23:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    355 mV (39%)
+  Maximum Noise:                    385 mV (42%)
+  Average Noise:                    317 mV (35%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/27/2021 23:03:43.000 39,42,35,3600
+INF: End Of Noise Report
+ALM: 05 07/27/2021 23:05:05.500 Input Voltage Low
+ALM: 05 07/27/2021 23:05:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 23:12:13.000 Reports Memory Full
+ALM: 05 07/27/2021 23:15:05.500 Input Voltage Low
+ALM: 05 07/27/2021 23:15:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 23:22:13.000 Reports Memory Full
+ALM: 05 07/27/2021 23:25:05.500 Input Voltage Low
+ALM: 05 07/27/2021 23:25:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 23:32:13.000 Reports Memory Full
+ALM: 05 07/27/2021 23:35:05.500 Input Voltage Low
+ALM: 05 07/27/2021 23:35:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 23:42:13.000 Reports Memory Full
+ALM: 05 07/27/2021 23:45:05.500 Input Voltage Low
+ALM: 05 07/27/2021 23:45:50.600 Exciter Voltage Low
+ALM: 05 07/27/2021 23:52:13.000 Reports Memory Full
+ALM: 05 07/27/2021 23:55:05.500 Input Voltage Low
+ALM: 05 07/27/2021 23:55:50.600 Exciter Voltage Low

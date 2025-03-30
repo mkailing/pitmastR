@@ -44,3 +44,25 @@ inds_by_dates <- function(x, #name of working dataframe
   }
   return(y)
 }
+
+## This used the test tag dataframe to create a survival object
+#' @title
+#' Creates survival object
+#' 
+#' @description
+#' Uses test tag fires to create 'sampling data frame' for survival analyses
+#' 
+#' @param x main data object, preferably returned from 'workhorse'
+#' @param obs.groups list of columns by which observations will be grouped
+#' @param obs.unit time unit of which to summarize observations
+#' @param date.colname name of the column containing dates
+#' @export
+#' @details 
+#' Optional section! 
+#' @examples
+#' # ids_wks <- compress_ids_date(x = pm2,
+#' # obs.groups =  c(id, sex, site.x),
+#' # obs.unit = "weeks",
+#' # date.colname = date)
+
+

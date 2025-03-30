@@ -30,10 +30,12 @@ format_m1 <-function(path.csv,
     mutate(start.date = lubridate::parse_date_time(.data$start.date, date.formats),
            end.date = lubridate::parse_date_time(.data$end.date, date.formats),
            end.date = tidyr::replace_na(.data$end.date, lubridate::parse_date_time(Sys.Date(), date.formats)),
+           serial.num = ifelse(nchar(.data$serial.num)<=4, paste('9999.', serial.num, sep=""), serial.num),
            #fill in missing serial.nums with default values starting at 1
-           serial.num = ifelse(is.na(.data$serial.num), 
-                               sprintf("%09.4f", seq_along(serial.num[is.na(serial.num)])), 
-                               format(as.numeric(serial.num), nsmall = 4))) 
+           serial.num = ifelse(is.na(.data$serial.num),
+                               sprintf("%09.4f", seq_along(serial.num[is.na(serial.num)])),
+                               format(as.numeric(serial.num), nsmall = 4)),
+           part.sn = sub(".*\\.", "", serial.num))
   return(x)
 }
 

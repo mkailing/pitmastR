@@ -64,7 +64,7 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
     if (length(txt_files)>0) {
       out2 <- data.frame()
       for (i in 1:length(txt_files)) {
-        eg <-readLines(txt_files[i]) #this reads in and makes distinct lines for log files
+        eg <-readLines(txt_files[i]) #this reads in and makes distinct lines for txt files
         tmp <- as.data.frame(paste(grep("\\d{3}[.]\\d{12}", eg, value=TRUE),
                                    as.character(getwd(), sep =" ")))
         out2<-rbind(out2,tmp)
@@ -73,9 +73,10 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
       x2<-data.frame(date = stringr::str_extract(out2$xx, "^[0-9]{2}/[0-9]{2}/[0-9]{4}?"), #does this change with PC vs MAC?
                      time=chron::chron(times=stringr::str_extract(out2$xx, "[0-9]{2}:[0-9]{2}:[0-9]{2}.[0-9]{2}")), #will this ever change?
                      id = stringr::str_extract(out2$xx, "\\d{3}[.]\\d{12}"),
-                     serial.num = stringr::str_extract(out2$xx, "\\d{4}[.]\\d{4}"),
+                     serial.num = stringr::str_extract(out2$xx, "\\d{4}[.]\\d{4}|\\s(\\d{4})\\s"),
                      path = stringr::str_extract(out2$xx, getwd()),
-                     source = ".txt")
+                     source = ".txt") %>%
+        mutate(serial.num = gsub(" ", "", .data$serial.num))
       all <- rbind(all, x2)
     }
     xlsx_files <- list.files(pattern = ".xlsx") #### MACY CHECK THAT THIS XLSX RUNS AND RBINDS PROPERLY!!
@@ -98,10 +99,10 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
     }
     # na.sn <- data.frame(unique(all$path[is.na(all$serial.num)])) %>%
     #   mutate(serial.num = sprintf("%09.4f", 0.9999+seq_along(1)))
-    all = all %>% 
-      mutate(serial.num = ifelse(is.na(serial.num),
-                                 sprintf("%09.4f", 0.9999+seq_along(serial.num[is.na(serial.num)])),
-                                 format(as.numeric(serial.num), nsmall = 4)),
+    all = all %>%
+      
+      ## MACY GET CORRECT SERIAL NUMBERS FROM M1 TO MUTATE IN HERE!
+      mutate(serial.num = ifelse(nchar(.data$serial.num)<=4, paste('9999.', serial.num, sep=""), serial.num),
              date = as.Date(format(as.Date(date,"%m/%d/%Y"),"%Y-%m-%d"))) %>%
       ungroup()
     
@@ -112,8 +113,11 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
       }
     else {
       z = map.file1 %>%
-      right_join(all, by = c("serial.num")) #%>% #inner_join(relationship = 'many-to-many')
-    #filter(lubridate::`%within%`(date, lubridate::interval(start.date,end.date))) ## THIS WILL DROP ROWS THAT ARE NOT ASSOCIATED WITH A SERIAL NUMBER!!!!
+        right_join(all, by = c("serial.num"), relationship = 'many-to-many') %>% #MACY REVISIT: SAME SERIAL NUMBERS AT MULTIPLE SITES OVERRIDES SITE CLASSIFICATIONS %>% #inner_join(relationship = 'many-to-many')
+        group_by(serial.num) %>%
+        filter(lubridate::`%within%`(date, lubridate::interval(start.date,end.date))) #THIS NEEDS CORRECT SERIAL NUMBERS FOR ALL, ELSE TXT AND XLS GETS DROPPED
+        #full_join(all, by = c("serial.num")) #%>%
+        #filter(lubridate::`%within%`(date, lubridate::interval(start.date,end.date))) ## THIS WILL DROP ROWS THAT ARE NOT ASSOCIATED WITH A SERIAL NUMBER!!!!
     df <- rbind(df, z)
     
     #tt <- df[df$id %in% map.file1$test.tag,]
@@ -122,7 +126,8 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
   df %>%
     mutate(reader2 = path,
            reader2 = gsub(d2, "", reader2),
-           reader2 = gsub("/", " ", reader2)) -> df
+           reader2 = gsub("/", " ", reader2),
+           reader2 = gsub("^ ", "", reader2)) -> df
   
   if (remove.dup==TRUE) {
     #df = df[!duplicated(df),]
@@ -258,14 +263,13 @@ workhorse <- function(directory, string, map.file1, remove.dup = FALSE){
 #' # working_pit <- integrate_ids(mastr_pit, m2, 
 #' # joiner = 'pit_id',
 #' # remove.tt = "Y")
-integrate_bio <- function(x, y,
-                          joiner = c(),
-                          remove.tt = FALSE){
+integrate_bio <- function(x = pit_mastr[[1]], y = m2,
+                          joiner = c(), remove.tt = FALSE){
   if (remove.tt == TRUE) {
     df <- left_join(x, y, by = {{joiner}}) #%>%
     #rename(site.detected = site.x,
     #       site.tagged = site.y) #%>%
-    df <- df[!(df$id %in% m1$test.tag),]
+    df <- df[!(df$id %in% x$test.tag),]
   }
   else {
     df <- left_join(x, y, by = {{joiner}}) #%>%

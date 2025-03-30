@@ -13,7 +13,7 @@ readr_check(x, sys.colname, date1, min.reads = 2)
 
 \item{date1}{date variable to summarize tag reads by}
 
-\item{min.reads}{number of times a test tag should be read in a date to be considered. Defaults to 2.}
+\item{min.reads}{number of times a test tag should be read in a date to be considered operating. Defaults to 2.}
 }
 \description{
 Summarizes the number of times a test tag was fired to determine if system was operating each day

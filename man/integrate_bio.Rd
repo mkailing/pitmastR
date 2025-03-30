@@ -4,7 +4,7 @@
 \alias{integrate_bio}
 \title{Primary integration function for biological data}
 \usage{
-integrate_bio(x, y, joiner = c(), remove.tt = FALSE)
+integrate_bio(x = pit_mastr[[1]], y = m2, joiner = c(), remove.tt = FALSE)
 }
 \arguments{
 \item{x}{data object returned from 'workhorse' that contains tag reads}

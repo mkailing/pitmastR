@@ -1,0 +1,794 @@
+ALM: 05 07/21/2021 00:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    177 mV (19%)
+  Maximum Noise:                    463 mV (51%)
+  Average Noise:                    163 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 00:03:43.000 19,51,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 00:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 00:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 00:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 00:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 00:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 01:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    160 mV (17%)
+  Maximum Noise:                    311 mV (34%)
+  Average Noise:                    165 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 01:03:43.000 17,34,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 01:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 01:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 01:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 01:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 01:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 02:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/21/2021
+  Time:                                 02:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           4
+  Tags In Memory:                      1749 (2%)
+  Status Reports In Memory:           1020 (99%)
+  Input Voltage:                          24.2 V
+  Exciter Voltage:                        20.1 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.7 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              391
+  Tuning Relative Phase:                       0
+  FDXB Signal Level:                147 mV (16%)
+  Temperature:                            32.5 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 05 07/21/2021 02:02:14.600 16,0,0,2,5,-1,314,2,99,242,201,57,16,392,325,21,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    165 mV (18%)
+  Maximum Noise:                    288 mV (32%)
+  Average Noise:                    166 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 02:03:43.000 18,32,18,3600
+INF: End Of Noise Report
+TAG: 05 07/21/2021 02:09:16.750 989.001034203268
+ALM: 05 07/21/2021 02:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 02:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 02:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 02:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 02:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 03:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    178 mV (19%)
+  Maximum Noise:                    250 mV (27%)
+  Average Noise:                    167 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 03:03:43.000 19,27,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 03:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 03:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 03:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 03:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 03:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 04:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    149 mV (16%)
+  Maximum Noise:                    212 mV (23%)
+  Average Noise:                    168 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 04:03:43.000 16,23,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 04:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 04:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 04:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 04:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 04:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 05:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    168 mV (18%)
+  Maximum Noise:                    311 mV (34%)
+  Average Noise:                    173 mV (19%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 05:03:43.000 18,34,19,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 05:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 05:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 05:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 05:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 05:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 06:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/21/2021
+  Time:                                 06:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           5
+  Tags In Memory:                      1750 (2%)
+  Status Reports In Memory:           1021 (99%)
+  Input Voltage:                          24.2 V
+  Exciter Voltage:                        20.1 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.7 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              392
+  Tuning Relative Phase:                      -1
+  FDXB Signal Level:                168 mV (18%)
+  Temperature:                            31.9 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 05 07/21/2021 06:02:14.600 16,0,0,2,5,-1,314,2,99,242,201,57,18,392,319,21,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    189 mV (21%)
+  Maximum Noise:                    318 mV (35%)
+  Average Noise:                    174 mV (19%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 06:03:43.000 21,35,19,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 06:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 06:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 06:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 06:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 06:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 07:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    181 mV (20%)
+  Maximum Noise:                    407 mV (45%)
+  Average Noise:                    174 mV (19%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 07:03:43.000 20,45,19,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 07:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 07:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 07:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 07:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 07:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 08:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    166 mV (18%)
+  Maximum Noise:                    575 mV (63%)
+  Average Noise:                    175 mV (19%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 08:03:43.000 18,63,19,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 08:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 08:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 08:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 08:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 08:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 09:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    180 mV (20%)
+  Maximum Noise:                    572 mV (63%)
+  Average Noise:                    176 mV (19%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 09:03:43.000 20,63,19,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 09:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 09:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 09:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 09:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 09:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 10:02:13.000 Reports Memory Full
+MSG: 05 07/21/2021 10:02:14.100 Test Tag Single Shot Fired
+TAG: 05 07/21/2021 10:02:14.130 999.000000007429
+MSG: 05 07/21/2021 10:02:14.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/21/2021
+  Time:                                 10:02:24
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           5
+  Tags In Memory:                      1751 (2%)
+  Status Reports In Memory:           1022 (99%)
+  Input Voltage:                          24.2 V
+  Exciter Voltage:                        20.1 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.7 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              392
+  Tuning Relative Phase:                      -1
+  FDXB Signal Level:                196 mV (21%)
+  Temperature:                            31.9 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 05 07/21/2021 10:02:24.100 16,0,0,2,5,-2,314,2,99,242,201,57,21,393,319,21,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    181 mV (20%)
+  Maximum Noise:                    593 mV (65%)
+  Average Noise:                    176 mV (19%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 10:03:43.000 20,65,19,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 10:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 10:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 10:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 10:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 10:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 11:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    160 mV (17%)
+  Maximum Noise:                    217 mV (24%)
+  Average Noise:                    171 mV (19%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 11:03:43.000 17,24,19,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 11:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 11:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 11:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 11:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 11:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 12:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    178 mV (19%)
+  Maximum Noise:                    390 mV (43%)
+  Average Noise:                    166 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 12:03:43.000 19,43,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 12:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 12:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 12:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 12:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 12:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 13:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    149 mV (16%)
+  Maximum Noise:                    455 mV (50%)
+  Average Noise:                    164 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 13:03:43.000 16,50,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 13:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 13:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 13:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 13:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 13:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 14:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/21/2021
+  Time:                                 14:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           5
+  Tags In Memory:                      1751 (2%)
+  Status Reports In Memory:          1023 (100%)
+  Input Voltage:                          24.2 V
+  Exciter Voltage:                        20.1 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.6 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              390
+  Tuning Relative Phase:                       1
+  FDXB Signal Level:                159 mV (17%)
+  Temperature:                            36.5 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 05 07/21/2021 14:02:14.600 16,0,0,2,5,1,314,2,100,242,201,56,17,390,365,21,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    152 mV (16%)
+  Maximum Noise:                    348 mV (38%)
+  Average Noise:                    159 mV (17%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 14:03:43.000 16,38,17,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 14:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 14:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 14:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 14:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 14:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 15:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    155 mV (17%)
+  Maximum Noise:                    242 mV (26%)
+  Average Noise:                    155 mV (17%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 15:03:43.000 17,26,17,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 15:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 15:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 15:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 15:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 15:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 16:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    173 mV (19%)
+  Maximum Noise:                    261 mV (29%)
+  Average Noise:                    154 mV (17%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 16:03:43.000 19,29,17,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 16:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 16:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 16:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 16:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 16:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 17:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    156 mV (17%)
+  Maximum Noise:                    273 mV (30%)
+  Average Noise:                    154 mV (17%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 17:03:43.000 17,30,17,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 17:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 17:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 17:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 17:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 17:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 18:02:13.000 Reports Memory Full
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/21/2021
+  Time:                                 18:02:14
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           5
+  Tags In Memory:                      1751 (2%)
+  Status Reports In Memory:           1020 (99%)
+  Input Voltage:                          24.2 V
+  Exciter Voltage:                        20.1 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.7 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              389
+  Tuning Relative Phase:                       2
+  FDXB Signal Level:                153 mV (17%)
+  Temperature:                            35.0 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 05 07/21/2021 18:02:14.600 16,0,0,2,5,2,314,2,99,242,201,57,17,389,350,21,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    169 mV (18%)
+  Maximum Noise:                    439 mV (48%)
+  Average Noise:                    162 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 18:03:43.000 18,48,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 18:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 18:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 18:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 18:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 18:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 19:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    179 mV (19%)
+  Maximum Noise:                    198 mV (22%)
+  Average Noise:                    163 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 19:03:43.000 19,22,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 19:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 19:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 19:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 19:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 19:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 20:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    156 mV (17%)
+  Maximum Noise:                    351 mV (39%)
+  Average Noise:                    162 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 20:03:43.000 17,39,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 20:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 20:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 20:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 20:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 20:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 21:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    177 mV (19%)
+  Maximum Noise:                    304 mV (33%)
+  Average Noise:                    164 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 21:03:43.000 19,33,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 21:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 21:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 21:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 21:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 21:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 22:02:13.000 Reports Memory Full
+MSG: 05 07/21/2021 22:02:14.100 Test Tag Single Shot Fired
+TAG: 05 07/21/2021 22:02:14.130 999.000000007429
+MSG: 05 07/21/2021 22:02:14.130 VTT Test Passed
+INF: Start Of Full Status Report
+ Reader:
+  ID:                                         05
+  Model:                                  IS1001
+  S/N:                                 2032.3566
+  Date:                               07/21/2021
+  Time:                                 22:02:24
+  Application Firmware Version:            1.7.1
+  Operation Mode:                           Scan
+  Network Mode:                IS1001 Standalone
+  Exciter Sync. Mode:                 Standalone
+  Date/Time Sync.:                      Disabled
+  Beeper:                               Disabled
+  Tag Display Format:                        DEC
+  Initiation Delay:                     Disabled
+  Auto Standby Voltages:              16 V, 18 V
+  Periodic Standby Start Time:              0:00
+  Periodic Standby Duration:            Disabled
+  Idling Time:                          Disabled
+ Alarms:
+  Antenna Current Low Alarm:               0.5 A
+  Noise High Alarm:                          75%
+  Tuning Capacit. High Alarm:                970
+  Tuning Capacit. Low Alarm:                  50
+  Alarms Unique Delay:                   600 sec
+ Antenna/Tuning:
+  Exciter Voltage Level:                       5
+  Dynamic Tuning:                        Enabled
+  Tuning Target Phase:                       391
+  Tuning Target Phase Deviation Threshold:     4
+ Communication:
+  Local Port Speed:                       115200
+  Tags To Local Port:                    Enabled
+  Alarms To Local Port:                  Enabled
+  Messages To Local Port:                Enabled
+  Remote Port Protocol:                    ASCII
+  Remote Port Transfer Rate:                Full
+ Detection:
+  HDX Tag Detection:                    Disabled
+  Fastag Detection:                     Disabled
+  FDXB Tag Signal Level Detection:      Disabled
+  BioTherm Tag Temperature Detection:   Disabled
+  Detection Counter Enabled:                 Yes
+  Unique Mode:                             Delay
+  Unique Delay:                           60 sec
+  FDXB Detection Scan Time:               120 ms
+  VTT Level:                                 128
+  Auto VTT Delay:                        720 min
+ Measurements:
+  Antenna Current Gain:                      115
+  Antenna Current Offset:                    110
+ Memory:
+  Tags Memory Size:                        78583
+  Status Reports Memory Size:               1023
+  Store Tags To Memory:                  Enabled
+  Store VTT To Memory:                   Enabled
+  Store Stat. Reports To Memory:         Enabled
+ Reports:
+  Auto Noise Report Delay:                60 min
+  Auto Status Report Delay:              240 min
+ Diagnostics:
+  Detection Counter:                           5
+  Tags In Memory:                      1752 (2%)
+  Status Reports In Memory:           1021 (99%)
+  Input Voltage:                          24.2 V
+  Exciter Voltage:                        20.1 V
+  Antenna Tuning:                          Tuned
+  Antenna Current:                         5.7 A
+  Tuning Capacitors:                         314
+  Tuning Phase:                              391
+  Tuning Relative Phase:                       0
+  FDXB Signal Level:                183 mV (20%)
+  Temperature:                            32.7 C
+  Sync. Input Present:                       N/A
+  Sec. Master Active:                        N/A
+ Active Alarms:
+  Reports Memory Full
+SRP: 05 07/21/2021 22:02:24.100 16,0,0,2,5,0,314,2,99,242,201,57,20,391,327,21,0,0,0,0
+INF: End Of Full Status Report
+INF: Start Of Noise Report
+  Present Noise:                    160 mV (17%)
+  Maximum Noise:                    482 mV (53%)
+  Average Noise:                    164 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 22:03:43.000 17,53,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 22:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 22:22:13.000 Reports Memory Full
+ALM: 05 07/21/2021 22:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 22:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 22:52:13.000 Reports Memory Full
+ALM: 05 07/21/2021 23:02:13.000 Reports Memory Full
+INF: Start Of Noise Report
+  Present Noise:                    172 mV (19%)
+  Maximum Noise:                    305 mV (33%)
+  Average Noise:                    168 mV (18%)
+  Time Averaged Over:                    1:00:00
+NRP: 05 07/21/2021 23:03:43.000 19,33,18,3600
+INF: End Of Noise Report
+ALM: 05 07/21/2021 23:12:13.000 Reports Memory Full
+ALM: 05 07/21/2021 23:22:13.000 Reports Memory Full
+TAG: 05 07/21/2021 23:26:01.730 989.001034203265
+ALM: 05 07/21/2021 23:32:13.000 Reports Memory Full
+ALM: 05 07/21/2021 23:42:13.000 Reports Memory Full
+ALM: 05 07/21/2021 23:52:13.000 Reports Memory Full

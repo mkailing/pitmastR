@@ -11,5 +11,6 @@
 #' @importFrom readxl read_excel
 #' @importFrom chron times
 #' @importFrom utils read.csv
+#' @import ggplot2
 ## usethis namespace: end
 NULL
